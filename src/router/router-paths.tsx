@@ -1,5 +1,6 @@
+const baseUrl ="/ad-architect-app"
 export const RouterPaths = {
-    Home: '/',
-    Renovations: '/renovations',
-    WhoWeAre: '/whoweare'
+    Home: `${baseUrl}/`,
+    Renovations: `${baseUrl}/renovations`,
+    WhoWeAre: `${baseUrl}/whoweare`
 } as const;
