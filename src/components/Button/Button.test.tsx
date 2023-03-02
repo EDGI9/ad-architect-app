@@ -6,23 +6,17 @@ describe('Button component', () => {
   let component: object;
   let testText: string = "Test Text";
 
-  beforeEach( () => {
+  it('Componen works', () => {
     const {getByTestId} = render(<Button text={testText}></Button>)
     component = getByTestId('qa-button');
-  })
-
-  it('Renders component', () => {
     expect(component).not.toBeNull();
-  })
-  it('Has Button class', () => {
+    //@ts-ignore
     expect(component.classList.contains('c-button')).toBe(true);
-  })
-  it('Receives text and renders it', () => {
+    //@ts-ignore
     expect(component.textContent).toEqual(testText)
-  })
-  it('Fires click event', async () => {
     // const {getByTestId, unmount} = render(<Button text="Test Text"></Button>)
     const handleClick = jest.fn()
+    //@ts-ignore
     fireEvent.click(component)
     //expect(handleClick).toHaveBeenCalledOnce()
   })
