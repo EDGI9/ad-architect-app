@@ -1,4 +1,4 @@
-import {it, describe, beforeEach, expect} from "vitest";
+import {it, describe, expect} from "vitest";
 import {render} from '@testing-library/react';
 import {Image} from "./Image.js"
 
