@@ -1,9 +1,21 @@
 import { it, describe } from 'vitest'
+import {render} from '@testing-library/react';
+import {NavBar} from "./NavBar.js"
+import {RouterPaths} from "../../router/router-paths";
+
 
 describe('NavBar component', () => {
+  let component: object;
+  const testItems: Array<string> = ['Item 1', 'Item 2', 'Item 3'];
 
-    it('should work', (ctx) => {
-      // prints name of the test
-      console.log(ctx.meta.name)
-    })
+  it('Component works', () => {
+      const {getByTestId, getByText} = render(<NavBar />);
+      component = getByTestId('qa-sub-nav-bar');
+      //@ts-ignore
+      expect(component.classList.contains('c-sub-nav-bar'));
+      Object.entries(RouterPaths).map(([routeKey, routeProperties]) => {
+        //@ts-ignore
+        expect(getByText(routeProperties.text).textContent).toBe(RouterPaths[routeKey].text)
+      })
+  })
 })
