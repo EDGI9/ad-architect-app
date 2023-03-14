@@ -7,7 +7,7 @@ describe('Button component', () => {
   let testText: string = "Test Text";
 
   it('Componen works', () => {
-    const {getByTestId} = render(<Button text={testText}></Button>)
+    const {getByTestId} = render(<Button text={testText} type="primary"></Button>)
     component = getByTestId('qa-button');
     expect(component).not.toBeNull();
     //@ts-ignore

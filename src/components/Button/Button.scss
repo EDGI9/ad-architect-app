@@ -1,0 +1,26 @@
+@import '../../assets/styles/_variables.scss';
+.c-button {
+    padding: 26px 46px;
+    border: none;
+    border-radius: 15px;
+    font-family: $primary-font;
+    font-size: $button-font-size-big;
+    
+    &.c-button--primary{
+        background-color: $primary-color;
+        color: $white-color;
+        &:hover{
+            cursor: pointer;
+            background-color: darken($color: $primary-color, $amount: 5) ;
+        }
+    }
+    &.c-button--secondary{
+        background-color: $white-color;
+        color: $secondary-color;
+        &:hover{
+            cursor: pointer;
+            background-color: lighten($color: $secondary-color, $amount: 10) ;
+            color: $white-color;
+        }
+    }
+}
