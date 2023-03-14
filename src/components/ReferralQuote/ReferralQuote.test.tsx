@@ -8,6 +8,8 @@ describe('ReferralQuote component', () => {
     it('Component works', () => {
         const {getByTestId, getByText} = render(<ReferralQuote text={testText}/>);
         component = getByTestId('qa-referral-quote');
+
+        expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-referral-quote'));
         expect(getByText(testText).textContent).toBe(testText)

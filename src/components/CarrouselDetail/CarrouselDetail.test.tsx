@@ -12,6 +12,8 @@ describe('CarrouselDetail component', () => {
     it('Component works', () => {
         const {getByTestId, getByText} = render(<CarrouselDetail image={testImageSource} text={testText} />);
         component = getByTestId('qa-carrousel-detail');
+        
+        expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-carrousel-detail'));
         //@ts-ignore

@@ -10,6 +10,8 @@ describe('SectionBubble component', () => {
     it('Component works', () => {
         const {getByTestId, getByText} = render(<SectionBubble title={testTitle} text={testText}/>);
         component = getByTestId('qa-section-bubble');
+
+        expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-section-bubble'));
         expect(getByText(testTitle).textContent).toBe(testTitle)

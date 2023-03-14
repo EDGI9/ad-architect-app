@@ -10,6 +10,7 @@ describe('Title component', () => {
   it('Component works', () => {
     const {getByTestId} = render(<Title type={testType} text={testText}></Title>)
     component = getByTestId('qa-title');
+    
     expect(component).not.toBeNull();
     //@ts-ignore
     expect(component.classList.contains('c-title')).toBe(true);

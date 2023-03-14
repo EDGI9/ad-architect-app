@@ -10,6 +10,8 @@ describe('Card component', () => {
     it('Component works', () => {
         const {getByTestId} = render(<Card color={color} borderRadius={borderRadius}/>);
         component = getByTestId('qa-card');
+        
+        expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-card'));
         //Test to see if component renders image

@@ -5,11 +5,12 @@ import { slider } from "../../__mock__/slider";
 
 describe('CarrouselSmall component', () => {
     let component: object;
-    const testImageSource: string = "testImage.jpg";
 
     it.skip('Component works', () => {
         const {getByTestId} = render(<CarrouselSmall slides={slider} />);
         component = getByTestId('qa-carrousel-small');
+        
+        expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-carrousel-small'));
         /* console.log(container);

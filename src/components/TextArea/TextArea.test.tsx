@@ -8,6 +8,8 @@ describe('TextArea component', () => {
     it('Component works', () => {
         const {getByTestId} = render(<TextArea text={testText}/>);
         component = getByTestId('qa-textarea');
+
+        expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-textarea')).toBe(true);
         //Test to see if text is rendered inside component

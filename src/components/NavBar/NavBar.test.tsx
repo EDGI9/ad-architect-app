@@ -11,6 +11,8 @@ describe('NavBar component', () => {
   it('Component works', () => {
       const {getByTestId, getByText} = render(<NavBar />);
       component = getByTestId('qa-sub-nav-bar');
+      
+      expect(component).not.toBeNull();
       //@ts-ignore
       expect(component.classList.contains('c-sub-nav-bar'));
       Object.entries(RouterPaths).map(([routeKey, routeProperties]) => {

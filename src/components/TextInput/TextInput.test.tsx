@@ -8,6 +8,8 @@ describe('TextInput component', () => {
   it('Component works', () => {
     const {getByTestId} = render(<TextInput text={testText}/>);
     component = getByTestId('qa-text-input');
+
+    expect(component).not.toBeNull();
     //@ts-ignore
     expect(component.classList.contains('c-text-input')).toBe(true); 
   })

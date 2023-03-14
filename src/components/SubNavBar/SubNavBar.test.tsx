@@ -9,6 +9,8 @@ describe('SubNavBar component', () => {
     it('Component works', () => {
         const {getByTestId, getByText} = render(<SubNavBar items={testItems} />);
         component = getByTestId('qa-sub-nav-bar');
+
+        expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-sub-nav-bar'));
         testItems.forEach((text, index) => {
