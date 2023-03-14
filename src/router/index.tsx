@@ -7,9 +7,9 @@ import {WhoWeAre} from "../views/WhoWeAre";
 export function Router(): JSX.Element {
     return (
         <Routes>
-            <Route path={RouterPaths.Home} element={<Home />}/>
-            <Route path={RouterPaths.Renovations} element={<Renovations />}/>
-            <Route path={RouterPaths.WhoWeAre} element={<WhoWeAre />}/>
+            <Route path={RouterPaths.home.path} element={<Home />}/>
+            <Route path={RouterPaths.renovations.path} element={<Renovations />}/>
+            <Route path={RouterPaths.whoWeAre.path} element={<WhoWeAre />}/>
         </Routes>
     );
 }
