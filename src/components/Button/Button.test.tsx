@@ -15,7 +15,7 @@ describe('Button component', () => {
     //@ts-ignore
     expect(component.textContent).toEqual(testText)
     // const {getByTestId, unmount} = render(<Button text="Test Text"></Button>)
-    const handleClick = jest.fn()
+    //const handleClick = jest.fn()
     //@ts-ignore
     fireEvent.click(component)
     //expect(handleClick).toHaveBeenCalledOnce()

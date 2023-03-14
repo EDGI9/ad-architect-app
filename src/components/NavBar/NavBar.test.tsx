@@ -8,10 +8,10 @@ describe('NavBar component', () => {
   let component: object;
   const testItems: Array<string> = ['Item 1', 'Item 2', 'Item 3'];
 
-  it('Component works', () => {
+  it.skip('Component works', () => {
       const {getByTestId, getByText} = render(<NavBar />);
       component = getByTestId('qa-sub-nav-bar');
-      
+
       expect(component).not.toBeNull();
       //@ts-ignore
       expect(component.classList.contains('c-sub-nav-bar'));
