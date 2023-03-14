@@ -1,5 +1,8 @@
 interface Image {
-    src: string,
+    imageData: {
+        src: string
+        name: string
+    },
     height: number,
     width: number
 }
@@ -15,8 +18,8 @@ export function Image(props:Image): JSX.Element {
     // return <img data-testid="qa-image" className="c-image" src={props.src}></img>
     return (
         <picture data-testid="qa-image" className="c-image">
-            <source src={props.src} />
-            <img src={props.src}></img>
+            <source src={props.imageData.src}/>
+            <img src={props.imageData.src} alt={props.imageData.name}></img>
         </picture>
     )
 }
