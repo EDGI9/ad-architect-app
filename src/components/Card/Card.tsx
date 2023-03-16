@@ -1,11 +1,14 @@
+import "./Card.scss"
 interface Card {
-    color: string
-    borderRadius: number
+    backgroundColor?: string
+    borderRadius?: number
 }
 
 export function Card(props: Card) {
+    console.log(props);
+    
     const style = {
-        color: props.color ? `#${props.color}` : "#000",
+        backgroundColor: props.backgroundColor ? `${props.backgroundColor}` : "#FFF",
         borderRadius: props.borderRadius ? props.borderRadius : "auto"
     }
 
