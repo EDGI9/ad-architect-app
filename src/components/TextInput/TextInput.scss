@@ -1,0 +1,23 @@
+@import '../../assets/styles/_variables.scss';
+.c-text-input {
+    padding: $input-padding;
+    padding-bottom: 34px;
+    border-radius: 16px;
+    border: 1px solid $light-gray-color;
+    font-weight: 700;
+
+    &.c-text-input--primary {
+        background-color: $white-color;
+        color: $dark-color;
+        &::placeholder{
+            color: $dark-color;
+        }
+    }
+    &.c-text-input--secondary {
+        background-color: $lightest-gray-color;
+        color: $light-gray-color;
+        &::placeholder{
+            color: $light-gray-color;
+        }
+    }
+}
