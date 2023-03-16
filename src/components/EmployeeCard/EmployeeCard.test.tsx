@@ -1,5 +1,5 @@
-import {it, describe, beforeEach, afterEach, expect} from "vitest";
-import {fireEvent, render} from '@testing-library/react';
+import {it, describe, expect} from "vitest";
+import {render} from '@testing-library/react';
 import {EmployeeCard} from "./EmployeeCard"
 import { slider } from "../../__mock__/slider";
 
