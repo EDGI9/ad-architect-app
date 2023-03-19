@@ -1,0 +1,23 @@
+@import '../../assets/styles/_variables.scss';
+.c-section-bubble {
+   display: flex;
+   flex-direction: column;
+   background-color: rgba($secondary-color, 0.9);
+   padding: $card-padding;
+   color: $white-color;
+   max-width: 500px;
+   
+
+   &.c-section-bubble--align-left{
+        padding-right: 50px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 25px 0px 0px 25px;
+   }
+   &.c-section-bubble--align-right{
+        padding-left: 50px;
+        align-items: flex-end;
+        justify-content: flex-end;
+        border-radius:  0px 25px 25px 0px;
+   }
+}

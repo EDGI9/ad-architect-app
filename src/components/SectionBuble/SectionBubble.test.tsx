@@ -8,12 +8,14 @@ describe('SectionBubble component', () => {
     const testText: string = "Test Text";
 
     it('Component works', () => {
-        const {getByTestId, getByText} = render(<SectionBubble title={testTitle} text={testText}/>);
+        const {getByTestId, getByText} = render(<SectionBubble title={testTitle} text={testText} align="left"/>);
         component = getByTestId('qa-section-bubble');
 
         expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-section-bubble'));
+        //@ts-ignore
+        expect(component.classList.contains('c-section-bubble--align-left'));
         expect(getByText(testTitle).textContent).toBe(testTitle)
         expect(getByText(testText).textContent).toBe(testText)
     })
