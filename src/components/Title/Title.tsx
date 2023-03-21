@@ -1,11 +1,7 @@
+import {Components} from "../../interfaces/components.d";
 import "./Title.scss"
 
-interface Title {
-    type: string
-    text: string
-}
-
-export function Title(props: Title): JSX.Element {
+export function Title(props: Components.Title): JSX.Element {
     
     if (props.type && props.text) {
         //@ts-ignore

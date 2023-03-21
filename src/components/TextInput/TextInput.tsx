@@ -1,12 +1,7 @@
+import {Components} from "../../interfaces/components.d";
 import "./TextInput.scss"
 
-interface TextInput {
-    text?: string
-    type?: string
-    placeholder?: string
-}
-
-export function TextInput(props: TextInput): JSX.Element {
+export function TextInput(props: Components.TextInput): JSX.Element {
     let inputType: string;
     switch(props.type) {
         case 'primary':

@@ -1,12 +1,7 @@
+import {Components} from "../../interfaces/components.d";
 import "./TextArea.scss"
 
-interface TextArea {
-    text?: string
-    type?: string
-    placeholder?: string
-}
-
-export function TextArea(props: TextArea): JSX.Element {
+export function TextArea(props: Components.TextArea): JSX.Element {
     let textAreaType: string;
     switch(props.type) {
         case 'primary':

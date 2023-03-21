@@ -1,4 +1,5 @@
 import { Router } from '../router';
+import { RouterPaths } from "../router/router-paths";
 import { NavBar } from '../components/NavBar/NavBar';
 
 import '../assets/styles/App.scss'
@@ -6,7 +7,7 @@ import '../assets/styles/App.scss'
 function App() {
   return (
     <div className="App">
-        <NavBar />
+        <NavBar routes={RouterPaths} />
         <Router />
     </div>
   )

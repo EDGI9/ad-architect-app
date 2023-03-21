@@ -1,15 +1,6 @@
-import { CSSProperties } from "react";
+import {Components} from "../../interfaces/components.d";
 
-interface Image {
-    imageData: {
-        src: string
-        name: string
-    },
-    height: number,
-    width: number
-}
-
-export function Image(props:Image): JSX.Element {
+export function Image(props: Components.Image): JSX.Element {
     const width: string = `${props.width}px` || "100px";
     const height: string = `${props.height}px` || "100px";
 

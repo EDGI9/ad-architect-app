@@ -1,11 +1,10 @@
+import {Components} from "../../interfaces/components.d";
 import { Card } from "../Card/Card";
 import "./ReferralQuote.scss"
 
-interface ReferralQuote {
-    text: string
-}
 
-export function ReferralQuote(props: ReferralQuote): JSX.Element {
+
+export function ReferralQuote(props: Components.ReferralQuote): JSX.Element {
     return (
         <div data-testid="qa-referral-quote" className="c-referral-quote">
             <Card borderRadius={6}>

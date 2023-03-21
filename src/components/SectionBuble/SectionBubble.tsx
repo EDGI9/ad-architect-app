@@ -1,14 +1,9 @@
-import "./SectionBubble.scss"
+import {Components} from "../../interfaces/components.d";
 import { Title } from "../Title/Title";
-
-interface SectionBubble {
-    title: string
-    text: string,
-    align: string
-}
+import "./SectionBubble.scss"
 
 //Replace parent div with Card component
-export function SectionBubble(props: SectionBubble) : JSX.Element {
+export function SectionBubble(props: Components.SectionBubble) : JSX.Element {
     let alignClass;
     if (props.align !== undefined) {
         alignClass = `c-section-bubble--align-${props.align}`

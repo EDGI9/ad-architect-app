@@ -1,12 +1,9 @@
-import { CSSProperties, ReactNode } from "react"
+import { CSSProperties } from "react"
+import {Components} from "../../interfaces/components.d";
 import "./Card.scss"
-interface Card {
-    backgroundColor?: string
-    borderRadius?: number
-    children: ReactNode
-}
 
-export function Card(props: Card): JSX.Element {
+
+export function Card(props: Components.Card): JSX.Element {
 
     const style: CSSProperties = {
         backgroundColor: props.backgroundColor ? `${props.backgroundColor}` : "#FFF",

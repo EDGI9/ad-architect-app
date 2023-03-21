@@ -1,20 +1,13 @@
-import "./EmployeeCard.scss"
+import {Components} from "../../interfaces/components.d";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
+import "./EmployeeCard.scss"
 
 
-interface EmployeeCard {
-    image:{
-        src: string 
-        name: string
-    }
-    title:string
-    subtitle: string
-    text:string
-}
 
-export function EmployeeCard(props: EmployeeCard) {
+
+export function EmployeeCard(props: Components.EmployeeCard) {
     let image;
     let title; 
     let subtitle; 
