@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 interface Image {
     imageData: {
         src: string
@@ -13,8 +15,8 @@ export function Image(props:Image): JSX.Element {
 
     return (
         <picture data-testid="qa-image" className="c-image">
-            <source src={props.imageData.src}/>
-            <img src={props.imageData.src} alt={props.imageData.name}></img>
+            <source src={props.imageData.src} height={height} width={width}/>
+            <img src={props.imageData.src} alt={props.imageData.name} height={height} width={width}></img>
         </picture>
     )
 }
