@@ -1,6 +1,7 @@
 import "./Title.scss"
+
 interface Title {
-    type: string,
+    type: string
     text: string
 }
 

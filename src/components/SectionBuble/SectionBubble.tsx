@@ -1,6 +1,5 @@
 import "./SectionBubble.scss"
 import { Title } from "../Title/Title";
-import { Card } from "../Card/Card";
 
 interface SectionBubble {
     title: string
