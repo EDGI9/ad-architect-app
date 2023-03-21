@@ -8,11 +8,13 @@ export default {
   title: 'Employee Card',
   component: EmployeeCard,
   args: {
+    image: slider[0],
     title: "Test title",
-    text: "Test EmployeeCard"
+    subtitle: "Test subtitle",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
   },
 } as ComponentMeta<typeof EmployeeCard>;
 
-export const Primary: ComponentStory<typeof EmployeeCard> = (args) => <EmployeeCard {...args} image={slider[0]}/>;
+export const Primary: ComponentStory<typeof EmployeeCard> = (args) => <EmployeeCard {...args} />;
 
 

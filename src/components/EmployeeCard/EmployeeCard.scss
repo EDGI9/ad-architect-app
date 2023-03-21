@@ -2,8 +2,11 @@
 .c-employee-card {
     max-width: 260px;
     color: $dark-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    :first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
