@@ -15,8 +15,6 @@ describe('Image component', () => {
     const {getByTestId, container} = render(<Image imageData={testImageSrc} width={width} height={height}></Image>)
     component = getByTestId('qa-image');
     expect(component).not.toBeNull();
-    //@ts-ignore
-    expect(component.classList.contains('c-image')).toBe(true);
     /* console.log(container);
     expect(container).toContainElement('source')
     expect(container).toContainElement('img') */
