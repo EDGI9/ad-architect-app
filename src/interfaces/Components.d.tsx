@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 import  Route  from "./Routes.d";
 import ImageInterface from "./Image.d";
 
@@ -7,13 +7,20 @@ import ImageInterface from "./Image.d";
 export namespace Components {
 
     export interface Button {
-        text: string
+        text?: string
         type?: string
+        round?: boolean
+        small?: boolean
+        onClick: MouseEventHandler
     }
 
     export interface Card {
         backgroundColor?: string
         borderRadius?: number
+        children: ReactNode,
+        className?: string
+    }
+
     export interface CarrouselDetail {
         image: ImageInterface
         text: {
@@ -22,6 +29,8 @@ export namespace Components {
         }
     }
 
+    export interface CarrouselSmall {
+        slides: Array<ImageInterface>
     }
 
     export interface EmployeeCard {
@@ -33,8 +42,8 @@ export namespace Components {
 
     export interface Image {
         imageData: ImageInterface
-        height: number
-        width: number
+        height?: number
+        width?: number
     }
 
     export interface NavBar {
