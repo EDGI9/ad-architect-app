@@ -15,12 +15,12 @@
         }
     }
     &.c-button--secondary{
-        background-color: $white-color;
-        color: $secondary-color;
+        background-color: transparent; 
+        color: $white-color;
         &:hover{
             cursor: pointer;
-            background-color: lighten($color: $secondary-color, $amount: 10) ;
-            color: $white-color;
+            background-color: $white-color;
+            color: rgba($secondary-color, 0.9);
         }
     }
 }
