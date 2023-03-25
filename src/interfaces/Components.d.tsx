@@ -48,6 +48,10 @@ export namespace Components {
         text: string
         align: string
     }
+
+    export interface SubNavBar {
+        items: Array<string>
+    }
     
     export interface TextArea {
         text?: string
