@@ -5,6 +5,14 @@
     border-radius: 15px;
     font-family: $primary-font;
     font-size: $button-font-size-big;
+
+    &.c-button--round{
+        border-radius: 100px;
+    }
+    
+    &.c-button--small{
+        padding: $button-padding-small;
+    }
     
     &.c-button--primary{
         background-color: $primary-color;
@@ -21,6 +29,13 @@
             cursor: pointer;
             background-color: $white-color;
             color: rgba($secondary-color, 0.9);
+        }
+    }
+    &.c-button--terceary{
+        background-color: $lightest-gray-color; 
+        color: $gray-color;
+        &:hover{
+            cursor: pointer;
         }
     }
 }

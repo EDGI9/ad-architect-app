@@ -14,7 +14,14 @@ export namespace Components {
     export interface Card {
         backgroundColor?: string
         borderRadius?: number
-        children: ReactNode
+    export interface CarrouselDetail {
+        image: ImageInterface
+        text: {
+            title: string
+            description: string
+        }
+    }
+
     }
 
     export interface EmployeeCard {
