@@ -1,4 +1,4 @@
-import {Components} from "../../interfaces/components.d";
+import {Components} from "../../interfaces/Components.d";
 import "./TextInput.scss"
 
 export function TextInput(props: Components.TextInput): JSX.Element {

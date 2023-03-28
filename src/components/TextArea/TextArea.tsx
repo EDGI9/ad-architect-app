@@ -1,4 +1,4 @@
-import {Components} from "../../interfaces/components.d";
+import {Components} from "../../interfaces/Components.d";
 import "./TextArea.scss"
 
 export function TextArea(props: Components.TextArea): JSX.Element {

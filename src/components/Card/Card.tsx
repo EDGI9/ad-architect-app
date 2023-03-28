@@ -1,5 +1,5 @@
 import { CSSProperties } from "react"
-import {Components} from "../../interfaces/components.d";
+import {Components} from "../../interfaces/Components.d";
 import "./Card.scss"
 
 

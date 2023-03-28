@@ -1,4 +1,4 @@
-import {Components} from "../../interfaces/components.d";
+import {Components} from "../../interfaces/Components.d";
 
 export function Image(props: Components.Image): JSX.Element {
     const width: string = props.width !== undefined ? `${props.width}px` : "auto";

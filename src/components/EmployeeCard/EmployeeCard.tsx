@@ -1,4 +1,4 @@
-import {Components} from "../../interfaces/components.d";
+import {Components} from "../../interfaces/Components.d";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";

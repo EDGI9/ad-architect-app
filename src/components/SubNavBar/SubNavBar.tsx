@@ -1,4 +1,4 @@
-import {Components} from "../../interfaces/components.d";
+import {Components} from "../../interfaces/Components.d";
 import { Button } from "../Button/Button";
 import "./SubNavBar.scss"
 

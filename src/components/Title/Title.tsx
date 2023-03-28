@@ -1,4 +1,4 @@
-import {Components} from "../../interfaces/components.d";
+import {Components} from "../../interfaces/Components.d";
 import "./Title.scss"
 
 export function Title(props: Components.Title): JSX.Element {
