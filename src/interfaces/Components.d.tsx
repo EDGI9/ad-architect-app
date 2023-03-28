@@ -11,7 +11,7 @@ export namespace Components {
         type?: string
         round?: boolean
         small?: boolean
-        onClick: MouseEventHandler
+        onClick?: MouseEventHandler
     }
 
     export interface Card {
