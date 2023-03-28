@@ -1,4 +1,5 @@
 import {Components} from "../../interfaces/Components.d";
+import {Images} from "../../interfaces/Image.d";
 import { Card } from "../Card/Card";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";
@@ -6,7 +7,7 @@ import { images } from "../../__mock__/images";
 import "./ReferralName.scss"
 
 export function ReferralName(props: Components.ReferralName): JSX.Element {
-    const image: ImageInterface = images[0];
+    const image: Images.Image = images.icon_quotation;
     return (
         <div data-testid="qa-referral-name" className="c-referral-name">
             <Card borderRadius={6} backgroundColor="#ECAE85E5">
