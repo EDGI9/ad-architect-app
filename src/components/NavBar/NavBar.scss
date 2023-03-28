@@ -1,0 +1,43 @@
+@import '../../assets/styles/_variables.scss';
+.c-nav-bar {
+    background-color: $white-color;
+    width: 100%;
+    padding: $navbar-padding;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .c-nav-bar__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column: 4 / 12;
+    }
+
+    .c-nav-bar__link {
+        text-decoration: none;
+        color: $dark-color;
+        font-family: $secondary-font; // replace with Satoshi
+        padding: 0px 15px;
+    }
+
+    .c-nav-bar__logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        grid-column: 1 / 2;
+    }
+
+    .c-nav-bar__search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        grid-column: 12;
+        :hover {
+            cursor: pointer;
+        }
+    }
+}
