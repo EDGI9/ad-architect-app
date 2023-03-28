@@ -39,6 +39,10 @@ export namespace Components {
         subtitle: string
         text: string
     }
+    
+    export interface Footer {
+        routes: Route 
+    }
 
     export interface Image {
         imageData: Images.Image
