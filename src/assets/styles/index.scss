@@ -1,7 +1,7 @@
 @import "./_variables.scss";
 
 :root {
-  font-family: 'Public Sans', 'Poppins', sans-serif;
+  font-family: $primary-font, $secondary-font, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
