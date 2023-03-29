@@ -4,11 +4,12 @@ import {Card} from "./Card"
 
 describe('Card component', () => {
     let component: object;
-    const color: string = "Test Title";
+    const color: string = "#FFF";
     const borderRadius: number = 10;
+    const testHtml = <h1>Test html</h1>
     
     it('Component works', () => {
-        const {getByTestId} = render(<Card color={color} borderRadius={borderRadius}/>);
+        const {getByTestId} = render(<Card backgroundColor={color} borderRadius={borderRadius}>{testHtml}</Card>);
         component = getByTestId('qa-card');
         
         expect(component).not.toBeNull();
