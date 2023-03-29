@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 
 import { Image } from "./Image"
-import { slider } from "../../__mock__/slider";
+import { images } from "../../__mock__/images";
 
 export default {
   title: 'Image',
@@ -26,7 +26,7 @@ export default {
     },
   },
   args: {
-    imageData: slider[0],
+    image: images.big_img_1,
     title: "John Doe",
     width: 250,
     height: 250,

@@ -45,7 +45,7 @@ export namespace Components {
     }
 
     export interface Image {
-        imageData: Images.Image
+        image: Images.Image
         height?: number
         width?: number
     }

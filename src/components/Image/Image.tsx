@@ -6,8 +6,8 @@ export function Image(props: Components.Image): JSX.Element {
 
     return (
         <picture data-testid="qa-image" className="c-image">
-            <source src={props.imageData.src} height={height} width={width}/>
-            <img src={props.imageData.src} alt={props.imageData.name} height={height} width={width}></img>
+            <source src={props.image.src} height={height} width={width}/>
+            <img src={props.image.src} alt={props.image.name} height={height} width={width}></img>
         </picture>
     )
 }

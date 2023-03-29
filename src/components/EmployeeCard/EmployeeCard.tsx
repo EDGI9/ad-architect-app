@@ -14,7 +14,7 @@ export function EmployeeCard(props: Components.EmployeeCard) {
     let text;
     
     if (props.image) {
-        image = <Image imageData={props.image} height={200} width={200} />
+        image = <Image image={props.image} height={200} width={200} />
     } 
     if (props.title) {
         title = <Title type="h3" text={props.title} />

@@ -12,7 +12,7 @@ export function ReferralName(props: Components.ReferralName): JSX.Element {
         <div data-testid="qa-referral-name" className="c-referral-name">
             <Card borderRadius={6} backgroundColor="#ECAE85E5">
                 <div className="c-referral-name__image">
-                    <Image imageData={image} height={70} width={70} />
+                    <Image image={image} height={70} width={70} />
                 </div>                
                 <div className="c-referral-name__text">
                     <Title type="h2" text={props.title} />
