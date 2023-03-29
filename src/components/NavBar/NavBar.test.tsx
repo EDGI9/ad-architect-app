@@ -9,7 +9,7 @@ describe('NavBar component', () => {
   const testItems: Array<string> = ['Item 1', 'Item 2', 'Item 3'];
 
   it.skip('Component works', () => {
-      const {getByTestId, getByText} = render(<NavBar />);
+      const {getByTestId, getByText} = render(<NavBar routes={RouterPaths} />);
       component = getByTestId('qa-sub-nav-bar');
 
       expect(component).not.toBeNull();

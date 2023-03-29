@@ -20,9 +20,9 @@ describe('CarrouselDetail component', () => {
         //@ts-ignore
         expect(component.classList.contains('c-carrousel-detail'));
         //@ts-ignore
-        expect(getByText(testText.title).textContent).toBe(testText.title)
+        expect(getByText(testData.text.title).textContent).toBe(testData.text.title)
         //@ts-ignore
-        expect(getByText(testText.description).textContent).toBe(testText.description)
+        expect(getByText(testData.text.description).textContent).toBe(testData.text.description)
         /* console.log(container);
         expect(container).toContainElement('source')
         expect(container).toContainElement('img') */
