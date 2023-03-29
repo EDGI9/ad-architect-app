@@ -1,16 +1,19 @@
+import {Components} from "../../interfaces/Components.d";
+
 import {it, describe, expect} from "vitest";
 import {render} from '@testing-library/react';
 import {CarrouselDetail} from "./CarrouselDetail.js"
-import { slider } from "../../__mock__/slider";
+import { images } from "../../__mock__/images";
 
 describe('CarrouselDetail component', () => {
     let component: object;
-    /* Add Image interface */
-    const testImageSource: object = slider[0];
-    const testText: object = {title: "Test Title", description: "Test Description"}; // Add CarrouselDetail type globally
+    const testData: Components.CarrouselDetail = {
+        image: images.big_img_1,
+        text: {title: "Test Title", description: "Test Description"}
+    } 
 
     it('Component works', () => {
-        const {getByTestId, getByText} = render(<CarrouselDetail image={testImageSource} text={testText} />);
+        const {getByTestId, getByText} = render(<CarrouselDetail image={testData.image} text={testData.text} />);
         component = getByTestId('qa-carrousel-detail');
         
         expect(component).not.toBeNull();

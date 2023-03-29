@@ -19,7 +19,7 @@ export function CarrouselDetail(props: Components.CarrouselDetail): JSX.Element 
 
     return (
         <div data-testid="qa-carrousel-detail" className="c-carrousel-detail">
-            <Image imageData={props.image} />
+            <Image image={props.image} />
 
             <Card backgroundColor="#E1E1E1" borderRadius={6} className={`c-carrousel-detail__details-card ${visibiliTyClass}`}>
                 <Button text="<" type="terceary" round={true} small={true} onClick={toggleDetailsContainer}></Button>

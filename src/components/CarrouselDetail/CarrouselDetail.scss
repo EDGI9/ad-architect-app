@@ -17,12 +17,13 @@
         height: 70%;
         max-width: 200px;
         left: 100%;
+        transform: translate(0);
         z-index: 2;
-        transition: left 0.5s;
+        transition: transform 0.5s;
         transition-timing-function: ease-in-out;
     }
     .c-carrousel-detail__details-card--visible {
-        left: 55%;
+        transform: translate(-100%);
     }
 
     .c-button {
