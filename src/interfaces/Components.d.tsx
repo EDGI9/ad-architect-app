@@ -33,11 +33,13 @@ export namespace Components {
         slides: Array<Images.Image>
     }
 
+    //TODO fetch intreface from employees
     export interface EmployeeCard {
         image: Images.Image
         title: string
         subtitle: string
         text: string
+        backgroundColor?: string
     }
     
     export interface Footer {
