@@ -1,0 +1,15 @@
+@import '../../assets/styles/_variables.scss';
+.c-sub-nav-bar {
+     background-color: rgba($secondary-color, 0.5);
+     width: 100%;     
+     
+     .c-sub-nav-bar__list {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          align-items: center;
+          justify-content: space-evenly;
+          padding: 15px 20px ;
+     }
+     
+}

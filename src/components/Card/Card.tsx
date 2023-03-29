@@ -1,18 +1,18 @@
-interface Card {
-    color: string
-    borderRadius: number
-}
+import { CSSProperties } from "react"
+import {Components} from "../../interfaces/Components.d";
+import "./Card.scss"
 
-export function Card(props: Card) {
-    const style = {
-        color: props.color ? `#${props.color}` : "#000",
-        borderRadius: props.borderRadius ? props.borderRadius : "auto"
+
+export function Card(props: Components.Card): JSX.Element {
+
+    const style: CSSProperties = {
+        backgroundColor: props.backgroundColor !== undefined ? `${props.backgroundColor}` : "#FFF",
+        borderRadius: props.borderRadius !== undefined ? props.borderRadius : "auto"
     }
 
     return (
-        <div data-testid="qa-card" className="c-card" style={style}>
+        <div data-testid="qa-card" className={`c-card ${props.className}`} style={style}>
             {
-            //@ts-ignore
             props.children
             }
         </div>

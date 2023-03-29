@@ -1,0 +1,22 @@
+@import '../../assets/styles/_variables.scss';
+.c-referral-name {
+   max-width: 700px;
+   min-width: 500px;
+
+   :first-child {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+   }
+
+   .c-referral-name__text{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+   }
+
+   .c-referral-name__title, .c-referral-name__subtitle {
+        text-align: start;
+   }
+}

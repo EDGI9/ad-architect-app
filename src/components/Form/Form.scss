@@ -1,0 +1,26 @@
+@import '../../assets/styles/_variables.scss';
+.c-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    font-family: $secondary-font; //replace with Satoshi
+
+    .c-form__main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        > * {
+            margin-top: 20px;
+        }
+        
+        :first-child {
+            margin-top: 0;
+        }
+        :last-child {
+            margin-bottom: 20px ;
+        }
+    }
+}

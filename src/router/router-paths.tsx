@@ -1,5 +1,8 @@
+import Routes from "../interfaces/Routes.d";
+
 const baseUrl ="/ad-architect-app"
-export const RouterPaths = {
+
+export const RouterPaths: Routes = {
     home: {
         text: 'Home',
         path: `${baseUrl}/`

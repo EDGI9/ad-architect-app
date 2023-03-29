@@ -1,20 +1,12 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import {Components} from "../../interfaces/Components.d";
+import {Images} from "../../interfaces/Image.d";
 import { Image } from "../Image/Image";
 
-/* Use image interface for the slides */
-interface Carrousel {
-  slides: [
-    {
-      src: string
-      name: string
-    }
-  ]
-}
 
 const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -32,7 +24,10 @@ const responsive = {
     }
   };
 
-export function CarrouselSmall(props: Carrousel) {
+export function CarrouselSmall(props: Components.CarrouselSmall) {
+
+    const slides = props.slides.length > 0 ? props.slides : [];
+
     return (
         <Carousel 
           data-testid="qa-carrousel-small" 
@@ -43,10 +38,9 @@ export function CarrouselSmall(props: Carrousel) {
           autoPlaySpeed={1000}
           transitionDuration={5000}
           removeArrowOnDeviceType={["tablet", "mobile"]}>
-          {/* Add interface for image */}
             {
-              props.slides.map((slide: object, index) => (
-                <Image imageData={slide} height={100} width={100} key={index} />
+              slides.map((slide: Images.Image, index) => (
+                 <Image image={slide} height={100} width={100} key={index} />
               ))
             }
         </Carousel>
