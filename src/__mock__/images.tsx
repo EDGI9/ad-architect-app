@@ -11,6 +11,9 @@ import logo from "../assets/images/logo.png";
 import logoName from "../assets/images/logoName.png";
 import logo2 from "../assets/images/logo2.png";
 import logoName2 from "../assets/images/logoName2.png";
+import employee1 from "../assets/images/employee_1.png";
+import employee2 from "../assets/images/employee_2.png";
+import employee3 from "../assets/images/employee_3.png";
 
 
 export const images: Images.ImageList = {
@@ -61,5 +64,17 @@ export const images: Images.ImageList = {
     'logo_name_2' : {
         src: logoName2,
         name: 'Ad Architects'
+    },
+    'employee_1' : {
+        src: employee1,
+        name: 'Employee 1'
+    },
+    'employee_2' : {
+        src: employee2,
+        name: 'Employee 2'
+    },
+    'employee_3' : {
+        src: employee3,
+        name: 'Employee 3'
     },
 };
