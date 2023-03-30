@@ -11,6 +11,7 @@ export namespace Components {
         type?: string
         round?: boolean
         small?: boolean
+        className?: string
         onClick?: MouseEventHandler
     }
 
@@ -90,5 +91,6 @@ export namespace Components {
     export interface Title {
         type: string
         text: string
+        className?: string
     }
   }

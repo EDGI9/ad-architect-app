@@ -5,20 +5,24 @@
     border-radius: 15px;
     font-family: $primary-font;
     font-size: $button-font-size-big;
+    &:hover{
+        cursor: pointer;
+    }
 
     &.c-button--round{
         border-radius: 100px;
     }
     
     &.c-button--small{
+        border-radius: 5px;
         padding: $button-padding-small;
+        font-size: $button-font-size-small;
     }
     
     &.c-button--primary{
         background-color: $primary-color;
         color: $white-color;
         &:hover{
-            cursor: pointer;
             background-color: darken($color: $primary-color, $amount: 5) ;
         }
     }
@@ -26,7 +30,6 @@
         background-color: transparent; 
         color: $white-color;
         &:hover{
-            cursor: pointer;
             background-color: $white-color;
             color: rgba($secondary-color, 0.9);
         }
@@ -34,8 +37,5 @@
     &.c-button--terceary{
         background-color: $lightest-gray-color; 
         color: $gray-color;
-        &:hover{
-            cursor: pointer;
-        }
     }
 }
