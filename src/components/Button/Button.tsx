@@ -5,6 +5,8 @@ export function Button(props: Components.Button): JSX.Element {
     let buttonType: string;
     let isRound: string = props.round !== undefined ? 'c-button--round' : '';
     let isSmall: string = props.small !== undefined ? 'c-button--small' : '';
+    const classList = props.className !== undefined ? props.className : '';
+    
     switch(props.type) {
         case 'primary':
             buttonType = 'c-button--primary'
@@ -19,6 +21,6 @@ export function Button(props: Components.Button): JSX.Element {
             buttonType = 'c-button--primary'
     }
     return (
-        <button data-testid="qa-button" className={`c-button ${buttonType} ${isRound} ${isSmall}`} onClick={props.onClick}>{props.text}</button>
+        <button data-testid="qa-button" className={`c-button ${buttonType} ${isRound} ${isSmall} ${classList}`} onClick={props.onClick}>{props.text}</button>
     ) 
 }
