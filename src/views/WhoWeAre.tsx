@@ -3,6 +3,7 @@ import { EmployeeCard } from "../components/EmployeeCard/EmployeeCard";
 import { Button } from "../components/Button/Button";
 import { Card } from "../components/Card/Card";
 import { employees } from "../__mock__/employees";
+import  "../assets/styles/utilities.scss";
 
 export function WhoWeAre(): JSX.Element{
     let employeeList;
@@ -14,9 +15,9 @@ export function WhoWeAre(): JSX.Element{
     }
 
     return (
-        <div className="max-w-screen-2xl">
+        <div className="w-full">
                 <section className="flex justify-start my-16">
-                    <Title type="h1" text="Who we are"></Title>
+                    <Title type="h1" text="Who we are" className="text-8xl md:text-9xl u-text-lightest-gray"></Title>
                 </section>
                 <section className="flex justify-center my-28 ">
                     <Card backgroundColor="#E1E1E1" className="w-screen flex justify-center items-center flex-col md:flex-row md:space-x-12">
@@ -25,11 +26,11 @@ export function WhoWeAre(): JSX.Element{
                 </section>
                 <section className="flex justify-center my-28">
                     <div className="flex justify-center items-start flex-col md:flex-row md:space-x-12 mx-16 md:mx-0">
-                        <div className="w-3/5">
+                        <div className="w-full md:w-3/5 mb-5 md:mb-0">
                             <Title type="h2" text="Let’s start a conversation!"></Title>
                             <Title type="h6" text="Get in touch for any questions you may have and we’ll work together to find the best solution."></Title>
                         </div>
-                        <Button text="get in touch"></Button>
+                        <Button text="get in touch" className="w-full md:w-auto" ></Button>
                     </div>
                 </section>
         </div>
