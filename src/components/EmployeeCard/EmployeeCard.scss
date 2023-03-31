@@ -2,6 +2,7 @@
 .c-employee-card {
     max-width: 260px;
     color: $dark-color;
+    font-family: $terceary-font;
 
     :first-child {
         display: flex;
@@ -9,4 +10,22 @@
         justify-content: center;
         align-items: center;
     }
+    .c-employee-card__title {
+        font-weight: 700;
+        font-size: 14px;
+        margin-top: 15px;
+        line-height: 24px;
+    }
+    .c-employee-card__subtitle {
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 15px;
+        line-height: 18px;
+    }
+    .c-employee-card__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
 }
