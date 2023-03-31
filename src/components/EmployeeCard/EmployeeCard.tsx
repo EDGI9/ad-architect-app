@@ -12,23 +12,27 @@ export function EmployeeCard(props: Components.EmployeeCard) {
     let title; 
     let subtitle; 
     let text;
+    let backgroundColor;
     
-    if (props.image) {
+    if (props.image !== undefined) {
         image = <Image image={props.image} height={200} width={200} />
     } 
-    if (props.title) {
+    if (props.title !== undefined) {
         title = <Title type="h3" text={props.title} />
     } 
-    if (props.title) {
+    if (props.title !== undefined) {
         subtitle = <Title type="h4" text={props.subtitle} />
     } 
-    if (props.text) {
+    if (props.text !== undefined) {
         text = <Title type="h5" text={props.text} />
+    } 
+    if (props.backgroundColor !== undefined) {
+        backgroundColor = props.backgroundColor
     } 
 
     return (
         <div data-testid="qa-employee-card" className="c-employee-card">
-            <Card backgroundColor="#FFF" borderRadius={0}>
+            <Card backgroundColor={backgroundColor} borderRadius={0}>
                 <div className="c-employee-card__image">
                     {image}
                 </div>
