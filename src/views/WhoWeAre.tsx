@@ -21,7 +21,7 @@ export function WhoWeAre(): JSX.Element{
                     <PageTitle text="Who we are"/>
                 </section>
                 <section className="flex justify-center my-28 ">
-                    <Card backgroundColor="#E1E1E1" className="w-screen flex justify-center items-center md:items-top flex-col md:flex-row md:space-x-12">
+                    <Card backgroundColor="#E1E1E1" className="w-screen flex justify-center items-center md:items-start flex-col md:flex-row md:space-x-12">
                         {employeeList}
                     </Card>
                 </section>
