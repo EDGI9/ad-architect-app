@@ -1,0 +1,8 @@
+@import '../../assets/styles/_variables.scss';
+.c-page-title {
+   font-family: $primary-font;
+   font-size: $page-title-size;
+   font-weight: 800;
+   line-height: 70%;
+   color: $lightest-gray-color;
+}

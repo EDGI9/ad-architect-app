@@ -57,6 +57,11 @@ export namespace Components {
         routes: Route 
     }
 
+    export interface PageTitle {
+        text: string 
+        className?: string
+    }
+
     export interface ReferralName {
         title: string
         subtitle: string
