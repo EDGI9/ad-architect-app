@@ -2,6 +2,7 @@ import { Title } from "../components/Title/Title";
 import { EmployeeCard } from "../components/EmployeeCard/EmployeeCard";
 import { Button } from "../components/Button/Button";
 import { Card } from "../components/Card/Card";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 import { employees } from "../__mock__/employees";
 import  "../assets/styles/utilities.scss";
 
@@ -17,7 +18,7 @@ export function WhoWeAre(): JSX.Element{
     return (
         <div className="w-full">
                 <section className="flex justify-start my-16">
-                    <Title type="h1" text="Who we are" className="text-8xl md:text-9xl u-text-lightest-gray"></Title>
+                    <PageTitle text="Who we are"/>
                 </section>
                 <section className="flex justify-center my-28 ">
                     <Card backgroundColor="#E1E1E1" className="w-screen flex justify-center items-center md:items-top flex-col md:flex-row md:space-x-12">
