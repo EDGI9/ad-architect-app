@@ -24,7 +24,7 @@ export function EmployeeCard(props: Components.EmployeeCard) {
         subtitle = <Title type="h4" text={props.subtitle} />
     } 
     if (props.text !== undefined) {
-        text = <p>{props.text} </p>
+        text = <p>{props.text}</p>
     } 
     if (props.backgroundColor !== undefined) {
         backgroundColor = props.backgroundColor
