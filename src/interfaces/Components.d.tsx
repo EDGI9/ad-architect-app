@@ -1,6 +1,7 @@
 import { MouseEventHandler, ReactNode } from "react";
 import  Route  from "./Routes.d";
 import {Images} from "./Image.d";
+import {Employees} from "./Employees.d";
 
 
 
@@ -28,6 +29,10 @@ export namespace Components {
             title: string
             description: string
         }
+    }
+
+    export interface CarrouselBig {
+        slides: Array<Images.Image>
     }
 
     export interface CarrouselSmall {
