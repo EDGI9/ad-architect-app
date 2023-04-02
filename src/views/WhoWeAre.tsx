@@ -28,8 +28,8 @@ export function WhoWeAre(): JSX.Element{
                 <section className="flex justify-center my-28">
                     <div className="flex justify-center items-start flex-col md:flex-row md:space-x-12 mx-16 md:mx-0">
                         <div className="w-full md:w-3/5 mb-5 md:mb-0">
-                            <Title type="h2" text="Let’s start a conversation!"></Title>
-                            <Title type="h6" text="Get in touch for any questions you may have and we’ll work together to find the best solution."></Title>
+                            <Title type="h2" text="Let’s start a conversation!" className="font-bold text-xl md:text-3xl text-center md:text-left"></Title>
+                            <p className="text-center md:text-left">Get in touch for any questions you may have and we’ll work together to find the best solution.</p>
                         </div>
                         <Button text="Get in touch" className="w-full md:w-auto" ></Button>
                     </div>
