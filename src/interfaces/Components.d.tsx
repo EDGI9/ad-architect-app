@@ -34,12 +34,7 @@ export namespace Components {
         slides: Array<Images.Image>
     }
 
-    //TODO fetch intreface from employees
-    export interface EmployeeCard {
-        image: Images.Image
-        title: string
-        subtitle: string
-        text: string
+    export interface EmployeeCard extends Employees.Employee {
         backgroundColor?: string
     }
     
