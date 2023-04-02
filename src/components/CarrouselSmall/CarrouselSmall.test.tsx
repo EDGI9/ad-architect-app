@@ -7,7 +7,7 @@ describe('CarrouselSmall component', () => {
     let component: object;
 
     it.skip('Component works', () => {
-        const {getByTestId} = render(<CarrouselSmall slides={slider} />);
+        const {getByTestId} = render(<CarrouselSmall slides={slider.small_slider} />);
         component = getByTestId('qa-carrousel-small');
         
         expect(component).not.toBeNull();
