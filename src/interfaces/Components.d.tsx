@@ -51,6 +51,7 @@ export namespace Components {
         image: Images.Image
         height?: number
         width?: number
+        className?: string
     }
 
     export interface NavBar {
