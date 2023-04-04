@@ -1,6 +1,7 @@
 import { MouseEventHandler, ReactNode } from "react";
 import  Route  from "./Routes.d";
 import {Images} from "./Image.d";
+import {Employees} from "./Employees.d";
 
 
 
@@ -30,16 +31,15 @@ export namespace Components {
         }
     }
 
+    export interface CarrouselBig {
+        slides: Array<Images.Image>
+    }
+
     export interface CarrouselSmall {
         slides: Array<Images.Image>
     }
 
-    //TODO fetch intreface from employees
-    export interface EmployeeCard {
-        image: Images.Image
-        title: string
-        subtitle: string
-        text: string
+    export interface EmployeeCard extends Employees.Employee {
         backgroundColor?: string
     }
     
@@ -51,6 +51,7 @@ export namespace Components {
         image: Images.Image
         height?: number
         width?: number
+        className?: string
     }
 
     export interface NavBar {

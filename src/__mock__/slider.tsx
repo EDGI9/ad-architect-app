@@ -1,24 +1,52 @@
 import {Images} from "../interfaces/Image.d";
-import img1 from "../assets/images/img1.png";
-import img2 from "../assets/images/img2.png";
-import img3 from "../assets/images/img3.png";
-import img4 from "../assets/images/img4.png";
+import bigSliderImg1 from "../assets/images/bigSliderImg1.png";
+import bigSliderImg2 from "../assets/images/bigSliderImg2.png";
+import bigSliderImg3 from "../assets/images/bigSliderImg3.png";
+import bigSliderImg4 from "../assets/images/bigSliderImg4.png";
+import smallSliderImg1 from "../assets/images/smallSliderImg1.png";
+import smallSliderImg2 from "../assets/images/smallSliderImg2.png";
+import smallSliderImg3 from "../assets/images/smallSliderImg3.png";
+import smallSliderImg4 from "../assets/images/smallSliderImg4.png";
 
-export const slider: Images.Image[] = [
+const bigImageSlider: Images.Image[] = [
     {
-        src: img1,
-        name: 'img1'
+        src: bigSliderImg1,
+        name: 'bigSliderImg1'
     },
     {
-        src: img2,
-        name: 'img2'
+        src: bigSliderImg2,
+        name: 'bigSliderImg2'
     },
     {
-        src: img3,
-        name: 'img3'
+        src: bigSliderImg3,
+        name: 'bigSliderImg3'
     },
     {
-        src: img4,
-        name: 'img4'
+        src: bigSliderImg4,
+        name: 'bigSliderImg4'
     }
-];
+]
+
+const smallImageSlider: Images.Image[] = [
+    {
+        src: smallSliderImg1,
+        name: 'smallSliderImg1'
+    },
+    {
+        src: smallSliderImg2,
+        name: 'smallSliderImg2'
+    },
+    {
+        src: smallSliderImg3,
+        name: 'smallSliderImg3'
+    },
+    {
+        src: smallSliderImg4,
+        name: 'smallSliderImg4'
+    }
+]
+
+export const slider = {
+    big_slider : bigImageSlider,
+    small_slider : smallImageSlider,
+}
