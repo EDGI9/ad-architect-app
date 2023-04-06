@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 400px;
-    font-family: $secondary-font; //replace with Satoshi
+    font-family: $primary-font;
 
     .c-form__main-section {
         display: flex;
@@ -22,5 +22,9 @@
         :last-child {
             margin-bottom: 20px ;
         }
+    }
+
+    .c-form__header {
+        margin-bottom: 25px;
     }
 }
