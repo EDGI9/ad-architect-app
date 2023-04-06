@@ -14,5 +14,9 @@ export const RouterPaths: Routes = {
     whoWeAre: {
         text: 'Who We Are',
         path: `${baseUrl}/whoweare`
+    },
+    contactUs: {
+        text: 'Contact Us',
+        path: `${baseUrl}/contactus`
     }
 } as const;
