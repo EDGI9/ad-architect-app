@@ -12,8 +12,8 @@ export function Form(props) {
         <Card backgroundColor="#FFF" borderRadius={5}>
             <form data-testid="qa-form" className="c-form">
                 <header className="c-form__header">
-                    <Title type='h2' text='Let’s start a conversation! '/>
-                    <Title type='h5' text='Get in touch for any questions and ideas you may have and we’ll work together to find the best solution. '/>
+                    <Title type='h1' text='Let’s start a conversation!'/>
+                    <p>Get in touch for any questions and ideas you may have and we’ll work together to find the best solution.</p>
                 </header>
                 <section className="c-form__main-section">
                     <TextInput placeholder="Name" type="secondary"/> 
