@@ -1,8 +1,15 @@
 @import '../../assets/styles/_variables.scss';
 .c-page-title {
    font-family: $primary-font;
-   font-size: $page-title-size;
+   font-size: $page-title-size-big;
    font-weight: 800;
    line-height: 70%;
    color: $lightest-gray-color;
+
+   @media (max-width: $breakpoint-tablet) {
+      font-size: $page-title-size-small;
+   }
+   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+      font-size: $page-title-size-medium;
+   }
 }

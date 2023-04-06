@@ -21,7 +21,9 @@ $terceary-font: 'Public Sans';
 //Font Sizes
 $button-font-size-big: 22px;
 $button-font-size-small: 14px;
-$page-title-size: 230px;
+$page-title-size-big: 14rem;
+$page-title-size-medium: 100px;
+$page-title-size-small: 80px;
 
 //Spacing
 $button-padding: 26px 46px;
@@ -29,3 +31,8 @@ $button-padding-small: 6px 16px;
 $card-padding: 32px 42px;
 $input-padding: 16px 16px;
 $navbar-padding: 12px 30px;
+
+//Breakpoints
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 640px;
