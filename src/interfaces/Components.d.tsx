@@ -37,6 +37,7 @@ export namespace Components {
 
     export interface CarrouselSmall {
         slides: Array<Images.Image>
+        onClick?: MouseEventHandler
     }
 
     export interface EmployeeCard extends Employees.Employee {
@@ -53,6 +54,7 @@ export namespace Components {
         width?: number
         imgClassName?: string
         className?: string
+        onClick?: MouseEventHandler
     }
 
     export interface NavBar {
