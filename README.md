@@ -3,6 +3,8 @@
 This project is a collaboration between me and [Sofia Dias (UI/UX Designer)](https://dribbble.com/bySofia).
 The [design](https://dribbble.com/shots/20492157-Architects-Landing-Page) was created by Sofia where afterwards it was used to develop the application. 
 
+![image](https://user-images.githubusercontent.com/24766085/230608305-de8dbd6c-478c-4418-a634-d98eb1f1e4d0.png)
+
 ## Demo
 [Ad-architect-app](https://edgi9.github.io/ad-architect-app/)
 
