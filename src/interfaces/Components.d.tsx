@@ -39,6 +39,11 @@ export namespace Components {
         slides: Array<Images.Image>
         onClick?: MouseEventHandler
     }
+    export interface ContactBlock {
+        title: string
+        text: string
+        backgroundColor?: string
+    }
 
     export interface EmployeeCard extends Employees.Employee {
         backgroundColor?: string
