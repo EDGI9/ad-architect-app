@@ -7,7 +7,8 @@ import { slider } from "../../__mock__/slider";
 
 describe('EmployeeCard component', () => {
     let component: object;
-    const testImageSource: Images.Image = slider.small_slider[0];
+    //TODO: Replace image used with employee image
+    const testImageSource: Images.Image = slider[0];
     const testTitle: string = "Test Title";
     const testSubtitleText: string = "Test Subtitle";
     const testText: string = "Test Text";
