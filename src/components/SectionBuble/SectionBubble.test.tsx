@@ -1,14 +1,22 @@
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {SectionBubble} from "./SectionBubble.js"
+import {Components} from "../../interfaces/Components.d";
+
 
 describe('SectionBubble component', () => {
     let component: object;
-    const testTitle: string = "Test Title";
-    const testText: string = "Test Text";
+    const props: Components.SectionBubble = {
+        title: 'Test Title',
+        text: 'Test Text',
+    };
+
+    afterAll(() => {
+        cleanup();
+    });
 
     it('Component works', () => {
-        const {getByTestId, getByText} = render(<SectionBubble title={testTitle} text={testText} align="left"/>);
+        const {getByTestId, getByText} = render(<SectionBubble {...props}/>);
         component = getByTestId('qa-section-bubble');
 
         expect(component).not.toBeNull();
@@ -16,7 +24,7 @@ describe('SectionBubble component', () => {
         expect(component.classList.contains('c-section-bubble'));
         //@ts-ignore
         expect(component.classList.contains('c-section-bubble--align-left'));
-        expect(getByText(testTitle).textContent).toBe(testTitle)
-        expect(getByText(testText).textContent).toBe(testText)
+        expect(getByText(props.title).textContent).toBe(props.title)
+        expect(getByText(props.text).textContent).toBe(props.text)
     })
 });

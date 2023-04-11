@@ -1,20 +1,28 @@
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {SubNavBar} from "./SubNavBar.js"
+import {Components} from "../../interfaces/Components.d";
+
 
 describe('SubNavBar component', () => {
     let component: object;
-    const testItems: Array<string> = ['Item 1', 'Item 2', 'Item 3'];
+    const props: Components.SubNavBar = {
+        items: ['Item 1', 'Item 2', 'Item 3']
+    };
+
+    afterAll(() => {
+        cleanup();
+    });
 
     it('Component works', () => {
-        const {getByTestId, getByText} = render(<SubNavBar items={testItems} />);
+        const {getByTestId, getByText} = render(<SubNavBar {...props} />);
         component = getByTestId('qa-sub-nav-bar');
 
         expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-sub-nav-bar'));
-        testItems.forEach((text, index) => {
-            expect(getByText(text).textContent).toBe(testItems[index])
+        props.items.forEach((text, index) => {
+            expect(getByText(text).textContent).toBe(props.items[index])
         })
     })
 });

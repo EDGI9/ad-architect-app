@@ -1,17 +1,31 @@
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {TextArea} from "./TextArea"
+import {Components} from "../../interfaces/Components.d";
 
 describe('TextArea component', () => {
     let component: object;
-    const testText: string = "Test text";
-    it('Component works', () => {
-        const {getByTestId} = render(<TextArea text={testText}/>);
+    const props: Components.TextArea = {
+        text: "Test Text",
+        type: "secondary",
+        placeholder: "Test Placeholder",
+    };
+
+    afterAll(() => {
+        cleanup();
+    });
+   
+    //TODO: Add more tests to test type and placeholder props
+    it('Component works', async  () => {
+        const {getByTestId} = render(<TextArea {...props}/>);
         component = getByTestId('qa-textarea');
 
         expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-textarea')).toBe(true);
-        //Test to see if text is rendered inside component
+        //@ts-ignore
+        expect(component.classList.contains('c-textarea--secondary')).toBe(true);
+        //@ts-ignore
+        expect(component.value).toBe(props.text);
     })
 });

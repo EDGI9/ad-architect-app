@@ -1,13 +1,21 @@
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {CarrouselSmall} from "./CarrouselSmall.js"
+import {Components} from "../../interfaces/Components.d";
 import { slider } from "../../__mock__/slider";
 
 describe('CarrouselSmall component', () => {
     let component: object;
+    const props: Components.CarrouselSmall = {
+        slides: slider,
+    }
+
+    afterAll(() => {
+        cleanup();
+    });
 
     it.skip('Component works', () => {
-        const {getByTestId} = render(<CarrouselSmall slides={slider} />);
+        const {getByTestId} = render(<CarrouselSmall {...props} />);
         component = getByTestId('qa-carrousel-small');
         
         expect(component).not.toBeNull();

@@ -1,15 +1,21 @@
 import { it, describe } from 'vitest'
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {NavBar} from "./NavBar.js"
 import {RouterPaths} from "../../router/router-paths";
-
+import {Components} from "../../interfaces/Components.d";
 
 describe('NavBar component', () => {
   let component: object;
-  const testItems: Array<string> = ['Item 1', 'Item 2', 'Item 3'];
+  const props: Components.NavBar = {
+    routes: RouterPaths
+  };
+
+  afterAll(() => {
+    cleanup();
+  });
 
   it.skip('Component works', () => {
-      const {getByTestId, getByText} = render(<NavBar routes={RouterPaths} />);
+      const {getByTestId, getByText} = render(<NavBar {...props}/>);
       component = getByTestId('qa-sub-nav-bar');
 
       expect(component).not.toBeNull();

@@ -1,22 +1,29 @@
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {Title} from "./Title"
+import {Components} from "../../interfaces/Components.d";
 
 describe('Title component', () => {
   let component: object;
-  let testText: string = "Test Text";
-  let testType: string = "h1";
+  const props: Components.Title = {
+    type: 'h1',
+    text: 'Test Text',
+  };
+
+  afterAll(() => {
+    cleanup();
+  });
   
   it('Component works', () => {
-    const {getByTestId} = render(<Title type={testType} text={testText}></Title>)
+    const {getByTestId} = render(<Title {...props}></Title>)
     component = getByTestId('qa-title');
     
     expect(component).not.toBeNull();
     //@ts-ignore
     expect(component.classList.contains('c-title')).toBe(true);
     //@ts-ignore
-    expect(component.nodeName).toEqual(testType.toUpperCase())
+    expect(component.nodeName).toEqual(props.type.toUpperCase())
     //@ts-ignore
-    expect(component.textContent).toEqual(testText)
+    expect(component.textContent).toEqual(props.text)
   })
 });

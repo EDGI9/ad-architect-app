@@ -1,16 +1,24 @@
-import {Images} from "../../interfaces/Image.d";
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {ContactBlock} from "./ContactBlock"
+import {Components} from "../../interfaces/Components.d";
 
 
 describe('ContactBlock component', () => {
     let component: object;
-    const testTitle: string = "Test Title";
-    const testText: string = "Test Text";
+    const props: Components.ContactBlock = {
+        title: "Test Title",
+        text: "Test Text",
+        backgroundColor: "#FFF"
+    }
 
+    afterAll(() => {
+        cleanup();
+    });
+
+    //TODO: Add test to test color prop
     it('Component works', () => {
-        const {getByTestId} = render(<ContactBlock title={testTitle} text={testText}/>);
+        const {getByTestId} = render(<ContactBlock {...props}/>);
         component = getByTestId('qa-contact-block');
 
         expect(component).not.toBeNull();
