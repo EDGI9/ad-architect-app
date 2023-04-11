@@ -83,7 +83,7 @@ export namespace Components {
     export interface SectionBubble {
         title: string
         text: string
-        align: string
+        align?: string
     }
 
     export interface SubNavBar {
