@@ -1,0 +1,27 @@
+@import '../../assets/styles/_variables.scss';
+.c-carrousel-small {
+     color: $white-color;
+     font-family: $terceary-font;
+
+     .c-carrousel-small__slide-container{
+          padding: 50px 20px;
+          gap: 20px;
+     }
+     
+     .c-carrousel-small__slide-item-container{
+          display: flex;
+          justify-content: center;
+          min-width: 150px;
+          min-height: 150px;
+     }
+
+     .c-carrousel-small__slide-container img  {
+          border-radius: 30px;
+          border: 2px solid $lightest-gray-color;
+     }
+
+     .c-carrousel-small__slide-item{
+          position: relative;
+     }
+
+}

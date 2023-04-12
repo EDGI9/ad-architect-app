@@ -4,23 +4,28 @@ import {Components} from "../../interfaces/Components.d";
 import {Images} from "../../interfaces/Image.d";
 import { Image } from "../Image/Image";
 
+import "./CarrouselSmall.scss"
 
 const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 4
+      items: 5,
+      partialVisibilityGutter: 30
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 4,
+      partialVisibilityGutter: 20
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 3
+      items: 4,
+      partialVisibilityGutter: 10
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 3,
+      partialVisibilityGutter: 15
     }
   };
 
@@ -32,7 +37,12 @@ export function CarrouselSmall(props: Components.CarrouselSmall) {
         <Carousel 
           data-testid="qa-carrousel-small" 
           containerClass="c-carrousel-small" 
+          itemClass="c-carrousel-small__slide-item-container"
+          sliderClass="c-carrousel-small__slide-container"
+          partialVisible={true} 
           responsive={responsive} 
+          swipeable={true} 
+          draggable={true} 
           infinite={true}
           autoPlay={true}
           autoPlaySpeed={1000}
@@ -40,7 +50,7 @@ export function CarrouselSmall(props: Components.CarrouselSmall) {
           removeArrowOnDeviceType={["tablet", "mobile"]}>
             {
               slides.map((slide: Images.Image, index) => (
-                 <Image image={slide} height={100} width={100} key={index} onClick={props.onClick}/>
+                 <Image image={slide} height={150} width={150} key={index} onClick={props.onClick}/>
               ))
             }
         </Carousel>
