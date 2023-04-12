@@ -8,14 +8,16 @@ import { CarrouselDetail } from "../components/CarrouselDetail/CarrouselDetail";
 import { ContactBlock } from "../components/ContactBlock/ContactBlock";
 import { Card } from "../components/Card/Card";
 import { Counter } from "../components/Counter/Counter";
+import { Title } from "../components/Title/Title";
 import { slider } from "../__mock__/slider";
+import { RenovationPaths } from "../router/renovations-paths"
 
 export function Renovations(): JSX.Element {
-    const subNavBarLinks = ['Interiors', 'Exteriors', 'Kitchens', 'Bathrooms', 'Exterior', 'Gardens'];
     const image: Images.Image = {id: 1 , src:'', name:'', text:{title:'', description:''}}// Figure out cleaner way of doing this
 
     let [currentImage, setCurrentImage] = useState(image);
     let [currentImageIndex, setCurrentImageIndex] = useState(1);
+    let [currentNav, setCurrentNav] = useState("");
 
     const updateCurrentImage = (image: Images.Image) => {
         const index = slider.findIndex(item => item.name == image.name) + 1;
@@ -23,8 +25,13 @@ export function Renovations(): JSX.Element {
         setCurrentImage(image);
     }
 
+    const updateCurrentNav = (navTitle:string):void => {
+        setCurrentNav(navTitle)
+    }
+
     useEffect( ()=> {
         setCurrentImage(slider[0]);
+        setCurrentNav(RenovationPaths.kitchens.text)
     } , [])
     
    
@@ -33,7 +40,7 @@ export function Renovations(): JSX.Element {
             <section className="flex justify-start my-16 text-sm">
                 <PageTitle text="Renovations"/>
             </section>
-            <SubNavBar items={subNavBarLinks}></SubNavBar>
+            <SubNavBar items={RenovationPaths} currentNav={currentNav} onClick={updateCurrentNav}></SubNavBar>
             <section className="mt-28">
                 <CarrouselBig slides={slider}></CarrouselBig>
             </section>
@@ -43,7 +50,9 @@ export function Renovations(): JSX.Element {
                         
                         <div className='flex justify-self-start self-start flex-col md:flex-row md:items-center mb-4'>
                             <Counter number={currentImageIndex} type="secondary" className="mr-5"/>
-                            <p>{currentImage.text.title}</p>
+                            <div className='flex items-center gap-2'>
+                                <Title type='h3' text={currentNav} className='text-[#7B7B7B]' /> / <Title type='h3' text={currentImage.text.title} className='text-[#7B7B7B] font-light' />
+                            </div>
                         </div>
                         <div>
                             <CarrouselDetail image={currentImage} text={currentImage.text}></CarrouselDetail>
