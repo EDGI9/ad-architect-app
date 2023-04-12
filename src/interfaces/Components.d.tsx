@@ -13,6 +13,7 @@ export namespace Components {
         round?: boolean
         small?: boolean
         className?: string
+        active?: boolean
         onClick?: MouseEventHandler
     }
 
@@ -93,7 +94,13 @@ export namespace Components {
     }
 
     export interface SubNavBar {
-        items: Array<string>
+        items: {
+            [key: string] : {
+                text:string
+            }
+        }
+        currentNav?: string
+        onClick?: MouseEventHandler
     }
     
     export interface TextArea {
