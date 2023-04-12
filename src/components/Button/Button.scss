@@ -22,14 +22,14 @@
     &.c-button--primary{
         background-color: $primary-color;
         color: $white-color;
-        &:hover{
+        &:hover, &.c-button--active{
             background-color: darken($color: $primary-color, $amount: 5) ;
         }
     }
     &.c-button--secondary{
         background-color: transparent; 
         color: $white-color;
-        &:hover{
+        &:hover, &.c-button--active{
             background-color: $white-color;
             color: rgba($secondary-color, 0.9);
         }
