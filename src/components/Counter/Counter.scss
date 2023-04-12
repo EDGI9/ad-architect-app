@@ -1,0 +1,25 @@
+@import '../../assets/styles/_variables.scss';
+.c-counter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 15px;
+    font-family: $primary-font;
+    text-align: center;
+    min-width: 50px;
+    height: 50px;
+
+    .c-counter__number {
+        min-width: 15px;
+        margin: 5px;
+    }
+    
+    &.c-counter--primary{
+        border: 2px solid $white-color;
+        color: $white-color;
+    }
+    &.c-counter--secondary{
+        border: 2px solid $secondary-color;
+        color: $secondary-color;
+    }
+}
