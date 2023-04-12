@@ -3,6 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import {Components} from "../../interfaces/Components.d";
 import {Images} from "../../interfaces/Image.d";
 import { Image } from "../Image/Image";
+import { Counter } from "../Counter/Counter";
 
 import "./CarrouselBig.scss"
 
@@ -37,7 +38,7 @@ export function CarrouselBig(props: Components.CarrouselBig) {
           itemClass="c-carrousel-big__slide-item-container"
           responsive={responsive} 
           infinite={true}
-          autoPlay={true}
+          autoPlay={false}
           centerMode={true}
           autoPlaySpeed={1000}
           transitionDuration={5000}
@@ -45,7 +46,7 @@ export function CarrouselBig(props: Components.CarrouselBig) {
             {
               slides.map((slide: Images.Image, index) => (
                   <div className="c-carrousel-big__slide-item" key={index}>
-                      <div className="c-carrousel-big__slide-number">{index+1}.</div>
+                      <Counter number={index + 1} type="primary" className="absolute left-2 top-2"/>
                       <Image image={slide} height={380} width={400} className="c-carrousel-big__slide-image" />
                   </div>
               ))
