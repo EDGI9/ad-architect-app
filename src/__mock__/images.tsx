@@ -15,7 +15,7 @@ import employee1 from "../assets/images/employee_1.png";
 import employee2 from "../assets/images/employee_2.png";
 import employee3 from "../assets/images/employee_3.png";
 
-
+//TODO: Update list of images in mock
 export const images: Images.ImageList = {
     'icon_quotation'  : {
         src: quotation,
