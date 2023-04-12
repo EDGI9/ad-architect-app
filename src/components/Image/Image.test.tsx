@@ -31,12 +31,14 @@ describe('Image component', () => {
     
     expect(component).not.toBeNull();
     //@ts-ignore
-    expect(component.classList.contains('c-image'));
+    expect(component.classList.contains('c-image')).toBe(true);;
     expect(img).toHaveAttribute('src', props.image.src);
     expect(img).toHaveAttribute('alt', props.image.name);
-
-    expect(component).toHaveClass(props.className);
-    expect(img).toHaveClass(props.imgClassName);
+    
+    //@ts-ignore
+    expect(component.classList.contains(props.className)).toBe(true);
+    //@ts-ignore
+    expect(img.classList.contains(props.imgClassName)).toBe(true);
 
     expect(img).toHaveAttribute('width', `${props.width}px`);
     expect(img).toHaveAttribute('height', `${props.height}px`);
