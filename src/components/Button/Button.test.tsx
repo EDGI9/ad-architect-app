@@ -11,6 +11,7 @@ describe('Button component', () => {
     type: "primary",
     round: true,
     small: true,
+    active:true,
     className: "test-class",
     onClick: handleClick,
   }
@@ -27,6 +28,8 @@ describe('Button component', () => {
     expect(component.classList.contains('c-button')).toBe(true);
     //@ts-ignore
     expect(component.classList.contains('c-button--primary')).toBe(true);
+    //@ts-ignore
+    expect(component.classList.contains('c-button--active')).toBe(true);
     //@ts-ignore
     expect(component.classList.contains(props.className)).toBe(true);
     //@ts-ignore
