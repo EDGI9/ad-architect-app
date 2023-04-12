@@ -49,7 +49,7 @@ export function Renovations(): JSX.Element {
                             <CarrouselDetail image={currentImage} text={currentImage.text}></CarrouselDetail>
                         </div>
                     </div>
-                    <div className='w-1/2'>
+                    <div className='w-screen sm:w-full lg:w-2/3 mt-5'>
                         <CarrouselSmall slides={slider} onClick={updateCurrentImage}></CarrouselSmall>
                     </div>
                 </section>
