@@ -7,6 +7,7 @@ import { CarrouselSmall } from "../components/CarrouselSmall/CarrouselSmall";
 import { CarrouselDetail } from "../components/CarrouselDetail/CarrouselDetail";
 import { ContactBlock } from "../components/ContactBlock/ContactBlock";
 import { Card } from "../components/Card/Card";
+import { Counter } from "../components/Counter/Counter";
 import { slider } from "../__mock__/slider";
 
 export function Renovations(): JSX.Element {
@@ -39,8 +40,9 @@ export function Renovations(): JSX.Element {
             <Card backgroundColor='#E1E1E1' className='md:!bg-white'>
                 <section className="flex justify-center flex-col items-center">
                     <div className="flex justify-center items-center flex-col mt-28">
+                        
                         <div className='flex justify-self-start self-start flex-col md:flex-row md:items-center mb-4'>
-                            <div className='pt-4 pl-6 pb-1 pr-2 border-2 rounded-xl border-[#ECAE85] mr-5 text-[#ECAE85]'>{currentImageIndex}</div>
+                            <Counter number={currentImageIndex} type="secondary" className="mr-5"/>
                             <p>{currentImage.text.title}</p>
                         </div>
                         <div>
