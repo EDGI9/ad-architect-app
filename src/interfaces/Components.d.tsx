@@ -45,6 +45,12 @@ export namespace Components {
         backgroundColor?: string
     }
 
+    export interface Counter {
+        number: number
+        type?: string
+        className?: string
+    }
+
     export interface EmployeeCard extends Employees.Employee {
         backgroundColor?: string
     }
