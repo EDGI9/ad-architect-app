@@ -3,14 +3,16 @@
     display: flex;
     align-items: center;
     position: relative;
-    max-width: 600px;
+    max-width: 800px;
     overflow: hidden;
 
     picture,source, img {
         position: relative;
         order: 1;
         z-index: 1;
-        width: 100%; height: 100%
+        width: 100%; 
+        height: 100%;
+        border-radius: 25px;
     }
 
     .c-carrousel-detail__details-card {
@@ -28,9 +30,11 @@
         transform: translate(-100%);
     }
 
-    .c-button {
+    .c-carrousel-detail__details-card-button{
         position: absolute;
+        top: 0%;
         right: calc(100% - 15px);
+        border-radius: 25px 0 0 25px;
     }
 
     .c-carrousel-detail__text-container {
