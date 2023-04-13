@@ -13,8 +13,8 @@ export function NavBar(props: Components.NavBar): JSX.Element {
         return (
             <nav data-testid="qa-nav-bar" className="c-nav-bar">
                 <div className="c-nav-bar__logo">
-                    <Image image={images.logo} width={60} height={60}/>
-                    <Image image={images.logo_name} width={150} height={15}/>
+                    <Image image={images.LOGO} width={60} height={60}/>
+                    <Image image={images.LOGO_NAME} width={150} height={15}/>
                 </div>
                 <div className="c-nav-bar__links">
                     {
@@ -25,7 +25,7 @@ export function NavBar(props: Components.NavBar): JSX.Element {
                     } 
                 </div>
                 <div className="c-nav-bar__search">
-                    <Image image={images.icon_search} width={20} height={20}/>
+                    <Image image={images.ICON_SEARCH} width={20} height={20}/>
                 </div>
             </nav>
         );

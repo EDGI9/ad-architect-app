@@ -7,7 +7,7 @@ import { images } from "../../__mock__/images";
 import "./ReferralName.scss"
 
 export function ReferralName(props: Components.ReferralName): JSX.Element {
-    const image: Images.Image = images.icon_quotation;
+    const image: Images.Image = images.ICON_QUOTATION;
     return (
         <div data-testid="qa-referral-name" className="c-referral-name">
             <Card borderRadius={6} backgroundColor="#ECAE85E5">
