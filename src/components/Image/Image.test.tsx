@@ -11,7 +11,7 @@ describe('Image component', () => {
   let img: object;
   const handleClick = vi.fn((): void => {})
   const props: Components.Image = {
-    image: images.big_img_1,
+    image: images.BIG_IMG_1,
     className: "test-class",
     imgClassName: "img-test-class",
     width: 100,

@@ -7,7 +7,7 @@ import { images } from "../../__mock__/images";
 describe('CarrouselDetail component', () => {
     let component: object;
     const props: Components.CarrouselDetail = {
-        image: images.big_img_1,
+        image: images.BIG_IMG_1,
         text: {title: "Test Title", description: "Test Description"}
     }
 
