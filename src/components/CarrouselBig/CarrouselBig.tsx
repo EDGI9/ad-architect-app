@@ -47,7 +47,7 @@ export function CarrouselBig(props: Components.CarrouselBig) {
               slides.map((slide: Images.Image, index) => (
                   <div className="c-carrousel-big__slide-item" key={index}>
                       <Counter number={index + 1} type="primary" className="absolute left-2 top-2"/>
-                      <Image image={slide} height={380} width={400} className="c-carrousel-big__slide-image" />
+                      <Image image={slide.src} height={380} width={400} className="c-carrousel-big__slide-image" />
                   </div>
               ))
             }

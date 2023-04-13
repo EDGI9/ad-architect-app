@@ -50,7 +50,7 @@ export function CarrouselSmall(props: Components.CarrouselSmall) {
           removeArrowOnDeviceType={["tablet", "mobile"]}>
             {
               slides.map((slide: Images.Image, index) => (
-                 <Image image={slide} height={150} width={150} key={index} onClick={props.onClick}/>
+                 <Image image={slide.src} height={150} width={150} key={index} onClick={props.onClick}/>
               ))
             }
         </Carousel>
