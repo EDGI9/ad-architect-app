@@ -8,10 +8,10 @@ import {ContactUs} from "../views/ContactUs";
 export function Router(): JSX.Element {
     return (
         <Routes>
-            <Route path={RouterPaths.home.path} element={<Home />}/>
-            <Route path={RouterPaths.renovations.path} element={<Renovations />}/>
-            <Route path={RouterPaths.whoWeAre.path} element={<WhoWeAre />}/>
-            <Route path={RouterPaths.contactUs.path} element={<ContactUs />}/>
+            <Route path={RouterPaths.HOME.path} element={<Home />}/>
+            <Route path={RouterPaths.RENOVATIONS.path} element={<Renovations />}/>
+            <Route path={RouterPaths.WHO_WE_ARE.path} element={<WhoWeAre />}/>
+            <Route path={RouterPaths.CONTACT_US.path} element={<ContactUs />}/>
         </Routes>
     );
 }

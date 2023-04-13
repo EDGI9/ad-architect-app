@@ -3,19 +3,19 @@ import Routes from "../interfaces/Routes.d";
 const baseUrl ="/ad-architect-app"
 
 export const RouterPaths: Routes = {
-    home: {
+    HOME: {
         text: 'Home',
         path: `${baseUrl}/`
     } ,
-    renovations: {
+    RENOVATIONS: {
         text: 'Renovations',
         path: `${baseUrl}/renovations`
     } ,
-    whoWeAre: {
+    WHO_WE_ARE: {
         text: 'Who We Are',
         path: `${baseUrl}/whoweare`
     },
-    contactUs: {
+    CONTACT_US: {
         text: 'Contact Us',
         path: `${baseUrl}/contactus`
     }
