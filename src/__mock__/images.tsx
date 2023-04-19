@@ -40,7 +40,7 @@ import garden4 from "../assets/images/garden-4.jpg";
 import garden5 from "../assets/images/interior-5.jpg";
 
 //TODO: Update list of images in mock
-export const images: Images.ImageList = {
+export const images = {
     ICON_QUOTATION : {
         src: quotation,
         name: 'Quotation'
