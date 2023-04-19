@@ -101,7 +101,7 @@ export namespace Components {
    
 
     export interface SubNavBar {
-        items: SubNAvBarItem[]
+        items?: SubNAvBarItem[]
         activeItem?: SubNAvBarItem
         onClick?: (item: SubNAvBarItem) => void
     }

@@ -1,59 +1,60 @@
-import {it, describe, expect, vi} from "vitest";
+import {it, describe, expect, beforeAll, afterAll} from "vitest";
 import { fireEvent, render, cleanup, RenderResult } from '@testing-library/react';
-import {SubNavBar} from "./SubNavBar.js"
-import {RenovationPaths} from "../../router/renovations-paths.js";
-import {Components} from "../../interfaces/Components.d";
-import { exec } from "@faker-js/faker/modules/helpers/unique.js";
-
+import { SubNavBar } from "./SubNavBar.js"
+import { RenovationPaths } from "../../router/renovations-paths.js";
+import { Components } from "../../interfaces/Components.d";
 
 describe('SubNavBar component', () => {
-    const props: Components.SubNavBar = {
-        items: RenovationPaths,
-    };
-    
+    let component: RenderResult;
+    let nav: HTMLElement;
+    let navList: HTMLElement;
+    let navListItem: HTMLElement[];
+    let navListItemButton: HTMLElement;
 
-    afterAll(() => {
-        cleanup();
+     beforeAll(() => {
+        component = render(<SubNavBar />);
     });
 
-    it('It should render properly', async () => {
+    it('Componen renders properly', () => {
 
-        //think about the option of having items optional
-        const component = render(<SubNavBar items={RenovationPaths}/>);
+        component.rerender(<SubNavBar 
+            items={RenovationPaths} 
+        />); 
 
-        const nav = component.getByTestId('qa-sub-nav-bar');
-        const navList = component.getByTestId('qa-sub-nav-bar__list');
-        const navListItem = component.getAllByTestId('qa-sub-nav-bar__list-item');
-        const navListItemButton = navListItem[0].children[0];
+        nav = component.getByTestId('qa-sub-nav-bar');
+        navList = component.getByTestId('qa-sub-nav-bar__list');
+        navListItem = component.getAllByTestId('qa-sub-nav-bar__list-item');
+        navListItemButton = navListItem[0].children[0];
                
         expect(nav).toBeTruthy();
         expect(navList).toBeTruthy();
         expect(navListItem).toBeTruthy();
         expect(navListItemButton).toBeTruthy();
-        expect(navList.children.length).toEqual(props.items.length);
-
-        component.unmount();
+        expect(navList.children.length).toEqual(RenovationPaths.length);
     });
 
-    it.only('It should handle user events and emit the selected item information', async () => {
-
+    it('Component handles user events', () => {
         const firstItem = RenovationPaths[0];
 
         function handleClick(houseArea: Components.SubNAvBarItem):void {
             expect(houseArea.id).toEqual(firstItem.id);
             expect(houseArea.text).toEqual(firstItem.text);
         }
-        
-        const component = render(<SubNavBar items={RenovationPaths} onClick={handleClick}/>);      
 
-        const navListItem = component.getAllByTestId('qa-sub-nav-bar__list-item');
-        const navListItemButton = navListItem[0].children[0];
-       
+        component.rerender(<SubNavBar 
+            items={RenovationPaths} 
+            onClick={handleClick} 
+        />);  
+        
         expect(navListItem).toBeTruthy();
         expect(navListItemButton).toBeTruthy();
 
         fireEvent.click(navListItemButton);
-        
-        component.unmount();
     });
+
+
+    afterAll(() => {
+        component.unmount();
+        cleanup();
+    }); 
 });
