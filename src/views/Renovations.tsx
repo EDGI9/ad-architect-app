@@ -1,5 +1,8 @@
 import { useState } from 'react';
-import { Images } from "../interfaces/Image.d";
+import { RenovationPaths } from "../router/renovations-paths"
+import { ImageDataDTO } from "../integration/core/dtos/ImageData.dto";
+import { SubNavBarItemDTO } from "../integration/core/dtos/SubNavBarItem.dto";
+import { slider } from "../__mock__/slider";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { SubNavBar } from "../components/SubNavBar/SubNavBar";
 import { CarrouselBig } from "../components/CarrouselBig/CarrouselBig";
@@ -9,9 +12,6 @@ import { ContactBlock } from "../components/ContactBlock/ContactBlock";
 import { Card } from "../components/Card/Card";
 import { Counter } from "../components/Counter/Counter";
 import { Title } from "../components/Title/Title";
-import { slider } from "../__mock__/slider";
-import { RenovationPaths } from "../router/renovations-paths"
-import {Components} from "../interfaces/Components.d";
 
 
 export function Renovations(): JSX.Element {
@@ -19,13 +19,13 @@ export function Renovations(): JSX.Element {
     let [currentHouseArea, setCurrentHouseArea] = useState(RenovationPaths[3]);
     let [currentImage, setCurrentImage] = useState(slider[currentHouseArea.id][0]);
 
-    const updateCurrentImage = (image: Images.Image) => {
+    const updateCurrentImage = (image: ImageDataDTO) => {
         const index = slider[currentHouseArea.id].findIndex(item => item.name == image.name) + 1;
         setCurrentImageIndex(index);
         setCurrentImage(image);
     }
 
-    const updateCurrentHouseArea= (houseArea: Components.SubNAvBarItem):void => {
+    const updateCurrentHouseArea= (houseArea: SubNavBarItemDTO):void => {
         setCurrentHouseArea(houseArea);
     }
    
