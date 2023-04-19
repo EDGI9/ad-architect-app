@@ -1,8 +1,8 @@
-import Routes from "../interfaces/Routes.d";
+import { RoutesDTO } from "../integration/core/dtos/Routes.dto";
 
 const baseUrl ="/ad-architect-app"
 
-export const RouterPaths: Routes = {
+export const RouterPaths: RoutesDTO = {
     HOME: {
         text: 'Home',
         path: `${baseUrl}/`
