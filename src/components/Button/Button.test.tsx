@@ -4,8 +4,9 @@ import {Button} from "./Button.js"
 import {Components} from "../../interfaces/Components.d";
 
 describe('Button component', () => {
-  let component: object;
-  const handleClick = vi.fn((): void => {})
+  let component: RenderResult;
+  let button: HTMLElement;
+ 
   const props: Components.Button = {
     text: "Test Text",
     type: "primary",
@@ -13,29 +14,43 @@ describe('Button component', () => {
     small: true,
     active:true,
     className: "test-class",
-    onClick: handleClick,
   }
 
-  afterAll(() => {
-    cleanup();
+  beforeAll(() => {
+    component = render(<Button />);
   });
 
-  it('Componen works', async () => {
-    const {getByTestId} = render(<Button {...props}></Button>)
-    component = getByTestId('qa-button');
-    expect(component).not.toBeNull();
+  it('Componen renders properly', () => {
+    component.rerender(<Button {...props}></Button>)
+    button = component.getByTestId('qa-button');
+
+    expect(button).toBeTruthy();
     //@ts-ignore
-    expect(component.classList.contains('c-button')).toBe(true);
+    expect(button.classList.contains('c-button')).toBeTruthy();
     //@ts-ignore
-    expect(component.classList.contains('c-button--primary')).toBe(true);
+    expect(button.classList.contains('c-button--primary')).toBeTruthy();
     //@ts-ignore
-    expect(component.classList.contains('c-button--active')).toBe(true);
+    expect(button.classList.contains('c-button--active')).toBeTruthy();
     //@ts-ignore
-    expect(component.classList.contains(props.className)).toBe(true);
+    expect(button.classList.contains(props.className)).toBeTruthy();
     //@ts-ignore
-    expect(component.textContent).toEqual(props.text)
-    //@ts-ignore
-    await fireEvent.click(component)
-    expect(handleClick).toHaveBeenCalledTimes(1);
+    expect(button.textContent).toEqual(props.text)
   })
+
+  it('Component handles user events', () => {
+        
+    const handleClick = vi.fn((): void => {})
+
+    component.rerender(<Button {...props} onClick={handleClick}></Button>)
+    button = component.getByTestId('qa-button');
+
+    expect(button).toBeTruthy();
+    fireEvent.click(button)
+    expect(handleClick).toHaveBeenCalledOnce();
+  });
+
+  afterAll(() => {
+    component.unmount();
+    cleanup();
+  });
 });

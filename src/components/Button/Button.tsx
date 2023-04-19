@@ -22,6 +22,6 @@ export function Button(props: Components.Button): JSX.Element {
             buttonType = 'c-button--primary'
     }
     return (
-        <button data-testid="qa-button" className={`c-button ${buttonType} ${isRound} ${isSmall} ${isActive} ${classList}`} onClick={props.onClick}>{props.text}</button>
+        <button data-testid="qa-button" className={`c-button ${buttonType} ${isRound} ${isSmall} ${isActive} ${classList}`} onClick={() => props?.onClick()}>{props.text}</button>
     ) 
 }
