@@ -1,5 +1,5 @@
 import { ImageDataDTO } from "./ImageData.dto";
 
-export interface ImageList {
+export interface ImageListDTO {
     [key: string]: ImageDataDTO
 }
