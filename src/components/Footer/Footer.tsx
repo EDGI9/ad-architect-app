@@ -1,13 +1,11 @@
-import {Components} from "../../interfaces/Components.d";
-import {Link} from "react-router-dom";
+import { FooterDTO } from "../../integration/core/dtos/Footer.dto";
+import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";
 import { images } from "../../__mock__/images";
+import "./Footer.scss";
 
-import "./Footer.scss"
-
-
-export function Footer(props: Components.Footer): JSX.Element {
+export function Footer(props: FooterDTO): JSX.Element {
     const hastRoutes = Object.keys(props.routes).length > 0;
     let routes;
 

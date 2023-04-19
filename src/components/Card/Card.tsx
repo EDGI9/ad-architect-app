@@ -1,9 +1,9 @@
 import { CSSProperties } from "react"
-import {Components} from "../../interfaces/Components.d";
+import { CardDTO } from "../../integration/core/dtos/Card.dto";
 import "./Card.scss"
 
 
-export function Card(props: Components.Card): JSX.Element {
+export function Card(props: CardDTO): JSX.Element {
 
     const classList = props.className !== undefined ? props.className : ''
     const style: CSSProperties = {

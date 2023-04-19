@@ -1,12 +1,12 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {CarrouselSmall} from "./CarrouselSmall.js"
-import {Components} from "../../interfaces/Components.d";
+import { CarrouselSmall } from "./CarrouselSmall.js"
+import { CarrouselSmallDTO } from "../../integration/core/dtos/CarrouselSmall.dto";
 import { slider } from "../../__mock__/slider";
 
 describe('CarrouselSmall component', () => {
     let component: object;
-    const props: Components.CarrouselSmall = {
+    const props: CarrouselSmallDTO = {
         slides: slider,
     }
 

@@ -1,16 +1,16 @@
 import "@testing-library/jest-dom"
-import {it, describe, expect, vi} from "vitest";
-import {render, fireEvent, cleanup} from '@testing-library/react';
-import {Image} from "./Image.js"
-import {Components} from "../../interfaces/Components.d";
+import { it, describe, expect, vi } from "vitest";
+import { render, fireEvent, cleanup } from '@testing-library/react';
+import { ImageDTO } from "../../integration/core/dtos/Image.dto";
 import { images } from "../../__mock__/images";
+import { Image } from "./Image.js";
 
 
 describe('Image component', () => {
   let component: object;
   let img: object;
   const handleClick = vi.fn((): void => {})
-  const props: Components.Image = {
+  const props: ImageDTO = {
     image: images.BIG_IMG_1,
     className: "test-class",
     imgClassName: "img-test-class",

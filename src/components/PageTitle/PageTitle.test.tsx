@@ -1,13 +1,14 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {PageTitle} from "./PageTitle"
-import {Components} from "../../interfaces/Components.d";
+import { PageTitleDTO } from "../../integration/core/dtos/PageTitle.dto";
+import { PageTitle } from "./PageTitle";
+
 
 
 describe('PageTitle component', () => {
     let component: object;
     const testTitleText: string =  "Test Title"
-    const props: Components.PageTitle = {
+    const props: PageTitleDTO = {
         text: "Test Text",
         className: "test-class",
     };

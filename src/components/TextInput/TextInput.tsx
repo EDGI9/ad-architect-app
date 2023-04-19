@@ -1,7 +1,7 @@
-import {Components} from "../../interfaces/Components.d";
-import "./TextInput.scss"
+import { TextInputDTO } from "../../integration/core/dtos/TextInput.dto";
+import "./TextInput.scss";
 
-export function TextInput(props: Components.TextInput): JSX.Element {
+export function TextInput(props: TextInputDTO): JSX.Element {
     let inputType: string;
     switch(props.type) {
         case 'primary':

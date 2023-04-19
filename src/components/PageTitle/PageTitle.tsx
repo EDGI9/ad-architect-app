@@ -1,7 +1,7 @@
-import {Components} from "../../interfaces/Components.d";
-import "./PageTitle.scss"
+import { PageTitleDTO } from "../../integration/core/dtos/PageTitle.dto";
+import "./PageTitle.scss";
 
-export function PageTitle(props: Components.PageTitle): JSX.Element {
+export function PageTitle(props: PageTitleDTO): JSX.Element {
 
     const classList = props.className !== undefined ? props.className : ''
     

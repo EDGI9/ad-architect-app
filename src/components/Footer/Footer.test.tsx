@@ -1,13 +1,14 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup} from '@testing-library/react';
-import {RouterPaths} from "../../router/router-paths";
-import {Footer} from "./Footer.js"
-import {Components} from "../../interfaces/Components.d";
+import { RouterPaths } from "../../router/router-paths";
+import { FooterDTO } from "../../integration/core/dtos/Footer.dto";
+import { Footer } from "./Footer.js";
+
 
 
 describe('Footer component', () => {
     let component: object;
-    const props: Components.Footer = {
+    const props: FooterDTO = {
         routes: RouterPaths
     }
 

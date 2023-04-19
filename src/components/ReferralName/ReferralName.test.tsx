@@ -1,11 +1,11 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {ReferralName} from "./ReferralName"
-import {Components} from "../../interfaces/Components.d";
+import { ReferralNameDTO } from "../../integration/core/dtos/ReferralName.dto";
+import { ReferralName } from "./ReferralName";
 
 describe('ReferralName component', () => {
     let component: object;
-    const props: Components.ReferralName = {
+    const props: ReferralNameDTO = {
         title: "Test Title",
         subtitle: "Test subtitle",
     };

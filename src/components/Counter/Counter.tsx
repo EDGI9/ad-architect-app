@@ -1,7 +1,7 @@
-import {Components} from "../../interfaces/Components.d";
-import "./Counter.scss"
+import { CounterDTO } from "../../integration/core/dtos/Counter.dto";
+import "./Counter.scss";
 
-export function Counter(props: Components.Counter): JSX.Element {
+export function Counter(props: CounterDTO): JSX.Element {
     let buttonType: string;
     const classList = props.className !== undefined ? props.className : '';
 

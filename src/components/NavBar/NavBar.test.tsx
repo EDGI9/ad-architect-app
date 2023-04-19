@@ -1,12 +1,12 @@
 import { it, describe } from 'vitest'
 import { render, cleanup } from '@testing-library/react';
-import {NavBar} from "./NavBar.js"
-import {RouterPaths} from "../../router/router-paths";
-import {Components} from "../../interfaces/Components.d";
+import { RouterPaths } from "../../router/router-paths";
+import { NavBarDTO } from "../../integration/core/dtos/NavBar.dto";
+import { NavBar } from "./NavBar.js";
 
 describe('NavBar component', () => {
   let component: object;
-  const props: Components.NavBar = {
+  const props: NavBarDTO = {
     routes: RouterPaths
   };
 

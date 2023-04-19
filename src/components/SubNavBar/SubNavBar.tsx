@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
-import {Components} from "../../interfaces/Components.d";
+import { SubNavBarDTO } from "../../integration/core/dtos/SubNavBar.dto";
+import { SubNavBarItemDTO } from "../../integration/core/dtos/SubNavBarItem.dto";
 import { Button } from "../Button/Button";
 import "./SubNavBar.scss"
 
-export function SubNavBar(props: Components.SubNavBar): JSX.Element {
+export function SubNavBar(props: SubNavBarDTO): JSX.Element {
 
     const {items, activeItem, onClick} = props;
     const [currentAtiveId, setCurrentAtiveId]  = useState('');
     let listItems = [];
 
-    function itemClick(item: Components.SubNAvBarItem):void {
+    function itemClick(item: SubNavBarItemDTO):void {
         if(!onClick) {
             return 
         }
-        const clickedItem: Components.SubNAvBarItem = {id:item.id , text: item.text}
+        const clickedItem: SubNavBarItemDTO = {id:item.id , text: item.text}
         setCurrentAtiveId(item.id)
         onClick(clickedItem)
     }

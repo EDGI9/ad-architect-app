@@ -1,13 +1,13 @@
-import {Components} from "../../interfaces/Components.d";
+import { EmployeeCardDTO } from "../../integration/core/dtos/EmployeeCard.dto";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
-import "./EmployeeCard.scss"
+import "./EmployeeCard.scss";
 
 
 
 
-export function EmployeeCard(props: Components.EmployeeCard) {
+export function EmployeeCard(props: EmployeeCardDTO) {
     let image;
     let title; 
     let subtitle; 

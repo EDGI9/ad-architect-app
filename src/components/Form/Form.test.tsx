@@ -1,6 +1,6 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup} from '@testing-library/react';
-import {Form} from "./Form.js"
+import { Form } from "./Form.js";
 
 describe('Form component', () => {
     let component: object;

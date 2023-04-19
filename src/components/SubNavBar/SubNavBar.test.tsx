@@ -1,8 +1,9 @@
-import {it, describe, expect, beforeAll, afterAll} from "vitest";
+import { it, describe, expect, beforeAll, afterAll } from "vitest";
 import { fireEvent, render, cleanup, RenderResult } from '@testing-library/react';
-import { SubNavBar } from "./SubNavBar.js"
 import { RenovationPaths } from "../../router/renovations-paths.js";
-import { Components } from "../../interfaces/Components.d";
+import { SubNavBarItemDTO } from "../../integration/core/dtos/SubNavBarItem.dto";
+import { SubNavBar } from "./SubNavBar.js";
+
 
 describe('SubNavBar component', () => {
     let component: RenderResult;
@@ -36,7 +37,7 @@ describe('SubNavBar component', () => {
     it('Component handles user events', () => {
         const firstItem = RenovationPaths[0];
 
-        function handleClick(houseArea: Components.SubNAvBarItem):void {
+        function handleClick(houseArea: SubNavBarItemDTO):void {
             expect(houseArea.id).toEqual(firstItem.id);
             expect(houseArea.text).toEqual(firstItem.text);
         }

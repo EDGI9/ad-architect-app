@@ -1,15 +1,15 @@
 import "react-multi-carousel/lib/styles.css";
 import "@testing-library/jest-dom"
 import "react-multi-carousel";
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {CarrouselBig} from "./CarrouselBig.js"
-import {Components} from "../../interfaces/Components.d";
+import { CarrouselBig } from "./CarrouselBig.js";
+import { CarrouselBigDTO } from "../../integration/core/dtos/CarrouselBig.dto";
 import { slider } from "../../__mock__/slider";
 
 describe('CarrouselBig component', () => {
     let component: object;
-    const props: Components.CarrouselBig = {
+    const props: CarrouselBigDTO = {
         slides: slider,
     }
 

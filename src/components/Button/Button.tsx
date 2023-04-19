@@ -1,7 +1,8 @@
-import {Components} from "../../interfaces/Components.d";
+import {ButtonDTO} from "../../integration/core/dtos/Button.dto";
+
 import "./Button.scss"
 
-export function Button(props: Components.Button): JSX.Element {
+export function Button(props: ButtonDTO): JSX.Element {
     let buttonType: string;
     let isRound: string = props.round !== undefined && props.round === true ? 'c-button--round' : '';
     let isSmall: string = props.small !== undefined && props.small === true ? 'c-button--small' : '';

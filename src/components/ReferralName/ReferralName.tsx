@@ -1,13 +1,13 @@
-import {Components} from "../../interfaces/Components.d";
-import {Images} from "../../interfaces/Image.d";
+import { ReferralNameDTO } from "../../integration/core/dtos/ReferralName.dto";
+import { ImageDataDTO } from "../../integration/core/dtos/ImageData.dto";
 import { Card } from "../Card/Card";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";
 import { images } from "../../__mock__/images";
-import "./ReferralName.scss"
+import "./ReferralName.scss";
 
-export function ReferralName(props: Components.ReferralName): JSX.Element {
-    const image: Images.Image = images.ICON_QUOTATION;
+export function ReferralName(props: ReferralNameDTO): JSX.Element {
+    const image: ImageDataDTO = images.ICON_QUOTATION;
     return (
         <div data-testid="qa-referral-name" className="c-referral-name">
             <Card borderRadius={6} backgroundColor="#ECAE85E5">

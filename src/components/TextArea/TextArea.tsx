@@ -1,7 +1,7 @@
-import {Components} from "../../interfaces/Components.d";
-import "./TextArea.scss"
+import { TextAreaDTO } from "../../integration/core/dtos/TextArea.dto";
+import "./TextArea.scss";
 
-export function TextArea(props: Components.TextArea): JSX.Element {
+export function TextArea(props: TextAreaDTO): JSX.Element {
     let textAreaType: string;
     switch(props.type) {
         case 'primary':

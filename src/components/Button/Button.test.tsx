@@ -1,13 +1,13 @@
 import {it, describe, expect, vi} from "vitest";
 import {fireEvent, render, cleanup} from '@testing-library/react';
 import {Button} from "./Button.js"
-import {Components} from "../../interfaces/Components.d";
+import {ButtonDTO} from "../../integration/core/dtos/Button.dto";
 
 describe('Button component', () => {
   let component: RenderResult;
   let button: HTMLElement;
  
-  const props: Components.Button = {
+  const props: ButtonDTO = {
     text: "Test Text",
     type: "primary",
     round: true,

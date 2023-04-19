@@ -1,11 +1,11 @@
-import {it, describe, expect} from "vitest";
-import {render, cleanup} from '@testing-library/react';
-import {Counter} from "./Counter.js"
-import {Components} from "../../interfaces/Components.d.js";
+import { it, describe, expect } from "vitest";
+import { render, cleanup } from '@testing-library/react';
+import { Counter } from "./Counter.js";
+import { CounterDTO } from "../../integration/core/dtos/Counter.dto";
 
 describe('Counter component', () => {
   let component: object;
-  const props: Components.Counter = {
+  const props: CounterDTO = {
     number: 1,
     type: "primary",
     className: "test-class",

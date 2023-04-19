@@ -1,7 +1,7 @@
-import {Components} from "../../interfaces/Components.d";
-import "./Title.scss"
+import { TitleDTO } from "../../integration/core/dtos/Title.dto";
+import "./Title.scss";
 
-export function Title(props: Components.Title): JSX.Element {
+export function Title(props: TitleDTO): JSX.Element {
 
     const classList = props.className !== undefined ? props.className : ''
     

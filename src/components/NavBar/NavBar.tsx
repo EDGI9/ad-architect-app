@@ -1,11 +1,10 @@
-import {Components} from "../../interfaces/Components.d";
-import {Link} from "react-router-dom";
+import { NavBarDTO } from "../../integration/core/dtos/NavBar.dto";
+import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { images } from "../../__mock__/images";
+import "./NavBar.scss";
 
-import "./NavBar.scss"
-
-export function NavBar(props: Components.NavBar): JSX.Element {
+export function NavBar(props: NavBarDTO): JSX.Element {
 
     const hastRoutes = Object.keys(props.routes).length > 0;
     

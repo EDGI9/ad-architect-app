@@ -1,13 +1,10 @@
-import {Components} from "../../interfaces/Components.d";
+import { ContactBlockDTO } from "../../integration/core/dtos/ContactBlock.dto";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
 import { Button } from "../Button/Button";
-import "./ContactBlock.scss"
+import "./ContactBlock.scss";
 
-
-
-
-export function ContactBlock(props: Components.ContactBlock) {
+export function ContactBlock(props: ContactBlockDTO) {
     let title; 
     let text;
     let backgroundColor;

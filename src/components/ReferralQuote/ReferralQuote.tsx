@@ -1,10 +1,10 @@
-import {Components} from "../../interfaces/Components.d";
+import { ReferralQuoteDTO } from "../../integration/core/dtos/ReferralQuote.dto";
 import { Card } from "../Card/Card";
-import "./ReferralQuote.scss"
+import "./ReferralQuote.scss";
 
 
 
-export function ReferralQuote(props: Components.ReferralQuote): JSX.Element {
+export function ReferralQuote(props: ReferralQuoteDTO): JSX.Element {
     return (
         <div data-testid="qa-referral-quote" className="c-referral-quote">
             <Card borderRadius={6}>

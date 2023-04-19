@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {Components} from "../../interfaces/Components.d";
-import {Images} from "../../interfaces/Image.d";
+import { CarrouselBigDTO } from "../../integration/core/dtos/CarrouselBig.dto";
+import { ImageDataDTO } from "../../integration/core/dtos/ImageData.dto";
 import { Image } from "../Image/Image";
 import { Counter } from "../Counter/Counter";
 
@@ -26,7 +26,7 @@ const responsive = {
     }
   };
 
-export function CarrouselBig(props: Components.CarrouselBig) {
+export function CarrouselBig(props: CarrouselBigDTO) {
 
     const slides = props.slides.length > 0 ? props.slides : [];
 
@@ -44,7 +44,7 @@ export function CarrouselBig(props: Components.CarrouselBig) {
           transitionDuration={5000}
           removeArrowOnDeviceType={["tablet", "mobile"]}>
             {
-              slides.map((slide: Images.Image, index) => (
+              slides.map((slide: ImageDataDTO, index) => (
                   <div className="c-carrousel-big__slide-item" key={index}>
                       <Counter number={index + 1} type="primary" className="absolute left-2 top-2"/>
                       <Image image={slide.src} height={380} width={400} className="c-carrousel-big__slide-image" />
