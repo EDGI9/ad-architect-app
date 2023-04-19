@@ -1,7 +1,7 @@
-import {Employees} from "../interfaces/Employees.d";
-import {images} from "./images"
+import { EmployeeListDTO } from "../integration/core/dtos/EmployeeList.dto";
+import { images } from "./images";
 
-export const employees: Employees.EmployeesList = {
+export const employees: EmployeeListDTO = {
     EMPLOYEE_1 : {
         image: images.EMPLOYEE_1,
         title: "Sergio Lopez",

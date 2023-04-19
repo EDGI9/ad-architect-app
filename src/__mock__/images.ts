@@ -1,4 +1,4 @@
-import { Images } from "../interfaces/Image.d";
+import { ImageListDTO } from "../integration/core/dtos/ImageList.dto";
 import quotation from "../assets/svg/quotation.svg";
 import search from "../assets/svg/search.svg";
 import accessability from "../assets/svg/accessability.svg";
@@ -39,8 +39,7 @@ import garden3 from "../assets/images/garden-3.jpg";
 import garden4 from "../assets/images/garden-4.jpg";
 import garden5 from "../assets/images/interior-5.jpg";
 
-//TODO: Update list of images in mock
-export const images = {
+export const images: ImageListDTO = {
     ICON_QUOTATION : {
         src: quotation,
         name: 'Quotation'

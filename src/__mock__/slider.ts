@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker';
-import {HouseAreas} from "../integration/core/constants/house-areas.constants";
-import {images} from "./images"
+import { HouseAreas } from "../integration/core/constants/house-areas.constants";
+import { SliderDTO } from "../integration/core/dtos/Slider.dto";
+import { images } from "./images"
 
 const houseAreas: string[] = Object.keys(HouseAreas)
 
@@ -93,7 +94,7 @@ const generateSlider = () => {
     for (const area of houseAreas) {
 
         const areaImages = imageList.filter(item => item.area === area);
-        const generatedImageList = areaImages.map((item, index) => ({
+        const generatedImageList: SliderDTO = areaImages.map((item, index) => ({
             id: index + 1,   
             src: item.src,
             name: faker.lorem.word(),
