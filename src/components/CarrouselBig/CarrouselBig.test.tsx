@@ -1,13 +1,24 @@
+import "react-multi-carousel/lib/styles.css";
+import "@testing-library/jest-dom"
+import "react-multi-carousel";
 import {it, describe, expect} from "vitest";
-import { render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {CarrouselBig} from "./CarrouselBig.js"
+import {Components} from "../../interfaces/Components.d";
 import { slider } from "../../__mock__/slider";
 
 describe('CarrouselBig component', () => {
     let component: object;
+    const props: Components.CarrouselBig = {
+        slides: slider,
+    }
+
+    afterAll(() => {
+        cleanup();
+    });
 
     it.skip('Component works', () => {
-        const {getByTestId} = render(<CarrouselBig slides={slider.big_slider} />);
+        const {getByTestId} = render(<CarrouselBig {...props} />);
         component = getByTestId('qa-carrousel-big');
         
         expect(component).not.toBeNull();

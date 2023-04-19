@@ -1,15 +1,25 @@
 import {it, describe, expect} from "vitest";
-import { render} from '@testing-library/react';
+import { render, cleanup} from '@testing-library/react';
 import {Card} from "./Card"
+import {Components} from "../../interfaces/Components.d";
+
 
 describe('Card component', () => {
     let component: object;
-    const color: string = "#FFF";
-    const borderRadius: number = 10;
-    const testHtml = <h1>Test html</h1>
+    const props: Components.Card = {
+        backgroundColor: "#FFF",
+        borderRadius: 10,
+        className: "test-class",
+        children: <h1>Test html</h1>
+    }
+
+    afterAll(() => {
+        cleanup();
+    });
     
     it('Component works', () => {
-        const {getByTestId} = render(<Card backgroundColor={color} borderRadius={borderRadius}>{testHtml}</Card>);
+        // const {getByTestId} = render(<Card {...props}>{testHtml}</Card>);
+        const {getByTestId} = render(<Card {...props} />);
         component = getByTestId('qa-card');
         
         expect(component).not.toBeNull();

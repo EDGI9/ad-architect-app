@@ -22,15 +22,6 @@
           border-radius: 25px;
      }
 
-     .c-carrousel-big__slide-number{
-          position: absolute;
-          left: 20px;
-          top: 20px;
-          border: solid 2px $white-color;
-          border-radius: 15px;
-          padding: 15px 5px 3px 25px;
-     }
-
      .react-multi-carousel-item--active {
           transform: scale(1.30);
           transition: transform 0.5s;

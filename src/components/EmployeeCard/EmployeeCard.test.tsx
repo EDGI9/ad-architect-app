@@ -1,19 +1,27 @@
-import {Images} from "../../interfaces/Image.d";
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {EmployeeCard} from "./EmployeeCard"
+import {Components} from "../../interfaces/Components.d";
 import { slider } from "../../__mock__/slider";
+
 
 
 describe('EmployeeCard component', () => {
     let component: object;
-    const testImageSource: Images.Image = slider.small_slider[0];
-    const testTitle: string = "Test Title";
-    const testSubtitleText: string = "Test Subtitle";
-    const testText: string = "Test Text";
+    //TODO: Replace image used with employee image
+    const props: Components.EmployeeCard = {
+        image:slider[0],
+        title: "Test Title",
+        subtitle: "Test Subtitle",
+        text: "Test Text"
+    }
+
+    afterAll(() => {
+        cleanup();
+    });
 
     it('Component works', () => {
-        const {getByTestId} = render(<EmployeeCard image={testImageSource} title={testTitle} subtitle={testSubtitleText} text={testText}/>);
+        const {getByTestId} = render(<EmployeeCard {...props}/>);
         component = getByTestId('qa-employee-card');
 
         expect(component).not.toBeNull();

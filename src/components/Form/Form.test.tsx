@@ -1,11 +1,13 @@
-import {it, describe, beforeEach, afterEach, expect} from "vitest";
-import {fireEvent, render} from '@testing-library/react';
+import {it, describe, expect} from "vitest";
+import { render, cleanup} from '@testing-library/react';
 import {Form} from "./Form.js"
 
 describe('Form component', () => {
     let component: object;
-    let input: object;
-    let textarea: object;
+
+    afterAll(() => {
+        cleanup();
+    });
 
     it('Component works', () => {
         const {getByTestId} = render(<Form />);

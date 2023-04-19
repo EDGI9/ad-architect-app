@@ -3,17 +3,21 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 600px;
+    max-width: 800px;
     overflow: hidden;
 
     picture,source, img {
         position: relative;
+        order: 1;
         z-index: 1;
-        width: 100%; height: 100%
+        width: 100%; 
+        height: 100%;
+        border-radius: 25px;
     }
 
     .c-carrousel-detail__details-card {
         position: absolute;
+        order: 2;
         height: 70%;
         max-width: 200px;
         left: 100%;
@@ -26,13 +30,35 @@
         transform: translate(-100%);
     }
 
-    .c-button {
+    .c-carrousel-detail__details-card-button{
         position: absolute;
+        top: 0%;
         right: calc(100% - 15px);
+        border-radius: 25px 0 0 25px;
     }
 
     .c-carrousel-detail__text-container {
         border-left: 1px solid $dark-color;
         padding-left: 15px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .c-carrousel-detail__details-card{
+            position: relative;
+            order: 1;
+            left: 0%;
+            max-width: 100%;
+            padding: 0;
+        } 
+        picture,source, img {
+            order: 2;
+        }
+
+        .c-button{
+            display: none;
+        }
     }
 }

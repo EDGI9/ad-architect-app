@@ -7,7 +7,7 @@ export default {
   title: 'Carrousel Big',
   component: CarrouselBig,
   args: {
-    slides: slider.big_slider
+    slides: slider
   },
 } as ComponentMeta<typeof CarrouselBig>;
 

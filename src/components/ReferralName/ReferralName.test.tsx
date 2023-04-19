@@ -1,20 +1,27 @@
-import {Components} from "../../interfaces/Components.d";
 import {it, describe, expect} from "vitest";
-import { render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {ReferralName} from "./ReferralName"
+import {Components} from "../../interfaces/Components.d";
 
 describe('ReferralName component', () => {
     let component: object;
-    const testTitleText: string =  "Test Title"
-    const testSubTitle: string = "Test Subtitle"
+    const props: Components.ReferralName = {
+        title: "Test Title",
+        subtitle: "Test subtitle",
+    };
+
+    afterAll(() => {
+        cleanup();
+    });
+
     it('Component works', () => {
-        const {getByTestId, getByText} = render(<ReferralName title={testTitleText} subtitle={testSubTitle}/>);
+        const {getByTestId, getByText} = render(<ReferralName {...props}/>);
         component = getByTestId('qa-referral-name');
 
         expect(component).not.toBeNull();
         //@ts-ignore
         expect(component.classList.contains('c-referral-name'));
-        expect(getByText(testTitleText).textContent).toBe(testTitleText)
-        expect(getByText(testSubTitle).textContent).toBe(testSubTitle)
+        expect(getByText(props.title).textContent).toBe(props.title)
+        expect(getByText(props.subtitle).textContent).toBe(props.subtitle)
     })
 });

@@ -1,52 +1,112 @@
-import {Images} from "../interfaces/Image.d";
-import bigSliderImg1 from "../assets/images/bigSliderImg1.png";
-import bigSliderImg2 from "../assets/images/bigSliderImg2.png";
-import bigSliderImg3 from "../assets/images/bigSliderImg3.png";
-import bigSliderImg4 from "../assets/images/bigSliderImg4.png";
-import smallSliderImg1 from "../assets/images/smallSliderImg1.png";
-import smallSliderImg2 from "../assets/images/smallSliderImg2.png";
-import smallSliderImg3 from "../assets/images/smallSliderImg3.png";
-import smallSliderImg4 from "../assets/images/smallSliderImg4.png";
+import { faker } from '@faker-js/faker';
+import {HouseAreas} from "../integration/core/constants/house-areas.constants";
+import {images} from "./images"
 
-const bigImageSlider: Images.Image[] = [
+const houseAreas: string[] = Object.keys(HouseAreas)
+
+const imageList= [
     {
-        src: bigSliderImg1,
-        name: 'bigSliderImg1'
+        src: images.INTERIOR_1,
+        area: HouseAreas.INTERIORS.id
     },
     {
-        src: bigSliderImg2,
-        name: 'bigSliderImg2'
+        src: images.INTERIOR_2,
+        area: HouseAreas.INTERIORS.id
     },
     {
-        src: bigSliderImg3,
-        name: 'bigSliderImg3'
+        src: images.INTERIOR_3,
+        area: HouseAreas.INTERIORS.id
     },
     {
-        src: bigSliderImg4,
-        name: 'bigSliderImg4'
-    }
+        src: images.INTERIOR_4,
+        area: HouseAreas.INTERIORS.id
+    },
+    {
+        src: images.INTERIOR_5,
+        area: HouseAreas.INTERIORS.id
+    },
+    {
+        src: images.KITCHEN_1,
+        area: HouseAreas.KITCHENS.id
+    },
+    {
+        src: images.KITCHEN_2,
+        area: HouseAreas.KITCHENS.id
+    },
+    {
+        src: images.KITCHEN_3,
+        area: HouseAreas.KITCHENS.id
+    },
+    {
+        src: images.KITCHEN_4,
+        area: HouseAreas.KITCHENS.id
+    },
+    {
+        src: images.KITCHEN_5,
+        area: HouseAreas.KITCHENS.id
+    },
+    {
+        src: images.GARDEN_1,
+        area: HouseAreas.GARDENS.id
+    },
+    {
+        src: images.GARDEN_2,
+        area: HouseAreas.GARDENS.id
+    },
+    {
+        src: images.GARDEN_3,
+        area: HouseAreas.GARDENS.id
+    },
+    {
+        src: images.GARDEN_4,
+        area: HouseAreas.GARDENS.id
+    },
+    {
+        src: images.GARDEN_5,
+        area: HouseAreas.GARDENS.id
+    },
+    {
+        src: images.BATHROOM_1,
+        area: HouseAreas.BATHROOM.id
+    },
+    {
+        src: images.BATHROOM_2,
+        area: HouseAreas.BATHROOM.id
+    },
+    {
+        src: images.BATHROOM_3,
+        area: HouseAreas.BATHROOM.id
+    },
+    {
+        src: images.BATHROOM_4,
+        area: HouseAreas.BATHROOM.id
+    },
+    {
+        src: images.BATHROOM_5,
+        area: HouseAreas.BATHROOM.id
+    },
 ]
 
-const smallImageSlider: Images.Image[] = [
-    {
-        src: smallSliderImg1,
-        name: 'smallSliderImg1'
-    },
-    {
-        src: smallSliderImg2,
-        name: 'smallSliderImg2'
-    },
-    {
-        src: smallSliderImg3,
-        name: 'smallSliderImg3'
-    },
-    {
-        src: smallSliderImg4,
-        name: 'smallSliderImg4'
-    }
-]
+const generateSlider = () => {
+    let result = {};
+    
+    for (const area of houseAreas) {
 
-export const slider = {
-    big_slider : bigImageSlider,
-    small_slider : smallImageSlider,
+        const areaImages = imageList.filter(item => item.area === area);
+        const generatedImageList = areaImages.map((item, index) => ({
+            id: index + 1,   
+            src: item.src,
+            name: faker.lorem.word(),
+            text: {
+                title: faker.name.jobDescriptor(),
+                description: faker.lorem.lines(1)
+            }
+        }));
+        
+        result = {...result, [area]: generatedImageList};
+    }
+    
+    return result
 }
+
+export const slider = generateSlider();

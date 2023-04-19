@@ -1,12 +1,23 @@
 import {it, describe, expect} from "vitest";
-import {render} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import {TextInput} from "./TextInput"
+import {Components} from "../../interfaces/Components.d";
 
 describe('TextInput component', () => {
   let component: object;
-  const testText: string = "Test Text"
+  const props: Components.TextInput = {
+    text: "Test Text",
+    type: "secondary",
+    placeholder: "Test Placeholder",
+  };
+
+  afterAll(() => {
+    cleanup();
+  });
+
+  //TODO: Add more tests to test type and placeholder props
   it('Component works', () => {
-    const {getByTestId} = render(<TextInput text={testText}/>);
+    const {getByTestId} = render(<TextInput {...props}/>);
     component = getByTestId('qa-text-input');
 
     expect(component).not.toBeNull();

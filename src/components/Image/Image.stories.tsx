@@ -26,7 +26,7 @@ export default {
     },
   },
   args: {
-    image: images.big_img_1,
+    image: images.BIG_IMG_1,
     title: "John Doe",
     width: 250,
     height: 250,

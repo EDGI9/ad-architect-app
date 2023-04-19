@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from "react";
+import { MouseEvent, ReactNode } from "react";
 import  Route  from "./Routes.d";
 import {Images} from "./Image.d";
 import {Employees} from "./Employees.d";
@@ -13,7 +13,8 @@ export namespace Components {
         round?: boolean
         small?: boolean
         className?: string
-        onClick?: MouseEventHandler
+        active?: boolean
+        onClick?: MouseEvent
     }
 
     export interface Card {
@@ -37,6 +38,18 @@ export namespace Components {
 
     export interface CarrouselSmall {
         slides: Array<Images.Image>
+        onClick?: MouseEvent
+    }
+    export interface ContactBlock {
+        title: string
+        text: string
+        backgroundColor?: string
+    }
+
+    export interface Counter {
+        number: number
+        type?: string
+        className?: string
     }
 
     export interface EmployeeCard extends Employees.Employee {
@@ -53,6 +66,7 @@ export namespace Components {
         width?: number
         imgClassName?: string
         className?: string
+        onClick?: MouseEvent
     }
 
     export interface NavBar {
@@ -76,11 +90,20 @@ export namespace Components {
     export interface SectionBubble {
         title: string
         text: string
-        align: string
+        align?: string
     }
 
+    export interface SubNAvBarItem {
+        id: string
+        text: string
+        active?: boolean
+    }
+   
+
     export interface SubNavBar {
-        items: Array<string>
+        items?: SubNAvBarItem[]
+        activeItem?: SubNAvBarItem
+        onClick?: (item: SubNAvBarItem) => void
     }
     
     export interface TextArea {
