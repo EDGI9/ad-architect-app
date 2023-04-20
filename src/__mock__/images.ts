@@ -39,145 +39,180 @@ import garden3 from "../assets/images/garden-3.jpg";
 import garden4 from "../assets/images/garden-4.jpg";
 import garden5 from "../assets/images/interior-5.jpg";
 
-export const images: ImageListDTO = {
-    ICON_QUOTATION : {
+export const images = [
+    {
+        id:'ICON_QUOTATION',
         src: quotation,
         name: 'Quotation'
     },
-    ICON_SEARCH: {
+    {
+        id:'ICON_SEARCH',
         src: search,
         name: 'Search'
     },
-    ICON_ACCESSABILITY: {
+    {
+        id:'ICON_ACCESSABILITY',
         src: accessability,
         name: 'Accessability'
     },
-    ICON_TWITTTER: {
+    {
+        id:'ICON_TWITTTER',
         src: twitter,
         name: 'Twitter'
     },
-    ICON_INSTAGRAM: {
+    {
+        id:'ICON_INSTAGRAM',
         src: instagram,
         name: 'Instagram'
     },
-    BIG_IMG_1: {
+    {
+        id:'BIG_IMG_1',
         src: bigImg1,
         name: 'Big Image 1'
     },
-    BIG_IMG_2: {
+    {
+        id:'BIG_IMG_2',
         src: bigImg2,
         name: 'Big Image 2'
     },
-    BIG_IMG_3: {
+    {
+        id:'BIG_IMG_3',
         src: bigImg3,
         name: 'Big Image 3'
     },
-    LOGO: {
+    {
+        id:'LOGO',
         src: logo,
         name: 'Ad Architects Logo'
     },
-    LOGO_NAME: {
+    {
+        id:'LOGO_NAME',
         src: logoName,
         name: 'Ad Architects'
     },
-    LOGO_2: {
+    {
+        id: 'LOGO_2',
         src: logo2,
         name: 'Ad Architects Logo'
     },
-    LOGO_NAME_2: {
+    {
+        id:'LOGO_NAME_2',
         src: logoName2,
         name: 'Ad Architects'
     },
-    EMPLOYEE_1: {
+    {
+        id:'EMPLOYEE_1',
         src: employee1,
         name: 'Employee 1'
     },
-    EMPLOYEE_2: {
+    {
+        id:'EMPLOYEE_2',
         src: employee2,
         name: 'Employee 2'
     },
-    EMPLOYEE_3: {
+    {
+        id:'EMPLOYEE_3',
         src: employee3,
         name: 'Employee 3'
     },
-    KITCHEN_1: {
+    {
+        id:'KITCHEN_1',
         src: kitchen1,
         name: 'Kitchen 1'
     },
-    KITCHEN_2: {
+    {
+        id:'KITCHEN_2',
         src: kitchen2,
         name: 'Kitchen 2'
     },
-    KITCHEN_3: {
+    {
+        id:'KITCHEN_3',
         src: kitchen3,
         name: 'Kitchen 3'
     },
-    KITCHEN_4: {
+    {
+        id:'KITCHEN_4',
         src: kitchen4,
         name: 'Kitchen 4'
     },
-    KITCHEN_5: {
+    {
+        id:'KITCHEN_5',
         src: kitchen5,
         name: 'Kitchen 5'
     },
-    BATHROOM_1: {
+    {
+        id:'BATHROOM_1',
         src: bathroom1,
         name: 'Bathroom 1'
     },
-    BATHROOM_2: {
+    {
+        id:'BATHROOM_2',
         src: bathroom2,
         name: 'Bathroom 2'
     },
-    BATHROOM_3: {
+    {
+        id:'BATHROOM_3',
         src: bathroom3,
         name: 'Bathroom 3'
     },
-    BATHROOM_4: {
+    {
+        id:'BATHROOM_4',
         src: bathroom4,
         name: 'Bathroom 4'
     },
-    BATHROOM_5: {
+    {
+        id:'BATHROOM_5',
         src: bathroom5,
         name: 'Bathroom 5'
     },
-    INTERIOR_1: {
+    {
+        id:'INTERIOR_1',
         src: interior1,
         name: 'Interior 1'
     },
-    INTERIOR_2: {
+    {
+        id:'INTERIOR_2',
         src: interior2,
         name: 'Interior 2'
     },
-    INTERIOR_3: {
+    {
+        id:'INTERIOR_3',
         src: interior3,
         name: 'Interior 3'
     },
-    INTERIOR_4: {
+    {
+        id:'INTERIOR_4',
         src: interior4,
         name: 'Interior 4'
     },
-    INTERIOR_5: {
+    {
+        id:'INTERIOR_5',
         src: interior5,
         name: 'Interior 5'
     },
-    GARDEN_1: {
+    {
+        id:'GARDEN_1',
         src: garden1,
         name: 'Garden 1'
     },
-    GARDEN_2: {
+    {
+        id:'GARDEN_2',
         src: garden2,
         name: 'Garden 2'
     },
-    GARDEN_3: {
+    {
+        id:'GARDEN_3',
         src: garden3,
         name: 'Garden 3'
     },
-    GARDEN_4: {
+    {
+        id:'GARDEN_4',
         src: garden4,
         name: 'Garden 4'
     },
-    GARDEN_5: {
+    {
+        id:'GARDEN_5',
         src: garden5,
         name: 'Garden 5'
     },
-};
+];

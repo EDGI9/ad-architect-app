@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { HouseAreas } from "../integration/core/constants/house-areas.constants";
+import { HouseAreas } from "../integration/core/constants/HouseAreas.constants";
 import { SliderDTO } from "../integration/core/dtos/Slider.dto";
 import { images } from "./images"
 
