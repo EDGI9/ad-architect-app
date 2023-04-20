@@ -1,6 +1,6 @@
 import { it, describe, expect, beforeAll, afterAll } from "vitest";
 import { fireEvent, render, cleanup, RenderResult } from '@testing-library/react';
-import { RenovationPaths } from "../../router/renovations-paths.js";
+import { RenovationPaths } from "../../router/RenovationsPaths.js";
 import { SubNavBarItemDTO } from "../../integration/core/dtos/SubNavBarItem.dto";
 import { SubNavBar } from "./SubNavBar.js";
 

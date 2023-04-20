@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup} from '@testing-library/react';
-import { RouterPaths } from "../../router/router-paths";
+import { RouterPaths } from "../../router/RouterPaths";
 import { FooterDTO } from "../../integration/core/dtos/Footer.dto";
 import { Footer } from "./Footer.js";
 

@@ -1,5 +1,5 @@
 import {Route, Routes} from "react-router-dom";
-import {RouterPaths} from "./router-paths";
+import {RouterPaths} from "./RouterPaths";
 import {Home} from "../views/Home";
 import {Renovations} from "../views/Renovations";
 import {WhoWeAre} from "../views/WhoWeAre";

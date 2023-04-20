@@ -1,6 +1,6 @@
 import { it, describe } from 'vitest'
 import { render, cleanup } from '@testing-library/react';
-import { RouterPaths } from "../../router/router-paths";
+import { RouterPaths } from "../../router/RouterPaths";
 import { NavBarDTO } from "../../integration/core/dtos/NavBar.dto";
 import { NavBar } from "./NavBar.js";
 
