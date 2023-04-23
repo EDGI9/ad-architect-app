@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 import { HouseAreas } from "../integration/core/constants/HouseAreas.constants";
 import { SliderDTO } from "../integration/core/dtos/Slider.dto";
 import { images } from "./images"
-
+//TODO: Delete file once unit tests are updated
 const houseAreas: string[] = Object.keys(HouseAreas)
 
 const imageList= [
