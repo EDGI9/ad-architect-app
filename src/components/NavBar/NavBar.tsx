@@ -1,4 +1,4 @@
-import { NavBarDTO } from "../../integration/core/dtos/NavBar.dto";
+import { NavBarDTO } from "../../integration/core/dtos/components/NavBar.dto";
 import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { images } from "../../__mock__/images";

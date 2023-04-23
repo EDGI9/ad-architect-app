@@ -1,5 +1,5 @@
 import { ReferralNameDTO } from "../../integration/core/dtos/ReferralName.dto";
-import { ImageDataDTO } from "../../integration/core/dtos/ImageData.dto";
+import { ImageDataDTO } from "../../integration/core/dtos/data/ImageData.dto";
 import { Card } from "../Card/Card";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";

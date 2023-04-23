@@ -1,4 +1,4 @@
-import {ButtonDTO} from "../../integration/core/dtos/Button.dto";
+import {ButtonDTO} from "../../integration/core/dtos/components/Button.dto";
 
 import "./Button.scss"
 
