@@ -1,4 +1,4 @@
-import { ImageListDTO } from "../core/dtos/ImageList.dto";
+import { ImageListDTO } from "../core/dtos/data/ImageList.dto";
 
 export interface ImagesServiceDriverPort {
     getAllImages(): Promise<ImageListDTO>;

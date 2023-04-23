@@ -1,4 +1,4 @@
-import { ImageDataDTO } from "./ImageData.dto";
+import { ImageDataDTO } from "../data/ImageData.dto";
 
 export interface ImageDTO {
     image: ImageDataDTO
