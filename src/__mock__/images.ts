@@ -1,4 +1,4 @@
-import { ImageListDTO } from "../integration/core/dtos/ImageList.dto";
+import { HouseAreas } from "../integration/core/constants/HouseAreas.constants"
 import quotation from "../assets/svg/quotation.svg";
 import search from "../assets/svg/search.svg";
 import accessability from "../assets/svg/accessability.svg";
@@ -118,101 +118,121 @@ export const images = [
     {
         id:'KITCHEN_1',
         src: kitchen1,
-        name: 'Kitchen 1'
+        name: 'Kitchen 1',
+        area:HouseAreas.KITCHENS.id
     },
     {
         id:'KITCHEN_2',
         src: kitchen2,
-        name: 'Kitchen 2'
+        name: 'Kitchen 2',
+        area:HouseAreas.KITCHENS.id
     },
     {
         id:'KITCHEN_3',
         src: kitchen3,
-        name: 'Kitchen 3'
+        name: 'Kitchen 3',
+        area:HouseAreas.KITCHENS.id
     },
     {
         id:'KITCHEN_4',
         src: kitchen4,
-        name: 'Kitchen 4'
+        name: 'Kitchen 4',
+        area:HouseAreas.KITCHENS.id
     },
     {
         id:'KITCHEN_5',
         src: kitchen5,
-        name: 'Kitchen 5'
+        name: 'Kitchen 5',
+        area:HouseAreas.KITCHENS.id
     },
     {
         id:'BATHROOM_1',
         src: bathroom1,
-        name: 'Bathroom 1'
+        name: 'Bathroom 1',
+        area: HouseAreas.BATHROOM.id
     },
     {
         id:'BATHROOM_2',
         src: bathroom2,
-        name: 'Bathroom 2'
+        name: 'Bathroom 2',
+        area: HouseAreas.BATHROOM.id
     },
     {
         id:'BATHROOM_3',
         src: bathroom3,
-        name: 'Bathroom 3'
+        name: 'Bathroom 3',
+        area: HouseAreas.BATHROOM.id
     },
     {
         id:'BATHROOM_4',
         src: bathroom4,
-        name: 'Bathroom 4'
+        name: 'Bathroom 4',
+        area: HouseAreas.BATHROOM.id
     },
     {
         id:'BATHROOM_5',
         src: bathroom5,
-        name: 'Bathroom 5'
+        name: 'Bathroom 5',
+        area: HouseAreas.BATHROOM.id
     },
     {
         id:'INTERIOR_1',
         src: interior1,
-        name: 'Interior 1'
+        name: 'Interior 1',
+        area: HouseAreas.INTERIORS.id
     },
     {
         id:'INTERIOR_2',
         src: interior2,
-        name: 'Interior 2'
+        name: 'Interior 2',
+        area: HouseAreas.INTERIORS.id
     },
     {
         id:'INTERIOR_3',
         src: interior3,
-        name: 'Interior 3'
+        name: 'Interior 3',
+        area: HouseAreas.INTERIORS.id
     },
     {
         id:'INTERIOR_4',
         src: interior4,
-        name: 'Interior 4'
+        name: 'Interior 4',
+        area: HouseAreas.INTERIORS.id
     },
     {
         id:'INTERIOR_5',
         src: interior5,
-        name: 'Interior 5'
+        name: 'Interior 5',
+        area: HouseAreas.INTERIORS.id
     },
     {
         id:'GARDEN_1',
         src: garden1,
-        name: 'Garden 1'
+        name: 'Garden 1',
+        area: HouseAreas.GARDENS.id
     },
     {
         id:'GARDEN_2',
         src: garden2,
-        name: 'Garden 2'
+        name: 'Garden 2',
+        area: HouseAreas.GARDENS.id
     },
     {
         id:'GARDEN_3',
         src: garden3,
-        name: 'Garden 3'
+        name: 'Garden 3',
+        area: HouseAreas.GARDENS.id
     },
     {
         id:'GARDEN_4',
         src: garden4,
-        name: 'Garden 4'
+        name: 'Garden 4',
+        area: HouseAreas.GARDENS.id
     },
     {
         id:'GARDEN_5',
         src: garden5,
-        name: 'Garden 5'
+        name: 'Garden 5',
+        area: HouseAreas.GARDENS.id
     },
 ];
