@@ -1,5 +1,16 @@
-import { EmployeeListDTO } from "../integration/core/dtos/EmployeeList.dto";
-import { images } from "./images";
+import { EmployeeListDTO } from "../integration/core/dtos/components/EmployeeList.dto";
+import { Services } from "../integration/services/index"
+import { ImageListDTO } from "../integration/core/dtos/data/ImageList.dto"
+
+let images: ImageListDTO = {};
+
+await Services.Images.getAllImages().then((response) => {
+    if (!response) {
+        return
+    }
+    
+    images = response
+})
 
 export const employees: EmployeeListDTO = {
     EMPLOYEE_1 : {

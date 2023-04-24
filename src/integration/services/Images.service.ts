@@ -6,7 +6,10 @@ import {ImagesMapper} from "../core/mappers/Images.mapper";
 export function ImagesService(reader: ImagesReaderDrivenPort): ImagesServiceDriverPort {
     async function getAllImages(): Promise<ImageListDTO> {
         const response = await reader.getAll();
-        console.log(response, 'response');
+        
+        if (!response) {
+            return {}
+        }
         
         return await ImagesMapper.mapToImageList(response);
     }
