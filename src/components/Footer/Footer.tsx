@@ -31,26 +31,25 @@ export function Footer(props: FooterDTO): JSX.Element {
     return (
         <footer data-testid="qa-footer" className="c-footer">
             <div className="c-footer__logo">
-                {(!images && !images['LOGO_2']) && <Image image={images['LOGO_2']} width={60} height={60}/>}
-                {(!images && !images['LOGO_NAME_2']) && <Image image={images['LOGO_NAME_2']} width={150} height={15}/>}
+                <Image image={images.LOGO_2} width={60} height={60}/>
+                <Image image={images.LOGO_NAME_2} width={150} height={15}/>
             </div>
             <div className="c-footer__links">
                 {routes}
             </div>
             <div className="c-footer__footer">
                 <div>
-                    {(!images && !images['LOGO_2']) && <Image image={images['LOGO_2']} width={40} height={40}/>}
+                    <Image image={images.LOGO_2} width={40} height={40}/>
                     <Title type="h6" text="Cookies policy | Privacy policy"/>
                 </div>
                 <div>
-                    
-                    {(!images && !images['ICON_ACCESSABILITY']) && <Image image={images['ICON_ACCESSABILITY']} width={30} height={30}/>}
+                    <Image image={images.ICON_ACCESSABILITY} width={30} height={30}/>
                     <Title type="h6" text="Site accessibility options"/>
                 </div>
                 <div>
                     <Title type="h6" text="Follow us for inspiration"/>
-                    {(!images && !images['ICON_TWITTTER']) && <Image image={images['ICON_TWITTTER']} width={35} height={35}/>}
-                    {(!images && !images['ICON_INSTAGRAM']) && <Image image={images['ICON_INSTAGRAM']} width={35} height={35}/>}
+                    <Image image={images.ICON_TWITTTER} width={35} height={35}/>
+                    <Image image={images.ICON_INSTAGRAM} width={35} height={35}/>
                 </div>
             </div>
         </footer>

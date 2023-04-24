@@ -65,16 +65,10 @@ export function ContactUs(): JSX.Element {
                                 referrerPolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
-                        {
-                            (!images && !images['BIG_IMG_1']) 
-                            &&
-                            <Image 
-                                image={images['BIG_IMG_1']}
-                                className="absolute top-0 z-0 contrast-[.40]" 
-                                imgClassName="rounded-full scale-[3.5] sm:scale-[2] lg:scale-[1.5] -translate-x-[80%] translate-y-[10%] sm:translate-x-[0px] sm:-translate-y-[30%] lg:-translate-x-[45%] lg:translate-y-[0%]"/> 
-                            
-                        }
-                        
+                        <Image 
+                            image={images.BIG_IMG_1}
+                            className="absolute top-0 z-0 contrast-[.40]" 
+                            imgClassName="rounded-full scale-[3.5] sm:scale-[2] lg:scale-[1.5] -translate-x-[80%] translate-y-[10%] sm:translate-x-[0px] sm:-translate-y-[30%] lg:-translate-x-[45%] lg:translate-y-[0%]"/> 
                     </div>
                 </Card>
             </section>
