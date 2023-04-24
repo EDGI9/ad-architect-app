@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { TextAreaDTO } from "../../integration/core/dtos/TextArea.dto";
+import { TextAreaDTO } from "../../integration/core/dtos/components/TextArea.dto";
 import { TextArea } from "./TextArea";
 
 

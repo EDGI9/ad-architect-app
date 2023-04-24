@@ -1,4 +1,4 @@
-import { TitleDTO } from "../../integration/core/dtos/Title.dto";
+import { TitleDTO } from "../../integration/core/dtos/components/Title.dto";
 import "./Title.scss";
 
 export function Title(props: TitleDTO): JSX.Element {

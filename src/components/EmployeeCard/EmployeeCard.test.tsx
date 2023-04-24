@@ -1,7 +1,7 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { EmployeeCard} from "./EmployeeCard";
-import { EmployeeCardDTO } from "../../integration/core/dtos/EmployeeCard.dto";
+import { EmployeeCardDTO } from "../../integration/core/dtos/components/EmployeeCard.dto";
 import { slider } from "../../__mock__/slider";
 
 

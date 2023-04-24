@@ -1,7 +1,7 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { Counter } from "./Counter.js";
-import { CounterDTO } from "../../integration/core/dtos/Counter.dto";
+import { CounterDTO } from "../../integration/core/dtos/components/Counter.dto";
 
 describe('Counter component', () => {
   let component: object;

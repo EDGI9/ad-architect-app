@@ -1,7 +1,7 @@
 import {it, describe, expect} from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { ContactBlock } from "./ContactBlock";
-import { ContactBlockDTO } from "../../integration/core/dtos/ContactBlock.dto";
+import { ContactBlockDTO } from "../../integration/core/dtos/components/ContactBlock.dto";
 
 
 

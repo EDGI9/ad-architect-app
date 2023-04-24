@@ -1,4 +1,4 @@
-import { FooterDTO } from "../../integration/core/dtos/Footer.dto";
+import { FooterDTO } from "../../integration/core/dtos/components/Footer.dto";
 import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";

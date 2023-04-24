@@ -1,4 +1,4 @@
-import { ReferralQuoteDTO } from "../../integration/core/dtos/ReferralQuote.dto";
+import { ReferralQuoteDTO } from "../../integration/core/dtos/components/ReferralQuote.dto";
 import { Card } from "../Card/Card";
 import "./ReferralQuote.scss";
 

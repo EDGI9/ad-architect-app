@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { CarrouselSmallDTO } from "../../integration/core/dtos/CarrouselSmall.dto";
+import { CarrouselSmallDTO } from "../../integration/core/dtos/components/CarrouselSmall.dto";
 import { ImageDataDTO } from "../../integration/core/dtos/data/ImageData.dto";
 import { Image } from "../Image/Image";
 

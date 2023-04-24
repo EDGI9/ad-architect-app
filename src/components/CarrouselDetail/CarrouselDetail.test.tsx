@@ -1,7 +1,7 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { CarrouselDetail } from "./CarrouselDetail.js";
-import { CarrouselDetailDTO } from "../../integration/core/dtos/CarrouselDetail.dto";
+import { CarrouselDetailDTO } from "../../integration/core/dtos/components/CarrouselDetail.dto";
 
 import { images } from "../../__mock__/images";
 

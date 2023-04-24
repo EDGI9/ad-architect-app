@@ -1,5 +1,5 @@
 import { CSSProperties } from "react"
-import { CardDTO } from "../../integration/core/dtos/Card.dto";
+import { CardDTO } from "../../integration/core/dtos/components/Card.dto";
 import "./Card.scss"
 
 

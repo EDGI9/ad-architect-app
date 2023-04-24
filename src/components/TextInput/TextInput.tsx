@@ -1,4 +1,4 @@
-import { TextInputDTO } from "../../integration/core/dtos/TextInput.dto";
+import { TextInputDTO } from "../../integration/core/dtos/components/TextInput.dto";
 import "./TextInput.scss";
 
 export function TextInput(props: TextInputDTO): JSX.Element {

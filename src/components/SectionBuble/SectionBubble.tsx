@@ -1,4 +1,4 @@
-import { SectionBubbleDTO } from "../../integration/core/dtos/SectionBubble.dto";
+import { SectionBubbleDTO } from "../../integration/core/dtos/components/SectionBubble.dto";
 import { Title } from "../Title/Title";
 import "./SectionBubble.scss";
 

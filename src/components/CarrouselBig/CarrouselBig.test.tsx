@@ -4,7 +4,7 @@ import "react-multi-carousel";
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { CarrouselBig } from "./CarrouselBig.js";
-import { CarrouselBigDTO } from "../../integration/core/dtos/CarrouselBig.dto";
+import { CarrouselBigDTO } from "../../integration/core/dtos/components/CarrouselBig.dto";
 import { slider } from "../../__mock__/slider";
 
 describe('CarrouselBig component', () => {

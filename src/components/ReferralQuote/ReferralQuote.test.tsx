@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { ReferralQuoteDTO } from "../../integration/core/dtos/ReferralQuote.dto";
+import { ReferralQuoteDTO } from "../../integration/core/dtos/components/ReferralQuote.dto";
 import { ReferralQuote } from "./ReferralQuote";
 
 

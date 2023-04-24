@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { SectionBubbleDTO } from "../../integration/core/dtos/SectionBubble.dto";
+import { SectionBubbleDTO } from "../../integration/core/dtos/components/SectionBubble.dto";
 import { SectionBubble } from "./SectionBubble.js";
 
 describe('SectionBubble component', () => {

@@ -1,4 +1,4 @@
-import { TextAreaDTO } from "../../integration/core/dtos/TextArea.dto";
+import { TextAreaDTO } from "../../integration/core/dtos/components/TextArea.dto";
 import "./TextArea.scss";
 
 export function TextArea(props: TextAreaDTO): JSX.Element {

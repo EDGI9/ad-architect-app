@@ -1,4 +1,4 @@
-import { PageTitleDTO } from "../../integration/core/dtos/PageTitle.dto";
+import { PageTitleDTO } from "../../integration/core/dtos/components/PageTitle.dto";
 import "./PageTitle.scss";
 
 export function PageTitle(props: PageTitleDTO): JSX.Element {

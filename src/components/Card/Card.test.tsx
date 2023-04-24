@@ -1,7 +1,7 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { Card } from "./Card";
-import { CardDTO } from "../../integration/core/dtos/Card.dto";
+import { CardDTO } from "../../integration/core/dtos/components/Card.dto";
 
 
 describe('Card component', () => {

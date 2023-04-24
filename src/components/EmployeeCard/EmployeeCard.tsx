@@ -1,4 +1,4 @@
-import { EmployeeCardDTO } from "../../integration/core/dtos/EmployeeCard.dto";
+import { EmployeeCardDTO } from "../../integration/core/dtos/components/EmployeeCard.dto";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";

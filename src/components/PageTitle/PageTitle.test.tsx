@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { PageTitleDTO } from "../../integration/core/dtos/PageTitle.dto";
+import { PageTitleDTO } from "../../integration/core/dtos/components/PageTitle.dto";
 import { PageTitle } from "./PageTitle";
 
 

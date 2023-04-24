@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { TextInputDTO } from "../../integration/core/dtos/TextInput.dto";
+import { TextInputDTO } from "../../integration/core/dtos/components/TextInput.dto";
 import { TextInput } from "./TextInput";
 
 describe('TextInput component', () => {

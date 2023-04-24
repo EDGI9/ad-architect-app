@@ -1,4 +1,4 @@
-import { CounterDTO } from "../../integration/core/dtos/Counter.dto";
+import { CounterDTO } from "../../integration/core/dtos/components/Counter.dto";
 import "./Counter.scss";
 
 export function Counter(props: CounterDTO): JSX.Element {

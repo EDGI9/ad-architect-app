@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { TitleDTO } from "../../integration/core/dtos/Title.dto";
+import { TitleDTO } from "../../integration/core/dtos/components/Title.dto";
 import { Title } from "./Title";
 
 describe('Title component', () => {

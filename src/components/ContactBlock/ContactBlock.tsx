@@ -1,4 +1,4 @@
-import { ContactBlockDTO } from "../../integration/core/dtos/ContactBlock.dto";
+import { ContactBlockDTO } from "../../integration/core/dtos/components/ContactBlock.dto";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
 import { Button } from "../Button/Button";

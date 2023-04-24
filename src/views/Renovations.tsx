@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { RenovationPaths } from "../router/RenovationsPaths"
 import { ImageDataDTO } from "../integration/core/dtos/data/ImageData.dto";
-import { SubNavBarItemDTO } from "../integration/core/dtos/SubNavBarItem.dto";
+import { SubNavBarItemDTO } from "../integration/core/dtos/components/SubNavBarItem.dto";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { SubNavBar } from "../components/SubNavBar/SubNavBar";
 import { CarrouselBig } from "../components/CarrouselBig/CarrouselBig";

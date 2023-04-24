@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CarrouselDetailDTO } from "../../integration/core/dtos/CarrouselDetail.dto";
+import { CarrouselDetailDTO } from "../../integration/core/dtos/components/CarrouselDetail.dto";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Button } from "../Button/Button";

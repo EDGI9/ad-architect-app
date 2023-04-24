@@ -1,6 +1,6 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { ReferralNameDTO } from "../../integration/core/dtos/ReferralName.dto";
+import { ReferralNameDTO } from "../../integration/core/dtos/components/ReferralName.dto";
 import { ReferralName } from "./ReferralName";
 
 describe('ReferralName component', () => {

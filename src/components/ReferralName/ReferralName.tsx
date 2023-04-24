@@ -1,4 +1,4 @@
-import { ReferralNameDTO } from "../../integration/core/dtos/ReferralName.dto";
+import { ReferralNameDTO } from "../../integration/core/dtos/components/ReferralName.dto";
 import { ImageDataDTO } from "../../integration/core/dtos/data/ImageData.dto";
 import { Card } from "../Card/Card";
 import { Image } from "../Image/Image";

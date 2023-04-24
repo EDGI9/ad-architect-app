@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SubNavBarDTO } from "../../integration/core/dtos/components/SubNavBar.dto";
-import { SubNavBarItemDTO } from "../../integration/core/dtos/SubNavBarItem.dto";
+import { SubNavBarItemDTO } from "../../integration/core/dtos/components/SubNavBarItem.dto";
 import { Button } from "../Button/Button";
 import "./SubNavBar.scss"
 
