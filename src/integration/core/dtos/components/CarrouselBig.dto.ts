@@ -1,5 +1,5 @@
-import { ImageDataDTO } from "./ImageData.dto";
+import { ImageListResponseDTO } from "../data/ImageListResponse.dto";
 
 export interface CarrouselBigDTO {
-    slides: Array<ImageDataDTO>
+    slides: Array<ImageListResponseDTO> | []
 }

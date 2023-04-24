@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { RenovationPaths } from "../router/RenovationsPaths"
 import { ImageDataDTO } from "../integration/core/dtos/data/ImageData.dto";
+import { SliderImageDTO } from "../integration/core/dtos/data/SliderImage.dto";
 import { SubNavBarItemDTO } from "../integration/core/dtos/components/SubNavBarItem.dto";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { SubNavBar } from "../components/SubNavBar/SubNavBar";
@@ -17,11 +18,11 @@ import { Services } from "../integration/services/index";
 export function Renovations(): JSX.Element {
     let [currentImageIndex, setCurrentImageIndex] = useState(1); 
     let [currentHouseArea, setCurrentHouseArea] = useState(RenovationPaths[0]);
-    let [currentImage, setCurrentImage] = useState({});
+    let [currentImage, setCurrentImage] = useState<SliderImageDTO>({});
     let [sliderImages, setSliderImages] = useState([]);
 
-    const updateCurrentImage = (image: ImageDataDTO) => {
-        const index = sliderImages.findIndex(item => item.id == image.id) + 1;
+    const updateCurrentImage = (image: SliderImageDTO) => {
+        const index = sliderImages.findIndex((item: SliderImageDTO) => item.id == image.id) + 1;
         setCurrentImageIndex(index);
         setCurrentImage(image);
     }
@@ -31,8 +32,8 @@ export function Renovations(): JSX.Element {
     }
 
     const getSliderImages = (area: string) => {
-        Services.Slider.getByArea(area).then(res => {
-            setSliderImages(res)
+        Services.Slider.getByArea(area).then((images) => {
+            setSliderImages(images)
         })
     }
 

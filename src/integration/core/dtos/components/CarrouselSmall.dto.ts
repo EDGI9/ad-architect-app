@@ -1,5 +1,5 @@
 import { MouseEvent } from "react";
-import { ImageDataDTO } from "./ImageData.dto";
+import { ImageDataDTO } from "../data/ImageData.dto";
 
 export interface CarrouselSmallDTO {
     slides: Array<ImageDataDTO>

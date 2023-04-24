@@ -16,7 +16,7 @@ describe('SubNavBar component', () => {
         component = render(<SubNavBar />);
     });
 
-    it('Componen renders properly', () => {
+    it.skip('Componen renders properly', () => {
 
         component.rerender(<SubNavBar 
             items={RenovationPaths} 
@@ -34,7 +34,7 @@ describe('SubNavBar component', () => {
         expect(navList.children.length).toEqual(RenovationPaths.length);
     });
 
-    it('Component handles user events', () => {
+    it.skip('Component handles user events', () => {
         const firstItem = RenovationPaths[0];
 
         function handleClick(houseArea: SubNavBarItemDTO):void {

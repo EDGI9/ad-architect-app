@@ -1,9 +1,10 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
+import { Services } from "../../integration/services/index";
 import { CarrouselDetail } from "./CarrouselDetail.js";
 import { CarrouselDetailDTO } from "../../integration/core/dtos/components/CarrouselDetail.dto";
 
-import { images } from "../../__mock__/images";
+const images = await Services.Images.getAllImages();
 
 describe('CarrouselDetail component', () => {
     let component: object;

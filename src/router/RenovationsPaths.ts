@@ -1,5 +1,5 @@
 import { HouseAreas } from "../integration/core/constants/HouseAreas.constants";
-import { SubNavBarItemDTO } from "../integration/core/dtos/SubNavBarItem.dto";
+import { SubNavBarItemDTO } from "../integration/core/dtos/components/SubNavBarItem.dto";
 import { RenovationPathsDTO } from "../integration/core/dtos/RenovationPaths.dto";
 //TODO: Create service to fetch House areas
 

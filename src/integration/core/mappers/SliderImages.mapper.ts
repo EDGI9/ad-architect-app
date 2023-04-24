@@ -5,7 +5,7 @@ import type {SliderImageDTO} from "../dtos/data/SliderImage.dto";
 import type {ImageListResponseDTO} from "../dtos/data/ImageListResponse.dto";
 import { faker } from "@faker-js/faker";
 
-async function mapToSliderImageList(data: ImageListResponseDTO[]): Promise<ImageListResponseDTO[] | []> {
+async function mapToSliderImageList(data: ImageListResponseDTO[]): Promise<SliderImageDTO[] | []> {
     let response: SliderImageDTO[] = []
     
     response = data.map((item: ImageDataDTO , index: number) => ({

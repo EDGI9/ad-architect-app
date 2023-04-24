@@ -1,4 +1,4 @@
-import { RoutesDTO } from "./Routes.dto";
+import { RoutesDTO } from "../Routes.dto";
 
 export interface FooterDTO {
     routes: RoutesDTO 

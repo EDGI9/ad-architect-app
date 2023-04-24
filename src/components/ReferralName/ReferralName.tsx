@@ -1,10 +1,12 @@
 import { ReferralNameDTO } from "../../integration/core/dtos/components/ReferralName.dto";
 import { ImageDataDTO } from "../../integration/core/dtos/data/ImageData.dto";
+import { Services } from "../../integration/services/index";
 import { Card } from "../Card/Card";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";
-import { images } from "../../__mock__/images";
 import "./ReferralName.scss";
+
+const images = await Services.Images.getAllImages();
 
 export function ReferralName(props: ReferralNameDTO): JSX.Element {
     const image: ImageDataDTO = images.ICON_QUOTATION;
