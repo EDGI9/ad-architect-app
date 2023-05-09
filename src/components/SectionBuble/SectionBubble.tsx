@@ -1,9 +1,9 @@
-import { SectionBubbleDTO } from "../../integration/core/dtos/components/SectionBubble.dto";
 import { Title } from "../Title/Title";
 import "./SectionBubble.scss";
 
+//@ts-ignore
 //TODO: Replace parent div with Card component
-export function SectionBubble(props: SectionBubbleDTO) : JSX.Element {
+export function SectionBubble(props) : JSX.Element {
     let alignClass;
     if (props.align !== undefined) {
         alignClass = `c-section-bubble--align-${props.align}`

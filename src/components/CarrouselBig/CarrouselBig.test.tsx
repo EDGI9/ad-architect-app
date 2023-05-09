@@ -3,14 +3,13 @@ import "@testing-library/jest-dom"
 import "react-multi-carousel";
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { CarrouselBigDTO } from "../../integration/core/dtos/components/CarrouselBig.dto";
 import { Services } from "../../integration/services/index";
 import { CarrouselBig } from "./CarrouselBig.js";
 
 describe('CarrouselBig component', async () => {
     let component: object;
     //TODO: Replace hardcoded string with an object property fetched from a service    
-    const props: CarrouselBigDTO = {
+    const props = {
         slides: await Services.Slider.getByArea('KITCHENS'),
     }
 

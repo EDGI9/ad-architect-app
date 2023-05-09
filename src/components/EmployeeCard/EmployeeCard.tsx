@@ -1,13 +1,10 @@
-import { EmployeeCardDTO } from "../../integration/core/dtos/components/EmployeeCard.dto";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
 import "./EmployeeCard.scss";
 
-
-
-
-export function EmployeeCard(props: EmployeeCardDTO) {
+//@ts-ignore
+export function EmployeeCard(props) {
     let image;
     let title; 
     let subtitle; 

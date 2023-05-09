@@ -1,3 +1,4 @@
-import { SubNavBarItemDTO } from "./components/SubNavBarItem.dto";
-
-export interface RenovationPathsDTO extends Array<SubNavBarItemDTO>{}
+export interface RenovationPathsDTO {
+    id: string
+    text: string
+}

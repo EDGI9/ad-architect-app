@@ -1,5 +1,4 @@
-import type { ImageListDTO } from "../core/dtos/data/ImageList.dto";
-import type { ImageListResponseDTO } from "../core/dtos/data/ImageListResponse.dto";
+import type { ImageListResponseDTO } from "../core/dtos/ImageListResponse.dto";
 import type { SliderImagesDrivenPort } from "../ports/SliderImagesReaderDriven.port";
 import type { SliderImagesServiceDriverPort } from "../ports/SliderImagesServiceDriver.port";
 import { SliderImagesMapper } from "../core/mappers/SliderImages.mapper";
@@ -11,7 +10,7 @@ export function SliderService(reader: SliderImagesDrivenPort): SliderImagesServi
         if (!response) {
             return []
         }
-        
+        //@ts-ignore
         return await SliderImagesMapper.mapToSliderImageList(response);
     }
 

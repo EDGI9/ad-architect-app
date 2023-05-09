@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { NavBarDTO } from "../../integration/core/dtos/components/NavBar.dto";
 import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { Services } from "../../integration/services/index"
-import { ImageListDTO } from "../../integration/core/dtos/data/ImageList.dto"
+import { ImageListDTO } from "../../integration/core/dtos/ImageList.dto"
 import "./NavBar.scss";
 
-export function NavBar(props: NavBarDTO): JSX.Element {
+//@ts-ignore
+export function NavBar(props): JSX.Element {
 
     const hastRoutes = Object.keys(props.routes).length > 0;
     let [images, setImages] = useState<ImageListDTO>({});

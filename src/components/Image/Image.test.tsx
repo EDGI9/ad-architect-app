@@ -2,7 +2,6 @@ import "@testing-library/jest-dom"
 import { it, describe, expect, vi } from "vitest";
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import { Services } from "../../integration/services/index";
-import { ImageDTO } from "../../integration/core/dtos/components/Image.dto";
 import { Image } from "./Image.js";
 
 const images = await Services.Images.getAllImages();
@@ -11,7 +10,7 @@ describe('Image component', () => {
   let component: object;
   let img: object;
   const handleClick = vi.fn((): void => {})
-  const props: ImageDTO = {
+  const props = {
     image: images.BIG_IMG_1,
     className: "test-class",
     imgClassName: "img-test-class",

@@ -9,5 +9,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-  }
+  },
+  build: { 
+    target: 'esnext' //browsers can handle the latest ES features
+  },
 })

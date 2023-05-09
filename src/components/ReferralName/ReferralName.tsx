@@ -1,5 +1,4 @@
-import { ReferralNameDTO } from "../../integration/core/dtos/components/ReferralName.dto";
-import { ImageDataDTO } from "../../integration/core/dtos/data/ImageData.dto";
+import { ImageDataDTO } from "../../integration/core/dtos/ImageData.dto";
 import { Services } from "../../integration/services/index";
 import { Card } from "../Card/Card";
 import { Image } from "../Image/Image";
@@ -8,7 +7,8 @@ import "./ReferralName.scss";
 
 const images = await Services.Images.getAllImages();
 
-export function ReferralName(props: ReferralNameDTO): JSX.Element {
+//@ts-ignore
+export function ReferralName(props): JSX.Element {
     const image: ImageDataDTO = images.ICON_QUOTATION;
     return (
         <div data-testid="qa-referral-name" className="c-referral-name">

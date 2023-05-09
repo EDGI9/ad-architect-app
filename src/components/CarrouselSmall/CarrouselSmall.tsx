@@ -1,7 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { CarrouselSmallDTO } from "../../integration/core/dtos/components/CarrouselSmall.dto";
-import { ImageDataDTO } from "../../integration/core/dtos/data/ImageData.dto";
+import { ImageDataDTO } from "../../integration/core/dtos/ImageData.dto";
 import { Image } from "../Image/Image";
 
 import "./CarrouselSmall.scss"
@@ -29,7 +28,8 @@ const responsive = {
     }
   };
 
-export function CarrouselSmall(props: CarrouselSmallDTO) {
+//@ts-ignore
+export function CarrouselSmall(props) {
 
     const slides = props.slides.length > 0 ? props.slides : [];
 
@@ -49,6 +49,7 @@ export function CarrouselSmall(props: CarrouselSmallDTO) {
           transitionDuration={5000}
           removeArrowOnDeviceType={["tablet", "mobile"]}>
             {
+              //@ts-ignore
               slides.map((slide: ImageDataDTO, index) => (
                 //TODO: Properly set the onClick event
                  <Image image={slide.src} height={150} width={150} key={index} onClick={() => props?.onClick(slide)}/>

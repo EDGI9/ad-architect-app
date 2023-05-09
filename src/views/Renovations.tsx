@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { RenovationPaths } from "../router/RenovationsPaths"
-import { ImageDataDTO } from "../integration/core/dtos/data/ImageData.dto";
-import { SliderImageDTO } from "../integration/core/dtos/data/SliderImage.dto";
-import { SubNavBarItemDTO } from "../integration/core/dtos/components/SubNavBarItem.dto";
+import { HouseAreaDTO } from "../integration/core/dtos/HouseArea.dto";
+import { ImageListDTO } from "../integration/core/dtos/ImageList.dto";
+import { SliderImageDTO } from "../integration/core/dtos/SliderImage.dto";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { SubNavBar } from "../components/SubNavBar/SubNavBar";
 import { CarrouselBig } from "../components/CarrouselBig/CarrouselBig";
@@ -18,6 +18,7 @@ import { Services } from "../integration/services/index";
 export function Renovations(): JSX.Element {
     let [currentImageIndex, setCurrentImageIndex] = useState(1); 
     let [currentHouseArea, setCurrentHouseArea] = useState(RenovationPaths[0]);
+    //@ts-ignore
     let [currentImage, setCurrentImage] = useState<SliderImageDTO>({});
     let [sliderImages, setSliderImages] = useState([]);
 
@@ -27,12 +28,14 @@ export function Renovations(): JSX.Element {
         setCurrentImage(image);
     }
 
-    const updateCurrentHouseArea= (houseArea: SubNavBarItemDTO):void => {
+
+    const updateCurrentHouseArea= (houseArea: HouseAreaDTO):void => {
         setCurrentHouseArea(houseArea);
     }
 
     const getSliderImages = (area: string) => {
         Services.Slider.getByArea(area).then((images) => {
+            //@ts-ignore
             setSliderImages(images)
         })
     }

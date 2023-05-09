@@ -1,7 +1,7 @@
-import { CounterDTO } from "../../integration/core/dtos/components/Counter.dto";
 import "./Counter.scss";
 
-export function Counter(props: CounterDTO): JSX.Element {
+//@ts-ignore
+export function Counter(props): JSX.Element {
     let buttonType: string;
     const classList = props.className !== undefined ? props.className : '';
 

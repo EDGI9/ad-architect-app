@@ -1,13 +1,12 @@
 import {it, describe, expect} from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { ContactBlock } from "./ContactBlock";
-import { ContactBlockDTO } from "../../integration/core/dtos/components/ContactBlock.dto";
 
 
 
 describe('ContactBlock component', () => {
     let component: object;
-    const props: ContactBlockDTO = {
+    const props = {
         title: "Test Title",
         text: "Test Text",
         backgroundColor: "#FFF"

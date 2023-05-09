@@ -1,4 +1,4 @@
-import { ImageDataDTO } from "../data/ImageData.dto";
+import { ImageDataDTO } from "./ImageData.dto";
 
 export interface EmployeeDTO {
     image: ImageDataDTO
@@ -6,4 +6,3 @@ export interface EmployeeDTO {
     subtitle: string
     text: string
 }
-

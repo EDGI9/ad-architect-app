@@ -2,12 +2,11 @@ import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { Services } from "../../integration/services/index";
 import { CarrouselSmall } from "./CarrouselSmall.js"
-import { CarrouselSmallDTO } from "../../integration/core/dtos/components/CarrouselSmall.dto";
 
 describe('CarrouselSmall component', async () => {
     let component: object;
     //TODO: Replace hardcoded string with an object property fetched from a service    
-    const props: CarrouselSmallDTO = {
+    const props = {
         slides: await Services.Slider.getByArea('KITCHENS'),
     }
 

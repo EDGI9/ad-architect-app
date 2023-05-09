@@ -1,12 +1,11 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { Card } from "./Card";
-import { CardDTO } from "../../integration/core/dtos/components/Card.dto";
 
 
 describe('Card component', () => {
     let component: object;
-    const props: CardDTO = {
+    const props = {
         backgroundColor: "#FFF",
         borderRadius: 10,
         className: "test-class",

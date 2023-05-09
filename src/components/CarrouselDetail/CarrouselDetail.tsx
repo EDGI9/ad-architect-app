@@ -1,15 +1,12 @@
 import { useState } from "react";
-import { CarrouselDetailDTO } from "../../integration/core/dtos/components/CarrouselDetail.dto";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
 import "./CarrouselDetail.scss";
 
-
-
-
-export function CarrouselDetail(props: CarrouselDetailDTO): JSX.Element {
+//@ts-ignore
+export function CarrouselDetail(props): JSX.Element {
     let [detailsVisibility, setDetailsVisibility] = useState(false);
     let visibiliTyClass:string = detailsVisibility === true ? 'c-carrousel-detail__details-card--visible':'';
     const title: string = props.text?.title !== undefined ? props.text.title : "Title";

@@ -1,6 +1,6 @@
-import { EmployeeListDTO } from "../integration/core/dtos/components/EmployeeList.dto";
 import { Services } from "../integration/services/index"
-import { ImageListDTO } from "../integration/core/dtos/data/ImageList.dto"
+import { EmployeeListDTO } from "../integration/core/dtos/EmployeesList.dto";
+import { ImageListDTO } from "../integration/core/dtos/ImageList.dto"
 
 let images: ImageListDTO = {};
 

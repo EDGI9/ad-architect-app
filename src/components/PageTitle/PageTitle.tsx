@@ -1,7 +1,7 @@
-import { PageTitleDTO } from "../../integration/core/dtos/components/PageTitle.dto";
 import "./PageTitle.scss";
 
-export function PageTitle(props: PageTitleDTO): JSX.Element {
+//@ts-ignore
+export function PageTitle(props): JSX.Element {
 
     const classList = props.className !== undefined ? props.className : ''
     

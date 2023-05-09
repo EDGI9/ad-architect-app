@@ -1,8 +1,7 @@
 import type {SliderImages as SliderImagesInterface} from "./SliderImages";
-import type {ImageListDTO} from "../dtos/data/ImageList.dto";
-import type {ImageDataDTO} from "../dtos/data/ImageData.dto";
-import type {SliderImageDTO} from "../dtos/data/SliderImage.dto";
-import type {ImageListResponseDTO} from "../dtos/data/ImageListResponse.dto";
+import type {ImageDataDTO} from "../dtos/ImageData.dto";
+import type {SliderImageDTO} from "../dtos/SliderImage.dto";
+import type {ImageListResponseDTO} from "../dtos/ImageListResponse.dto";
 import { faker } from "@faker-js/faker";
 
 async function mapToSliderImageList(data: ImageListResponseDTO[]): Promise<SliderImageDTO[] | []> {

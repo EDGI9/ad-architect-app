@@ -1,5 +1,5 @@
 import { SliderImagesDrivenPort } from "../ports/SliderImagesReaderDriven.port";
-import { ImageListResponseDTO } from "../core/dtos/data/ImageListResponse.dto";
+import { ImageListResponseDTO } from "../core/dtos/ImageListResponse.dto";
 import { images } from "../../__mock__/images";
 
 export function SliderImagesReaderAdapter(): SliderImagesDrivenPort {

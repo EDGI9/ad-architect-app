@@ -1,4 +1,4 @@
-import type { ImageListDTO } from "../core/dtos/data/ImageList.dto";
+import type { ImageListDTO } from "../core/dtos/ImageList.dto";
 import type { ImagesReaderDrivenPort } from "../ports/ImagesReaderDriven.port";
 import type { ImagesServiceDriverPort } from "../ports/ImagesServiceDriver.port";
 import {ImagesMapper} from "../core/mappers/Images.mapper";

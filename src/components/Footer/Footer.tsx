@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { FooterDTO } from "../../integration/core/dtos/components/Footer.dto";
 import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";
 import { Services } from "../../integration/services/index"
-import { ImageListDTO } from "../../integration/core/dtos/data/ImageList.dto"
+import { ImageListDTO } from "../../integration/core/dtos/ImageList.dto"
 import "./Footer.scss";
 
-export function Footer(props: FooterDTO): JSX.Element {
+//@ts-ignore
+export function Footer(props): JSX.Element {
     const hastRoutes = Object.keys(props.routes).length > 0;
     let [images, setImages] = useState<ImageListDTO>({})
     let routes;

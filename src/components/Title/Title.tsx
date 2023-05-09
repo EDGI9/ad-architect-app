@@ -1,7 +1,7 @@
-import { TitleDTO } from "../../integration/core/dtos/components/Title.dto";
 import "./Title.scss";
 
-export function Title(props: TitleDTO): JSX.Element {
+//@ts-ignore
+export function Title(props): JSX.Element {
 
     const classList = props.className !== undefined ? props.className : ''
     

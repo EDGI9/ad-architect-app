@@ -1,7 +1,6 @@
 import { it, describe, expect, beforeAll, afterAll } from "vitest";
 import { fireEvent, render, cleanup, RenderResult } from '@testing-library/react';
 import { RenovationPaths } from "../../router/RenovationsPaths.js";
-import { SubNavBarItemDTO } from "../../integration/core/dtos/components/SubNavBarItem.dto";
 import { SubNavBar } from "./SubNavBar.js";
 
 
@@ -25,6 +24,7 @@ describe('SubNavBar component', () => {
         nav = component.getByTestId('qa-sub-nav-bar');
         navList = component.getByTestId('qa-sub-nav-bar__list');
         navListItem = component.getAllByTestId('qa-sub-nav-bar__list-item');
+        //@ts-ignore
         navListItemButton = navListItem[0].children[0];
                
         expect(nav).toBeTruthy();
@@ -36,8 +36,9 @@ describe('SubNavBar component', () => {
 
     it.skip('Component handles user events', () => {
         const firstItem = RenovationPaths[0];
-
-        function handleClick(houseArea: SubNavBarItemDTO):void {
+        
+        //@ts-ignore
+        function handleClick(houseArea):void {
             expect(houseArea.id).toEqual(firstItem.id);
             expect(houseArea.text).toEqual(firstItem.text);
         }

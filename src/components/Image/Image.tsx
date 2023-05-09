@@ -1,6 +1,5 @@
-import { ImageDTO } from "../../integration/core/dtos/components/Image.dto";
-
-export function Image(props: ImageDTO): JSX.Element {
+//@ts-ignore
+export function Image(props): JSX.Element {
     const classList = props.className !== undefined ? props.className : '';
     const imgClassList = props.imgClassName !== undefined ? props.imgClassName : '';
     const width: string = props.width !== undefined ? `${props.width}px` : "auto";

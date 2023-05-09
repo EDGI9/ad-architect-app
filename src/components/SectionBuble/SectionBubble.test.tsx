@@ -1,11 +1,10 @@
 import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import { SectionBubbleDTO } from "../../integration/core/dtos/components/SectionBubble.dto";
 import { SectionBubble } from "./SectionBubble.js";
 
 describe('SectionBubble component', () => {
     let component: object;
-    const props: SectionBubbleDTO = {
+    const props = {
         title: 'Test Title',
         text: 'Test Text',
     };

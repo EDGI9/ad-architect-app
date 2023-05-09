@@ -5,7 +5,7 @@ import { Form } from "../components/Form/Form";
 import { Title } from "../components/Title/Title";
 import { Image } from "../components/Image/Image";
 import { Services } from "../integration/services/index"
-import { ImageListDTO } from "../integration/core/dtos/data/ImageList.dto"
+import { ImageListDTO } from "../integration/core/dtos/ImageList.dto"
 
 export function ContactUs(): JSX.Element {
     let [images, setImages] = useState<ImageListDTO>({})

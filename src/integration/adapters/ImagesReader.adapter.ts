@@ -1,6 +1,6 @@
 import { ImagesReaderDrivenPort } from "../ports/ImagesReaderDriven.port";
-import { ImageDataDTO } from "../core/dtos/data/ImageData.dto";
-import { ImageListResponseDTO } from "../core/dtos/data/ImageListResponse.dto";
+import { ImageDataDTO } from "../core/dtos/ImageData.dto";
+import { ImageListResponseDTO } from "../core/dtos/ImageListResponse.dto";
 import { images } from "../../__mock__/images";
 
 export function ImagesReaderAdapter(): ImagesReaderDrivenPort {

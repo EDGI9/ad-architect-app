@@ -1,10 +1,10 @@
-import { ContactBlockDTO } from "../../integration/core/dtos/components/ContactBlock.dto";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
 import { Button } from "../Button/Button";
 import "./ContactBlock.scss";
 
-export function ContactBlock(props: ContactBlockDTO) {
+//@ts-ignore
+export function ContactBlock(props) {
     let title; 
     let text;
     let backgroundColor;

@@ -1,4 +1,4 @@
-import { HouseAreaListDTO } from "../dtos/data/HouseAreaList.dto";
+import { HouseAreaListDTO } from "../dtos/HouseAreaList.dto";
 
 export const HouseAreas: HouseAreaListDTO = {
     KITCHENS: {

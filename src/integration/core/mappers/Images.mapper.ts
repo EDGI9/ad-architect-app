@@ -1,7 +1,7 @@
 import type {ImageMapper as ImagesMapperInterface} from "./ImagesMaper";
-import type {ImageListDTO} from "../dtos/data/ImageList.dto";
-import type {ImageDataDTO} from "../dtos/data/ImageData.dto";
-import type {ImageListResponseDTO} from "../dtos/data/ImageListResponse.dto";
+import type {ImageListDTO} from "../dtos/ImageList.dto";
+import type {ImageDataDTO} from "../dtos/ImageData.dto";
+import type {ImageListResponseDTO} from "../dtos/ImageListResponse.dto";
 
 
 

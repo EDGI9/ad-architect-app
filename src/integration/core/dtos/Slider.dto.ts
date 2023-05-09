@@ -1,3 +1,3 @@
-import { SliderImageDTO } from "./data/SliderImage.dto";
+import { SliderImageDTO } from "./SliderImage.dto";
 
 export interface SliderDTO extends Array<SliderImageDTO> {}
