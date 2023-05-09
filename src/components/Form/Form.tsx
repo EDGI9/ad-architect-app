@@ -1,10 +1,9 @@
-import {Components} from "../../interfaces/Components.d";
 import { Card } from "../Card/Card";
 import { TextInput } from '../TextInput/TextInput';
 import { TextArea } from '../TextArea/TextArea';
 import { Title } from '../Title/Title';
 import { Button } from '../Button/Button';
-import "./Form.scss"
+import "./Form.scss";
 
 //@ts-ignore
 export function Form(props) {

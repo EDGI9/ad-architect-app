@@ -1,3 +1,4 @@
+import { EmployeeDTO } from "../integration/core/dtos/Employee.dto";
 import { EmployeeCard } from "../components/EmployeeCard/EmployeeCard";
 import { Card } from "../components/Card/Card";
 import { PageTitle } from "../components/PageTitle/PageTitle";
@@ -9,7 +10,7 @@ export function WhoWeAre(): JSX.Element{
     let employeeList;
 
     if (Object.keys(employees).length > 0) {
-        employeeList = Object.values(employees).map((employee, index) => {
+        employeeList = Object.values(employees).map((employee: EmployeeDTO, index) => {
             return <EmployeeCard image={employee.image} title={employee.title}  subtitle={employee.subtitle} text={employee.text} backgroundColor="" key={index}></EmployeeCard>
         })
     }

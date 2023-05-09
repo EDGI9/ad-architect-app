@@ -1,8 +1,10 @@
-import {Components} from "../../interfaces/Components.d";
-import "./TextArea.scss"
+import "./TextArea.scss";
 
-export function TextArea(props: Components.TextArea): JSX.Element {
+//@ts-ignore
+export function TextArea(props): JSX.Element {
     let textAreaType: string;
+
+    //TODO: Move "primary", "secondary", etc. strings to a global opject that can be accessed everywere and be consistent
     switch(props.type) {
         case 'primary':
             textAreaType = 'c-textarea--primary'

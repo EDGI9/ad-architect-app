@@ -1,4 +1,4 @@
-export default interface Route {
+export interface RoutesDTO {
     [key: string]: {
         text: string
         path: string

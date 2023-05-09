@@ -1,16 +1,15 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {EmployeeCard} from "./EmployeeCard"
-import {Components} from "../../interfaces/Components.d";
-import { slider } from "../../__mock__/slider";
+import { Services } from "../../integration/services/index";
+import { EmployeeCard} from "./EmployeeCard";
 
 
 
-describe('EmployeeCard component', () => {
+describe('EmployeeCard component', async () => {
     let component: object;
     //TODO: Replace image used with employee image
-    const props: Components.EmployeeCard = {
-        image:slider[0],
+    const props = {
+        image: await Services.Images.getAllImages().then(res => res.EMPLOYEE_1),
         title: "Test Title",
         subtitle: "Test Subtitle",
         text: "Test Text"

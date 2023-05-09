@@ -1,5 +1,5 @@
 import { Router } from '../router';
-import { RouterPaths } from "../router/router-paths";
+import { RouterPaths } from "../router/RouterPaths";
 import { NavBar } from '../components/NavBar/NavBar';
 import { Footer } from '../components/Footer/Footer';
 

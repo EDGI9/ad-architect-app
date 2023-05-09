@@ -1,5 +1,8 @@
-import { useState } from 'react';
-import { Images } from "../interfaces/Image.d";
+import { useEffect, useState } from 'react';
+import { RenovationPaths } from "../router/RenovationsPaths"
+import { HouseAreaDTO } from "../integration/core/dtos/HouseArea.dto";
+import { ImageListDTO } from "../integration/core/dtos/ImageList.dto";
+import { SliderImageDTO } from "../integration/core/dtos/SliderImage.dto";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { SubNavBar } from "../components/SubNavBar/SubNavBar";
 import { CarrouselBig } from "../components/CarrouselBig/CarrouselBig";
@@ -9,25 +12,46 @@ import { ContactBlock } from "../components/ContactBlock/ContactBlock";
 import { Card } from "../components/Card/Card";
 import { Counter } from "../components/Counter/Counter";
 import { Title } from "../components/Title/Title";
-import { slider } from "../__mock__/slider";
-import { RenovationPaths } from "../router/renovations-paths"
-import {Components} from "../interfaces/Components.d";
+import { Services } from "../integration/services/index";
 
 
 export function Renovations(): JSX.Element {
     let [currentImageIndex, setCurrentImageIndex] = useState(1); 
-    let [currentHouseArea, setCurrentHouseArea] = useState(RenovationPaths[3]);
-    let [currentImage, setCurrentImage] = useState(slider[currentHouseArea.id][0]);
+    let [currentHouseArea, setCurrentHouseArea] = useState(RenovationPaths[0]);
+    //@ts-ignore
+    let [currentImage, setCurrentImage] = useState<SliderImageDTO>({});
+    let [sliderImages, setSliderImages] = useState([]);
 
-    const updateCurrentImage = (image: Images.Image) => {
-        const index = slider[currentHouseArea.id].findIndex(item => item.name == image.name) + 1;
+    const updateCurrentImage = (image: SliderImageDTO) => {
+        const index = sliderImages.findIndex((item: SliderImageDTO) => item.id == image.id) + 1;
         setCurrentImageIndex(index);
         setCurrentImage(image);
     }
 
-    const updateCurrentHouseArea= (houseArea: Components.SubNAvBarItem):void => {
+
+    const updateCurrentHouseArea= (houseArea: HouseAreaDTO):void => {
         setCurrentHouseArea(houseArea);
     }
+
+    const getSliderImages = (area: string) => {
+        Services.Slider.getByArea(area).then((images) => {
+            //@ts-ignore
+            setSliderImages(images)
+        })
+    }
+
+    //TODO: Fix problem with default image for slider detail
+    useEffect(() => {
+        getSliderImages(currentHouseArea.id);
+        // console.log(sliderImages[0], 'here');
+        if (sliderImages.length > 0) {
+            setCurrentImage(sliderImages[0]);
+        }
+        
+        // setCurrentImage(sliderImages[0]);
+    },[currentHouseArea.id])
+
+    
    
     return (
         <div>
@@ -42,7 +66,7 @@ export function Renovations(): JSX.Element {
 
             <section className="mt-28">
                 <CarrouselBig 
-                    slides={slider[currentHouseArea.id]}
+                    slides={sliderImages}
                 />
             </section>
             <Card backgroundColor='#E1E1E1' className='md:!bg-white'>
@@ -60,7 +84,7 @@ export function Renovations(): JSX.Element {
                                 / 
                                 <Title 
                                     type='h3' 
-                                    text={currentImage.text.title} 
+                                    text={currentImage.text?.title} 
                                     className='text-[#7B7B7B] font-light' 
                                 />
                             </div>
@@ -74,7 +98,7 @@ export function Renovations(): JSX.Element {
                     </div>
                     <div className='w-screen sm:w-full lg:w-2/3 mt-5'>
                         <CarrouselSmall 
-                            slides={slider[currentHouseArea.id]} 
+                            slides={sliderImages} 
                             onClick={updateCurrentImage} 
                         />
                     </div>

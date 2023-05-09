@@ -1,11 +1,24 @@
+import { useEffect, useState } from "react";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { Card } from "../components/Card/Card";
 import { Form } from "../components/Form/Form";
 import { Title } from "../components/Title/Title";
 import { Image } from "../components/Image/Image";
-import { images } from "../__mock__/images";
+import { Services } from "../integration/services/index"
+import { ImageListDTO } from "../integration/core/dtos/ImageList.dto"
 
 export function ContactUs(): JSX.Element {
+    let [images, setImages] = useState<ImageListDTO>({})
+
+
+    useEffect(() => {
+        Services.Images.getAllImages().then((response: ImageListDTO) => {
+            if (!response) {
+                return
+            }
+            setImages(response)
+        })
+    },[])
 
     return (
         <div>
@@ -55,7 +68,7 @@ export function ContactUs(): JSX.Element {
                         <Image 
                             image={images.BIG_IMG_1}
                             className="absolute top-0 z-0 contrast-[.40]" 
-                            imgClassName="rounded-full scale-[3.5] sm:scale-[2] lg:scale-[1.5] -translate-x-[80%] translate-y-[10%] sm:translate-x-[0px] sm:-translate-y-[30%] lg:-translate-x-[45%] lg:translate-y-[0%]"/>
+                            imgClassName="rounded-full scale-[3.5] sm:scale-[2] lg:scale-[1.5] -translate-x-[80%] translate-y-[10%] sm:translate-x-[0px] sm:-translate-y-[30%] lg:-translate-x-[45%] lg:translate-y-[0%]"/> 
                     </div>
                 </Card>
             </section>

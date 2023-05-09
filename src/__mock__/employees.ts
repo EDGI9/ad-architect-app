@@ -1,7 +1,18 @@
-import {Employees} from "../interfaces/Employees.d";
-import {images} from "./images"
+import { Services } from "../integration/services/index"
+import { EmployeeListDTO } from "../integration/core/dtos/EmployeesList.dto";
+import { ImageListDTO } from "../integration/core/dtos/ImageList.dto"
 
-export const employees: Employees.EmployeesList = {
+let images: ImageListDTO = {};
+
+await Services.Images.getAllImages().then((response) => {
+    if (!response) {
+        return
+    }
+    
+    images = response
+})
+
+export const employees: EmployeeListDTO = {
     EMPLOYEE_1 : {
         image: images.EMPLOYEE_1,
         title: "Sergio Lopez",

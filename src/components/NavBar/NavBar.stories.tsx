@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
 
-import {RouterPaths} from "../../router/router-paths";
+import {RouterPaths} from "../../router/RouterPaths";
 import { NavBar } from './NavBar';
 
 

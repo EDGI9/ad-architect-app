@@ -1,13 +1,13 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {CarrouselSmall} from "./CarrouselSmall.js"
-import {Components} from "../../interfaces/Components.d";
-import { slider } from "../../__mock__/slider";
+import { Services } from "../../integration/services/index";
+import { CarrouselSmall } from "./CarrouselSmall.js"
 
-describe('CarrouselSmall component', () => {
+describe('CarrouselSmall component', async () => {
     let component: object;
-    const props: Components.CarrouselSmall = {
-        slides: slider,
+    //TODO: Replace hardcoded string with an object property fetched from a service    
+    const props = {
+        slides: await Services.Slider.getByArea('KITCHENS'),
     }
 
     afterAll(() => {

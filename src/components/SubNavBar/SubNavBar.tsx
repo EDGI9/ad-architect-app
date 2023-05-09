@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import {Components} from "../../interfaces/Components.d";
 import { Button } from "../Button/Button";
 import "./SubNavBar.scss"
 
-export function SubNavBar(props: Components.SubNavBar): JSX.Element {
+//@ts-ignore
+export function SubNavBar(props): JSX.Element {
 
     const {items, activeItem, onClick} = props;
     const [currentAtiveId, setCurrentAtiveId]  = useState('');
     let listItems = [];
-
-    function itemClick(item: Components.SubNAvBarItem):void {
+    //@ts-ignore
+    function itemClick(item):void {
         if(!onClick) {
             return 
         }
-        const clickedItem: Components.SubNAvBarItem = {id:item.id , text: item.text}
+        const clickedItem = {id:item.id , text: item.text}
         setCurrentAtiveId(item.id)
         onClick(clickedItem)
     }
@@ -26,6 +26,7 @@ export function SubNavBar(props: Components.SubNavBar): JSX.Element {
 
     
     if(items && items.length) {
+        //@ts-ignore
         listItems = items.map((item, index) => (
             <li title={item.text} key={index} className="c-sub-nav-bar__list-item" data-testid="qa-sub-nav-bar__list-item">
                 <Button key={index} text={item.text} type="secondary" active={item.id === currentAtiveId ? true : false} onClick={() => itemClick(item)}></Button>

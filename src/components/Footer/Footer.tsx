@@ -1,22 +1,33 @@
-import {Components} from "../../interfaces/Components.d";
-import {Link} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";
-import { images } from "../../__mock__/images";
+import { Services } from "../../integration/services/index"
+import { ImageListDTO } from "../../integration/core/dtos/ImageList.dto"
+import "./Footer.scss";
 
-import "./Footer.scss"
-
-
-export function Footer(props: Components.Footer): JSX.Element {
+//@ts-ignore
+export function Footer(props): JSX.Element {
     const hastRoutes = Object.keys(props.routes).length > 0;
+    let [images, setImages] = useState<ImageListDTO>({})
     let routes;
 
     if (hastRoutes) {
-        routes=  Object.values(props.routes).map((routeProperties, index) => (
+        routes = Object.values(props.routes).map((routeProperties, index) => (
             //@ts-ignore
             <Link className="c-footer__link" to={routeProperties.path} key={index}>{routeProperties.text} </Link>
         ))
     }
+
+    useEffect(() => {
+        Services.Images.getAllImages().then((response: ImageListDTO) => {
+            if (!response) {
+                return
+            }
+            setImages(response)
+        })
+    },[])
+
     return (
         <footer data-testid="qa-footer" className="c-footer">
             <div className="c-footer__logo">

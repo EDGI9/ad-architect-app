@@ -1,10 +1,13 @@
-import {Components} from "../../interfaces/Components.d";
-
-export function Image(props: Components.Image): JSX.Element {
+//@ts-ignore
+export function Image(props): JSX.Element {
     const classList = props.className !== undefined ? props.className : '';
     const imgClassList = props.imgClassName !== undefined ? props.imgClassName : '';
     const width: string = props.width !== undefined ? `${props.width}px` : "auto";
     const height: string = props.height !== undefined ? `${props.height}px` : "auto";
+
+    if (!props.image?.src) {
+        return <></>
+    }
 
     return (
         //TODO: Properly set the onClick event
