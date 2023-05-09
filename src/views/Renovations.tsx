@@ -33,25 +33,21 @@ export function Renovations(): JSX.Element {
         setCurrentHouseArea(houseArea);
     }
 
-    const getSliderImages = (area: string) => {
-        Services.Slider.getByArea(area).then((images) => {
-            //@ts-ignore
-            setSliderImages(images)
-        })
-    }
-
-    //TODO: Fix problem with default image for slider detail
     useEffect(() => {
-        getSliderImages(currentHouseArea.id);
-        // console.log(sliderImages[0], 'here');
+        if (currentHouseArea.id) {
+            Services.Slider.getByArea(currentHouseArea.id).then((images) => {
+                //@ts-ignore
+                setSliderImages(images)
+            })
+        }
+    },[currentHouseArea.id])
+
+    useEffect(() => {
         if (sliderImages.length > 0) {
             setCurrentImage(sliderImages[0]);
         }
-        
-        // setCurrentImage(sliderImages[0]);
-    },[currentHouseArea.id])
+    },[sliderImages])
 
-    
    
     return (
         <div>
