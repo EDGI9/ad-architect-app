@@ -1,9 +1,8 @@
 import { CSSProperties } from "react"
-import {Components} from "../../interfaces/Components.d";
 import "./Card.scss"
 
-
-export function Card(props: Components.Card): JSX.Element {
+//@ts-ignore
+export function Card(props): JSX.Element {
 
     const classList = props.className !== undefined ? props.className : ''
     const style: CSSProperties = {

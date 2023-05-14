@@ -1,11 +1,10 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {TextInput} from "./TextInput"
-import {Components} from "../../interfaces/Components.d";
+import { TextInput } from "./TextInput";
 
 describe('TextInput component', () => {
   let component: object;
-  const props: Components.TextInput = {
+  const props = {
     text: "Test Text",
     type: "secondary",
     placeholder: "Test Placeholder",

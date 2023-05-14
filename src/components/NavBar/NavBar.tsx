@@ -1,13 +1,25 @@
-import {Components} from "../../interfaces/Components.d";
-import {Link} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Image } from "../Image/Image";
-import { images } from "../../__mock__/images";
+import { Services } from "../../integration/services/index"
+import { ImageListDTO } from "../../integration/core/dtos/ImageList.dto"
+import "./NavBar.scss";
 
-import "./NavBar.scss"
-
-export function NavBar(props: Components.NavBar): JSX.Element {
+//@ts-ignore
+export function NavBar(props): JSX.Element {
 
     const hastRoutes = Object.keys(props.routes).length > 0;
+    let [images, setImages] = useState<ImageListDTO>({});
+
+
+    useEffect(() => {
+        Services.Images.getAllImages().then((response: ImageListDTO) => {
+            if (!response) {
+                return
+            }
+            setImages(response)
+        })
+    },[])
     
     if (hastRoutes) {
         return (

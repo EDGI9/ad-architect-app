@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Services } from "../../integration/services/index";
+import { Image } from "./Image";
 
-
-import { Image } from "./Image"
-import { images } from "../../__mock__/images";
+const images = await Services.Images.getAllImages();
 
 export default {
   title: 'Image',

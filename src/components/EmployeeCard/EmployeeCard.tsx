@@ -1,13 +1,10 @@
-import {Components} from "../../interfaces/Components.d";
 import { Image } from "../Image/Image";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
-import "./EmployeeCard.scss"
+import "./EmployeeCard.scss";
 
-
-
-
-export function EmployeeCard(props: Components.EmployeeCard) {
+//@ts-ignore
+export function EmployeeCard(props) {
     let image;
     let title; 
     let subtitle; 

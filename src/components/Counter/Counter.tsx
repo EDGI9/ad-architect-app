@@ -1,7 +1,7 @@
-import {Components} from "../../interfaces/Components.d";
-import "./Counter.scss"
+import "./Counter.scss";
 
-export function Counter(props: Components.Counter): JSX.Element {
+//@ts-ignore
+export function Counter(props): JSX.Element {
     let buttonType: string;
     const classList = props.className !== undefined ? props.className : '';
 

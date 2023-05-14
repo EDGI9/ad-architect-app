@@ -1,7 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { Services } from "../../integration/services/index";
 import { CarrouselDetail } from "./CarrouselDetail"
-import { images } from "../../__mock__/images";
+
+const images = await Services.Images.getAllImages();
 
 export default {
   title: 'Carrousel Detail',

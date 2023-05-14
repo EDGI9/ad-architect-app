@@ -1,12 +1,13 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {CarrouselDetail} from "./CarrouselDetail.js"
-import {Components} from "../../interfaces/Components.d";
-import { images } from "../../__mock__/images";
+import { Services } from "../../integration/services/index";
+import { CarrouselDetail } from "./CarrouselDetail.js";
+
+const images = await Services.Images.getAllImages();
 
 describe('CarrouselDetail component', () => {
     let component: object;
-    const props: Components.CarrouselDetail = {
+    const props = {
         image: images.BIG_IMG_1,
         text: {title: "Test Title", description: "Test Description"}
     }

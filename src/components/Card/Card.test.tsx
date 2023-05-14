@@ -1,12 +1,11 @@
-import {it, describe, expect} from "vitest";
-import { render, cleanup} from '@testing-library/react';
-import {Card} from "./Card"
-import {Components} from "../../interfaces/Components.d";
+import { it, describe, expect } from "vitest";
+import { render, cleanup } from '@testing-library/react';
+import { Card } from "./Card";
 
 
 describe('Card component', () => {
     let component: object;
-    const props: Components.Card = {
+    const props = {
         backgroundColor: "#FFF",
         borderRadius: 10,
         className: "test-class",

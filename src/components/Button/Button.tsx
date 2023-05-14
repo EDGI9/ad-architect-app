@@ -1,7 +1,6 @@
-import {Components} from "../../interfaces/Components.d";
 import "./Button.scss"
-
-export function Button(props: Components.Button): JSX.Element {
+//@ts-ignore
+export function Button(props): JSX.Element {
     let buttonType: string;
     let isRound: string = props.round !== undefined && props.round === true ? 'c-button--round' : '';
     let isSmall: string = props.small !== undefined && props.small === true ? 'c-button--small' : '';

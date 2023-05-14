@@ -1,12 +1,10 @@
-import {it, describe, expect} from "vitest";
+import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
-import {SectionBubble} from "./SectionBubble.js"
-import {Components} from "../../interfaces/Components.d";
-
+import { SectionBubble } from "./SectionBubble.js";
 
 describe('SectionBubble component', () => {
     let component: object;
-    const props: Components.SectionBubble = {
+    const props = {
         title: 'Test Title',
         text: 'Test Text',
     };

@@ -1,7 +1,7 @@
-import {Components} from "../../interfaces/Components.d";
-import "./Title.scss"
+import "./Title.scss";
 
-export function Title(props: Components.Title): JSX.Element {
+//@ts-ignore
+export function Title(props): JSX.Element {
 
     const classList = props.className !== undefined ? props.className : ''
     
