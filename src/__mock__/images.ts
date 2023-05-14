@@ -33,6 +33,18 @@ import interior3 from "../assets/images/interior-3.jpg";
 import interior4 from "../assets/images/interior-4.jpg";
 import interior5 from "../assets/images/interior-5.jpg";
 
+import exterior1 from "../assets/images/exterior-1.jpg";
+import exterior2 from "../assets/images/exterior-2.jpg";
+import exterior3 from "../assets/images/exterior-3.jpg";
+import exterior4 from "../assets/images/exterior-4.jpg";
+import exterior5 from "../assets/images/exterior-5.jpg";
+
+import exteriors1 from "../assets/images/exteriors-1.jpg";
+import exteriors2 from "../assets/images/exteriors-2.jpg";
+import exteriors3 from "../assets/images/exteriors-3.jpg";
+import exteriors4 from "../assets/images/exteriors-4.jpg";
+import exteriors5 from "../assets/images/exteriors-5.jpg";
+
 import garden1 from "../assets/images/garden-1.jpg";
 import garden2 from "../assets/images/garden-2.jpg";
 import garden3 from "../assets/images/garden-3.jpg";
@@ -204,6 +216,66 @@ export const images = [
         src: interior5,
         name: 'Interior 5',
         area: HouseAreas.INTERIORS.id
+    },
+    {
+        id:'EXTERIOR_1',
+        src: exterior1,
+        name: 'Exterior 1',
+        area: HouseAreas.EXTERIOR.id
+    },
+    {
+        id:'EXTERIOR_2',
+        src: exterior2,
+        name: 'Exterior 2',
+        area: HouseAreas.EXTERIOR.id
+    },
+    {
+        id:'EXTERIOR_3',
+        src: exterior3,
+        name: 'Exterior 3',
+        area: HouseAreas.EXTERIOR.id
+    },
+    {
+        id:'EXTERIOR_4',
+        src: exterior4,
+        name: 'Exterior 4',
+        area: HouseAreas.EXTERIOR.id
+    },
+    {
+        id:'EXTERIOR_5',
+        src: exterior5,
+        name: 'Exterior 5',
+        area: HouseAreas.EXTERIOR.id
+    },
+    {
+        id:'EXTERIORS_1',
+        src: exteriors1,
+        name: 'Exteriors 1',
+        area: HouseAreas.EXTERIORS.id
+    },
+    {
+        id:'EXTERIORS_2',
+        src: exteriors2,
+        name: 'Exteriors 2',
+        area: HouseAreas.EXTERIORS.id
+    },
+    {
+        id:'EXTERIORS_3',
+        src: exteriors3,
+        name: 'Exteriors 3',
+        area: HouseAreas.EXTERIORS.id
+    },
+    {
+        id:'EXTERIORS_4',
+        src: exteriors4,
+        name: 'Exteriors 4',
+        area: HouseAreas.EXTERIORS.id
+    },
+    {
+        id:'EXTERIORS_5',
+        src: exteriors5,
+        name: 'Exteriors 5',
+        area: HouseAreas.EXTERIORS.id
     },
     {
         id:'GARDEN_1',
