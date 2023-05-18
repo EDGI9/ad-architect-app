@@ -17,7 +17,7 @@ export function ReferralName(props): JSX.Element {
                     <Image image={image} height={70} width={70} />
                 </div>                
                 <div className="c-referral-name__text">
-                    <Title type="h2" text={props.title} />
+                    <Title type="h2" className="c-referral-name__title" text={props.title} />
                     <p className="c-referral-name__subtitle">{props.subtitle}</p>
                 </div>                
             </Card>
