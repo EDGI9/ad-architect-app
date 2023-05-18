@@ -6,6 +6,8 @@ import { SectionBubble } from "../components/SectionBuble/SectionBubble";
 import { ReferralName } from "../components/ReferralName/ReferralName";
 import { ReferralQuote } from "../components/ReferralQuote/ReferralQuote";
 import { Title } from "../components/Title/Title";
+import { Card } from "../components/Card/Card";
+import { Button } from "../components/Button/Button";
 import { Services } from "../integration/services/index";
 
 export function Home(): JSX.Element {
@@ -23,17 +25,18 @@ export function Home(): JSX.Element {
     
     return (
         <div>
-            <section className="relative h-[500px] overflow-hidden">
-                <SectionBubble 
-                    align="right"
-                    title="new builds" 
-                    text="Dream it & we’ll design it. From the conception stages all the way to choosing your finishes, we’ll work together with you to bring your dream home to life.">
-                </SectionBubble>
+            <section className="relative md:flex md:h-[600px] overflow-hidden">
+                <Card backgroundColor="" className="bg-[#ECAE85]/20 backdrop-blur-sm w-full md:w-1/2 md:max-w-xl my-10 rounded-lg">
+                    <Title type="h1" text="We’re here to help you build your dream home" className="text-6xl"/> 
+                    <p className="py-5">Whether you’re looking for a bachelor pad or a family home for twelve, we’ll work with you to bring your dream home to life.</p>
+                    <Button text="get in touch"></Button>
+                </Card>
+                
                 <Image image={images.BIG_IMG_3} className="absolute w-full -z-50" imgClassName="w-full h-full -translate-y-1/3" />
             </section>
-            <section className="flex h-[500px]  my-40">
-                <div className="relative w-1/2">
-                    <div className="flex absolute inset-x-0 -bottom-20 justify-start">
+            <section className="flex flex-col md:flex-row md:h-[500px]  my-40">
+                <div className="relative w-full md:w-1/2">
+                    <div className="flex md:absolute inset-x-0 -bottom-20 justify-start">
                         <SectionBubble 
                             align="right"
                             title="new builds" 
@@ -44,8 +47,8 @@ export function Home(): JSX.Element {
                         <Image image={images.BIG_IMG_2}  imgClassName="w-full"/>
                     </div>
                 </div>
-                <div className="relative flex w-1/2">
-                    <div className="flex absolute inset-x-0 -bottom-20 justify-end">
+                <div className="relative md:flex w-full md:w-1/2">
+                    <div className="flex md:absolute inset-x-0 -bottom-20 justify-end">
                         <SectionBubble 
                             align="left"
                             title="Renovations" 
@@ -57,15 +60,22 @@ export function Home(): JSX.Element {
                     </div>
                 </div>
             </section>
-            <section className="flex h-[500px] overflow-hidden my-40 bg-zinc-200">
-                <div className="relative w-1/2">
-                    <Title type="h1" text="12" /> 
-                    <Title type="h2" text="years" />
-                    <Title type="h2" text="building dreams" />
+            <section className="flex flex-col md:flex-row md:h-[500px] my-40 bg-zinc-200">
+                <div className="relative w-full md:w-1/2 ps-10 -translate-y-28 md:-translate-y-0 flex flex-col">
+                    <Title type="h1" className="text-8xl leading-none font-extrabold" text="12" /> 
+                    <Title type="h2" className="text-2xl leading-none md:justify-self-end" text="years" />
+                    <Title type="h2" className="text-2xl ms-3 md:ms-0 leading-none md:justify-self-end"  text="building dreams" />
                 </div>
-                <div className="relative w-1/2">
-                    <ReferralQuote text="The team was very professional and friendly. They delivered exactly what i was looking for. I love my new home."></ReferralQuote>
-                    <ReferralName title="Ana Silva" subtitle="Home owner"></ReferralName>
+                <div className="relative flex items-end justify-end  md:w-1/2">
+                    <div className="w-full md:w-auto md:me-72 md:mb-10">
+                        <div className="w-4/5 md:w-auto ms-3 md:ms-0 md:ps-20">
+                            <ReferralQuote text="The team was very professional and friendly. They delivered exactly what i was looking for. I love my new home."></ReferralQuote>
+                        </div>
+                        <div className="-translate-x-10 md:-translate-x-0 w-4/5 md:w-auto my-4 md:my-0">
+                            <ReferralName title="Ana Silva" subtitle="Home owner"></ReferralName>
+                        </div>
+                    </div>
+                    <Image image={images.HOMEPAGE_PERSON} className="absolute bottom-0 right-0 w-1/2 md:w-auto" imgClassName="w-full me-0"/>
                 </div>
             </section>
             <section className="flex justify-center mt-10">
