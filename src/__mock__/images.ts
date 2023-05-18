@@ -14,6 +14,7 @@ import logoName2 from "../assets/images/logoName2.png";
 import employee1 from "../assets/images/employee_1.png";
 import employee2 from "../assets/images/employee_2.png";
 import employee3 from "../assets/images/employee_3.png";
+import homePagePerson from "../assets/images/homepage-persone.png";
 
 import kitchen1 from "../assets/images/kitchen-1.jpg";
 import kitchen2 from "../assets/images/kitchen-2.jpg";
@@ -126,6 +127,11 @@ export const images = [
         id:'EMPLOYEE_3',
         src: employee3,
         name: 'Employee 3'
+    },
+    {
+        id:'HOMEPAGE_PERSON',
+        src: homePagePerson,
+        name: 'Home Person'
     },
     {
         id:'KITCHEN_1',
