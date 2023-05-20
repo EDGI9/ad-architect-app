@@ -60,11 +60,13 @@ export function Home(): JSX.Element {
                     </div>
                 </div>
             </section>
-            <section className="flex flex-col md:flex-row md:h-[500px] my-40 bg-zinc-200">
-                <div className="relative w-full md:w-1/2 ps-10 -translate-y-28 md:-translate-y-0 flex flex-col">
-                    <Title type="h1" className="text-8xl leading-none font-extrabold" text="12" /> 
-                    <Title type="h2" className="text-2xl leading-none md:justify-self-end" text="years" />
-                    <Title type="h2" className="text-2xl ms-3 md:ms-0 leading-none md:justify-self-end"  text="building dreams" />
+            <section className="flex flex-col md:flex-row md:h-[500px] mt-52 mb-36 bg-zinc-200">
+                <div className="relative w-full md:w-1/2 ps-10 -translate-y-28 ">
+                    <div className="w-full md:w-7/12 grid flex-col justify-contnet-end align-items-end">
+                        <Title type="h1" className="text-[200px] text-[#555555] leading-none justify-self-start flex md:justify-self-end font-extrabold" text="12" /> 
+                        <Title type="h2" className="text-[50px] text-[#555555] ms-6 md:ms-0 leading-none justify-self-start flex md:justify-self-end" text="years" />
+                        <Title type="h2" className="text-[50px] text-[#555555] ms-10 md:ms-0 leading-none justify-self-start flex md:justify-self-end"  text="building dreams" />
+                    </div>
                 </div>
                 <div className="relative flex items-end justify-end  md:w-1/2">
                     <div className="w-full md:w-auto md:me-72 md:mb-10">
@@ -78,7 +80,7 @@ export function Home(): JSX.Element {
                     <Image image={images.HOMEPAGE_PERSON} className="absolute bottom-0 right-0 w-1/2 md:w-auto" imgClassName="w-full me-0"/>
                 </div>
             </section>
-            <section className="flex justify-center mt-10">
+            <section className="flex justify-center my-36">
                 <ContactBlock title='Let’s start a conversation!' text='Get in touch for any questions you may have and we’ll work together to find the best solution.'/>
             </section>
         </div>
