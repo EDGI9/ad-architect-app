@@ -26,13 +26,13 @@ export function Home(): JSX.Element {
     return (
         <div>
             <section className="relative md:flex md:h-[600px] overflow-hidden">
-                <Card backgroundColor="" className="bg-[#ECAE85]/20 backdrop-blur-sm w-full md:w-1/2 md:max-w-xl my-10 rounded-lg">
-                    <Title type="h1" text="We’re here to help you build your dream home" className="text-6xl"/> 
-                    <p className="py-5">Whether you’re looking for a bachelor pad or a family home for twelve, we’ll work with you to bring your dream home to life.</p>
+                <Card backgroundColor="" className="bg-white md:bg-[#ECAE85]/20 backdrop-blur-sm w-full md:w-1/2 md:max-w-xl my-10 rounded-lg max-md:p-0 max-md:flex max-md:flex-col max-md:items-center">
+                    <Title type="h1" text="We’re here to help you build your dream home" className="text-6xl max-md:px-11"/> 
+                    <Image image={images.BIG_IMG_3} className="md:hidden w-full -z-50 max-md:py-11" imgClassName="w-full h-full md:-translate-y-1/3" />
+                    <p className="py-5 max-md:px-11 max-md:text-center">Whether you’re looking for a bachelor pad or a family home for twelve, we’ll work with you to bring your dream home to life.</p>
                     <Button text="get in touch"></Button>
                 </Card>
-                
-                <Image image={images.BIG_IMG_3} className="absolute w-full -z-50" imgClassName="w-full h-full -translate-y-1/3" />
+                <Image image={images.BIG_IMG_3} className="max-md:hidden absolute w-full -z-50" imgClassName="w-full h-full md:-translate-y-1/3" />
             </section>
             <section className="flex flex-col md:flex-row md:h-[500px]  my-40">
                 <div className="relative w-full md:w-1/2">
@@ -66,8 +66,8 @@ export function Home(): JSX.Element {
                 <div className="relative w-full md:w-1/2 ps-10 -translate-y-28 ">
                     <div className="w-full md:w-7/12 grid flex-col justify-contnet-end align-items-end">
                         <Title type="h1" className="text-[200px] text-[#555555] leading-none justify-self-start flex md:justify-self-end font-extrabold" text="12" /> 
-                        <Title type="h2" className="text-[50px] text-[#555555] ms-6 md:ms-0 leading-none justify-self-start flex md:justify-self-end" text="years" />
-                        <Title type="h2" className="text-[50px] text-[#555555] ms-10 md:ms-0 leading-none justify-self-start flex md:justify-self-end"  text="building dreams" />
+                        <Title type="h2" className="text-[50px] text-[#555555] md:text-end ms-6 md:ms-0 leading-none justify-self-start flex md:justify-self-end" text="years" />
+                        <Title type="h2" className="text-[50px] text-[#555555] md:text-end ms-10 md:ms-0 leading-none justify-self-start flex md:justify-self-end"  text="building dreams" />
                     </div>
                 </div>
                 <div className="relative flex items-end justify-end  md:w-1/2">
