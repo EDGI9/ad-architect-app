@@ -39,6 +39,7 @@ export function Home(): JSX.Element {
                     <div className="flex md:absolute inset-x-0 -bottom-20 justify-start">
                         <SectionBubble 
                             align="right"
+                            className="max-md:!rounded-none max-md:w-full max-md:max-w-none max-md:!items-center"
                             title="new builds" 
                             text="Dream it & we’ll design it. From the conception stages all the way to choosing your finishes, we’ll work together with you to bring your dream home to life.">
                         </SectionBubble>
@@ -51,6 +52,7 @@ export function Home(): JSX.Element {
                     <div className="flex md:absolute inset-x-0 -bottom-20 justify-end">
                         <SectionBubble 
                             align="left"
+                            className="max-md:!rounded-none max-md:w-full max-md:max-w-none max-md:!items-center"
                             title="Renovations" 
                             text="Let’s breath new life into your home and bring out all its potencial. Let’s start a chat and dream up a great remodel. ">
                         </SectionBubble>
