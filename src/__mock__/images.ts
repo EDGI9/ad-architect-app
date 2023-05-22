@@ -4,6 +4,7 @@ import search from "../assets/svg/search.svg";
 import accessability from "../assets/svg/accessability.svg";
 import twitter from "../assets/svg/twitter.svg";
 import instagram from "../assets/svg/instagram.svg";
+import burguerMenu from "../assets/svg/burguer-menu.svg";
 import bigImg1 from "../assets/images/bigImg1.png";
 import bigImg2 from "../assets/images/bigImg2.png";
 import bigImg3 from "../assets/images/bigImg3.png";
@@ -77,6 +78,11 @@ export const images = [
         id:'ICON_INSTAGRAM',
         src: instagram,
         name: 'Instagram'
+    },
+    {
+        id:'ICON_BURGUER_MENU',
+        src: burguerMenu,
+        name: 'Menu'
     },
     {
         id:'BIG_IMG_1',
