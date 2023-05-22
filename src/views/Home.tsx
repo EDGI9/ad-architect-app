@@ -62,7 +62,7 @@ export function Home(): JSX.Element {
                     </div>
                 </div>
             </section>
-            <section className="flex flex-col md:flex-row md:h-[500px] mt-52 mb-36 bg-zinc-200">
+            <section className="flex flex-col md:flex-row md:h-[500px] mt-52 mb-36 bg-gradient-to-r from-white from-10% to-[#E1E1E1] to-90%">
                 <div className="relative w-full md:w-1/2 ps-10 -translate-y-28 ">
                     <div className="w-full md:w-7/12 grid flex-col justify-contnet-end align-items-end">
                         <Title type="h1" className="text-[200px] text-[#555555] leading-none justify-self-start flex md:justify-self-end font-extrabold" text="12" /> 
