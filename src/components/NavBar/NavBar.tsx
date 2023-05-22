@@ -29,10 +29,10 @@ export function NavBar(props): JSX.Element {
     if (hastRoutes) {
         return (
             <nav data-testid="qa-nav-bar" className="c-nav-bar">
-                <div className="c-nav-bar__logo">
+                <Link className="c-nav-bar__logo" to={props.routes.HOME.path}>
                     <Image image={images.LOGO} width={60} height={60}/>
-                    <Image image={images.LOGO_NAME} width={150} height={15}/>
-                </div>
+                    <Image image={images.LOGO_NAME} width={150} height={15}/> 
+                </Link>
                 <div className={`c-nav-bar__links ${open ? 'c-nav-bar__links--active' : ''}`}>
                     {
                         Object.values(props.routes).map((routeProperties, index) => (
