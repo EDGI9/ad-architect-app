@@ -17,8 +17,9 @@
     .c-nav-bar__link {
         text-decoration: none;
         color: $dark-color;
-        font-family: $secondary-font; // replace with Satoshi
+        font-family: $primary-font; 
         padding: 0px 15px;
+        font-weight: 900;
     }
 
     .c-nav-bar__logo {
@@ -38,5 +39,38 @@
         :hover {
             cursor: pointer;
         }
+    }
+
+    .c-nav-bar__menu-button{
+        grid-column: 11;
+        display: none;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        grid-template-rows: 60px 1fr;
+
+        .c-nav-bar__logo {
+            grid-row: 1;
+            grid-column: 1 / 7;
+            justify-content: start;
+        }
+        .c-nav-bar__links {
+            grid-row: 2;
+            grid-column: 2 / 12;
+            justify-content: center;
+            flex-direction: column;
+            height: 0px;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+        }
+        .c-nav-bar__search {
+            grid-row: 1;
+            grid-column: 12;
+        }
+
+        .c-nav-bar__links--active{
+            height: 100%;
+        }
+        .c-nav-bar__menu-button{display:block;}
     }
 }

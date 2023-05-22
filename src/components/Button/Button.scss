@@ -5,6 +5,8 @@
     border-radius: 15px;
     font-family: $primary-font;
     font-size: $button-font-size-big;
+    text-transform: uppercase;
+    font-weight: bold;
     &:hover{
         cursor: pointer;
     }

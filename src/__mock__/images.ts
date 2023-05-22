@@ -4,6 +4,7 @@ import search from "../assets/svg/search.svg";
 import accessability from "../assets/svg/accessability.svg";
 import twitter from "../assets/svg/twitter.svg";
 import instagram from "../assets/svg/instagram.svg";
+import burguerMenu from "../assets/svg/burguer-menu.svg";
 import bigImg1 from "../assets/images/bigImg1.png";
 import bigImg2 from "../assets/images/bigImg2.png";
 import bigImg3 from "../assets/images/bigImg3.png";
@@ -14,6 +15,7 @@ import logoName2 from "../assets/images/logoName2.png";
 import employee1 from "../assets/images/employee_1.png";
 import employee2 from "../assets/images/employee_2.png";
 import employee3 from "../assets/images/employee_3.png";
+import homePagePerson from "../assets/images/homepage-persone.png";
 
 import kitchen1 from "../assets/images/kitchen-1.jpg";
 import kitchen2 from "../assets/images/kitchen-2.jpg";
@@ -78,6 +80,11 @@ export const images = [
         name: 'Instagram'
     },
     {
+        id:'ICON_BURGUER_MENU',
+        src: burguerMenu,
+        name: 'Menu'
+    },
+    {
         id:'BIG_IMG_1',
         src: bigImg1,
         name: 'Big Image 1'
@@ -126,6 +133,11 @@ export const images = [
         id:'EMPLOYEE_3',
         src: employee3,
         name: 'Employee 3'
+    },
+    {
+        id:'HOMEPAGE_PERSON',
+        src: homePagePerson,
+        name: 'Home Person'
     },
     {
         id:'KITCHEN_1',
