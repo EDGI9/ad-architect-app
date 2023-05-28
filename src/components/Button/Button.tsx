@@ -20,8 +20,16 @@ export function Button(props): JSX.Element {
         default:
             buttonType = 'c-button--primary'
     }
+
+    function buttonClick() {
+        if (!props.onClick) {
+            return
+        }
+        
+        props.onClick()
+    }
+
     return (
-        //TODO: Properly set the onClick event
-        <button data-testid="qa-button" className={`c-button ${buttonType} ${isRound} ${isSmall} ${isActive} ${classList}`} onClick={() => props?.onClick()}>{props.text}</button>
+        <button data-testid="qa-button" className={`c-button ${buttonType} ${isRound} ${isSmall} ${isActive} ${classList}`} onClick={() => buttonClick()}>{props.text}</button>
     ) 
 }
