@@ -5,53 +5,53 @@ import accessability from "../assets/svg/accessability.svg";
 import twitter from "../assets/svg/twitter.svg";
 import instagram from "../assets/svg/instagram.svg";
 import burguerMenu from "../assets/svg/burguer-menu.svg";
-import bigImg1 from "../assets/images/bigImg1.png";
-import bigImg2 from "../assets/images/bigImg2.png";
-import bigImg3 from "../assets/images/bigImg3.png";
-import logo from "../assets/images/logo.png";
-import logoName from "../assets/images/logoName.png";
-import logo2 from "../assets/images/logo2.png";
-import logoName2 from "../assets/images/logoName2.png";
-import employee1 from "../assets/images/employee_1.png";
-import employee2 from "../assets/images/employee_2.png";
-import employee3 from "../assets/images/employee_3.png";
-import homePagePerson from "../assets/images/homepage-persone.png";
+import bigImg1 from "../assets/images/bigImg1.webp";
+import bigImg2 from "../assets/images/bigImg2.webp";
+import bigImg3 from "../assets/images/bigImg3.webp";
+import logo from "../assets/images/logo.webp";
+import logoName from "../assets/images/logoName.webp";
+import logo2 from "../assets/images/logo2.webp";
+import logoName2 from "../assets/images/logoName2.webp";
+import employee1 from "../assets/images/employee_1.webp";
+import employee2 from "../assets/images/employee_2.webp";
+import employee3 from "../assets/images/employee_3.webp";
+import homePagePerson from "../assets/images/homepage-persone.webp";
 
-import kitchen1 from "../assets/images/kitchen-1.jpg";
-import kitchen2 from "../assets/images/kitchen-2.jpg";
-import kitchen3 from "../assets/images/kitchen-3.jpg";
-import kitchen4 from "../assets/images/kitchen-4.jpg";
-import kitchen5 from "../assets/images/kitchen-5.jpg";
+import kitchen1 from "../assets/images/kitchen-1.webp";
+import kitchen2 from "../assets/images/kitchen-2.webp";
+import kitchen3 from "../assets/images/kitchen-3.webp";
+import kitchen4 from "../assets/images/kitchen-4.webp";
+import kitchen5 from "../assets/images/kitchen-5.webp";
 
-import bathroom1 from "../assets/images/bathroom-1.jpg";
-import bathroom2 from "../assets/images/bathroom-2.jpg";
-import bathroom3 from "../assets/images/bathroom-3.jpg";
-import bathroom4 from "../assets/images/bathroom-4.jpg";
-import bathroom5 from "../assets/images/bathroom-5.jpg";
+import bathroom1 from "../assets/images/bathroom-1.webp";
+import bathroom2 from "../assets/images/bathroom-2.webp";
+import bathroom3 from "../assets/images/bathroom-3.webp";
+import bathroom4 from "../assets/images/bathroom-4.webp";
+import bathroom5 from "../assets/images/bathroom-5.webp";
 
-import interior1 from "../assets/images/interior-1.jpg";
-import interior2 from "../assets/images/interior-2.jpg";
-import interior3 from "../assets/images/interior-3.jpg";
-import interior4 from "../assets/images/interior-4.jpg";
-import interior5 from "../assets/images/interior-5.jpg";
+import interior1 from "../assets/images/interior-1.webp";
+import interior2 from "../assets/images/interior-2.webp";
+import interior3 from "../assets/images/interior-3.webp";
+import interior4 from "../assets/images/interior-4.webp";
+import interior5 from "../assets/images/interior-5.webp";
 
-import exterior1 from "../assets/images/exterior-1.jpg";
-import exterior2 from "../assets/images/exterior-2.jpg";
-import exterior3 from "../assets/images/exterior-3.jpg";
-import exterior4 from "../assets/images/exterior-4.jpg";
-import exterior5 from "../assets/images/exterior-5.jpg";
+import exterior1 from "../assets/images/exterior-1.webp";
+import exterior2 from "../assets/images/exterior-2.webp";
+import exterior3 from "../assets/images/exterior-3.webp";
+import exterior4 from "../assets/images/exterior-4.webp";
+import exterior5 from "../assets/images/exterior-5.webp";
 
-import exteriors1 from "../assets/images/exteriors-1.jpg";
-import exteriors2 from "../assets/images/exteriors-2.jpg";
-import exteriors3 from "../assets/images/exteriors-3.jpg";
-import exteriors4 from "../assets/images/exteriors-4.jpg";
-import exteriors5 from "../assets/images/exteriors-5.jpg";
+import exteriors1 from "../assets/images/exteriors-1.webp";
+import exteriors2 from "../assets/images/exteriors-2.webp";
+import exteriors3 from "../assets/images/exteriors-3.webp";
+import exteriors4 from "../assets/images/exteriors-4.webp";
+import exteriors5 from "../assets/images/exteriors-5.webp";
 
-import garden1 from "../assets/images/garden-1.jpg";
-import garden2 from "../assets/images/garden-2.jpg";
-import garden3 from "../assets/images/garden-3.jpg";
-import garden4 from "../assets/images/garden-4.jpg";
-import garden5 from "../assets/images/interior-5.jpg";
+import garden1 from "../assets/images/garden-1.webp";
+import garden2 from "../assets/images/garden-2.webp";
+import garden3 from "../assets/images/garden-3.webp";
+import garden4 from "../assets/images/garden-4.webp";
+import garden5 from "../assets/images/interior-5.webp";
 
 export const images = [
     {
