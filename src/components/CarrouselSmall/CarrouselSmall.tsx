@@ -33,6 +33,14 @@ export function CarrouselSmall(props) {
 
     const slides = props.slides.length > 0 ? props.slides : [];
 
+    function slideClick(slide: ImageDataDTO) {
+      if (!props.onClick) {
+          return
+      }
+      
+      props.onClick(slide)
+    }
+
     return (
         <Carousel 
           data-testid="qa-carrousel-small" 
@@ -51,8 +59,7 @@ export function CarrouselSmall(props) {
             {
               //@ts-ignore
               slides.map((slide: ImageDataDTO, index) => (
-                //TODO: Properly set the onClick event
-                 <Image image={slide.src} height={150} width={150} key={index} onClick={() => props?.onClick(slide)}/>
+                 <Image image={slide.src} height={150} width={150} key={index} onClick={() => slideClick(slide)}/>
               ))
             }
         </Carousel>

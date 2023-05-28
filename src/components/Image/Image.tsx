@@ -9,9 +9,18 @@ export function Image(props): JSX.Element {
         return <></>
     }
 
+    
+    function imageClick() {
+        if (!props.onClick) {
+            return
+        }
+        
+        props.onClick(props.image)
+    }
+    
+
     return (
-        //TODO: Properly set the onClick event
-        <picture data-testid="qa-image" className={`c-image ${classList}`} onClick={() => props?.onClick(props.image)}>
+        <picture data-testid="qa-image" className={`c-image ${classList}`} onClick={imageClick}>
             <source src={props.image.src} height={height} width={width} className={imgClassList}/>
             <img src={props.image.src} alt={props.image.name} height={height} width={width} className={imgClassList}></img>
         </picture>

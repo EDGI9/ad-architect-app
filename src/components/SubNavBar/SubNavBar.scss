@@ -11,5 +11,11 @@
           justify-content: space-evenly;
           padding: 15px 20px ;
      }
+
+     .c-sub-nav-bar__list-item{
+          :first-child{
+               text-transform: capitalize;
+          }
+     }
      
 }
