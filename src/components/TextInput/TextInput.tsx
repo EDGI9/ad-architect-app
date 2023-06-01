@@ -16,6 +16,6 @@ export function TextInput(props): JSX.Element {
             inputType = 'c-text-input--primary'
     }
     return (
-        <input type="text" data-testid="qa-text-input" className={`c-text-input ${inputType}`} placeholder={props.placeholder} value={props.text} />
+        <input type="text" data-testid="qa-text-input" className={`c-text-input ${inputType}`} placeholder={props.placeholder} defaultValue={props.text} />
     )
 }

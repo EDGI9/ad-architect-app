@@ -17,6 +17,6 @@ export function TextArea(props): JSX.Element {
     }
 
     return (
-        <textarea data-testid="qa-textarea" className={`c-textarea ${textAreaType}`} placeholder={props.placeholder}>{props.text}</textarea>
+        <textarea data-testid="qa-textarea" className={`c-textarea ${textAreaType}`} placeholder={props.placeholder} defaultValue={props.text}></textarea>
     )
 }
