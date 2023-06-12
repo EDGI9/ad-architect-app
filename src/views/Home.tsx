@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ImageListDTO } from "../integration/core/dtos/ImageList.dto";
 import { Image } from "../components/Image/Image";
 import { ContactBlock } from "../components/ContactBlock/ContactBlock";
@@ -9,6 +10,7 @@ import { Title } from "../components/Title/Title";
 import { Card } from "../components/Card/Card";
 import { Button } from "../components/Button/Button";
 import { Services } from "../integration/services/index";
+import { RouterPaths } from "../router/RouterPaths";
 
 export function Home(): JSX.Element {
     //@ts-ignore
@@ -30,7 +32,9 @@ export function Home(): JSX.Element {
                     <Title type="h1" text="We’re here to help you build your dream home" className="text-6xl max-md:px-11"/> 
                     <Image image={images.BIG_IMG_3} className="md:hidden w-full -z-50 max-md:py-11" imgClassName="w-full h-full md:-translate-y-1/3" />
                     <p className="py-5 max-md:px-11 max-md:text-center">Whether you’re looking for a bachelor pad or a family home for twelve, we’ll work with you to bring your dream home to life.</p>
-                    <Button text="get in touch"></Button>
+                    <Link to={RouterPaths.CONTACT_US.path}>
+                        <Button text="Get in touch"></Button>
+                    </Link>
                 </Card>
                 <Image image={images.BIG_IMG_3} className="max-md:hidden absolute w-full -z-50" imgClassName="w-full h-full md:-translate-y-1/3" />
             </section>

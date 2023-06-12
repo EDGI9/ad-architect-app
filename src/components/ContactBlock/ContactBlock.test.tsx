@@ -1,5 +1,6 @@
 import {it, describe, expect} from "vitest";
 import { render, cleanup } from '@testing-library/react';
+import { MemoryRouter } from "react-router-dom";
 import { ContactBlock } from "./ContactBlock";
 
 
@@ -18,7 +19,7 @@ describe('ContactBlock component', () => {
 
     //TODO: Add test to test color prop
     it('Component works', () => {
-        const {getByTestId} = render(<ContactBlock {...props}/>);
+        const {getByTestId} = render(<MemoryRouter><ContactBlock {...props}/></MemoryRouter>);
         component = getByTestId('qa-contact-block');
 
         expect(component).not.toBeNull();
