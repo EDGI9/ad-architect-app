@@ -13,7 +13,7 @@ import { Title } from "../components/Title/Title";
 import { Services } from "../integration/services/index";
 
 
-export function Renovations(): JSX.Element {
+export function NewBuilds(): JSX.Element {
     let [currentImageIndex, setCurrentImageIndex] = useState(1); 
     //@ts-ignore
     let [HouseAreaPaths, setHouseAreaPaths] = useState<HouseAreaDTO[]>([]);
@@ -36,8 +36,8 @@ export function Renovations(): JSX.Element {
 
     useEffect(() => {
         Services.HouseAreas.getAllHouseAreas().then((houseAreas) => {
-            updateCurrentHouseArea(houseAreas[0]) 
-            setHouseAreaPaths(houseAreas); 
+            updateCurrentHouseArea(houseAreas[0]);
+            setHouseAreaPaths(houseAreas);  
         })
     },[])
 
@@ -60,7 +60,7 @@ export function Renovations(): JSX.Element {
     return (
         <div>
             <section className="flex justify-start my-16 text-sm">
-                <PageTitle text="Renovations"/>
+                <PageTitle text="New Builds"/>
             </section>
             <SubNavBar 
                 items={HouseAreaPaths} 

@@ -1,7 +1,10 @@
 import { it, describe, expect, beforeAll, afterAll } from "vitest";
 import { fireEvent, render, cleanup, RenderResult } from '@testing-library/react';
-import { RenovationPaths } from "../../router/RenovationsPaths.js";
 import { SubNavBar } from "./SubNavBar.js";
+import { Services } from "../../integration/services/index";
+import { HouseAreaDTO } from "../../integration/core/dtos/HouseArea.dto";
+
+
 
 
 describe('SubNavBar component', () => {
@@ -10,15 +13,17 @@ describe('SubNavBar component', () => {
     let navList: HTMLElement;
     let navListItem: HTMLElement[];
     let navListItemButton: HTMLElement;
+    let NavBarPaths: HouseAreaDTO[];
 
-     beforeAll(() => {
+    beforeAll(async () => {
         component = render(<SubNavBar />);
+        NavBarPaths = await Services.HouseAreas.getAllHouseAreas()
     });
 
     it.skip('Componen renders properly', () => {
 
         component.rerender(<SubNavBar 
-            items={RenovationPaths} 
+            items={NavBarPaths} 
         />); 
 
         nav = component.getByTestId('qa-sub-nav-bar');
@@ -31,11 +36,11 @@ describe('SubNavBar component', () => {
         expect(navList).toBeTruthy();
         expect(navListItem).toBeTruthy();
         expect(navListItemButton).toBeTruthy();
-        expect(navList.children.length).toEqual(RenovationPaths.length);
+        expect(navList.children.length).toEqual(NavBarPaths.length);
     });
 
     it.skip('Component handles user events', () => {
-        const firstItem = RenovationPaths[0];
+        const firstItem = NavBarPaths[0];
         
         //@ts-ignore
         function handleClick(houseArea):void {
@@ -44,7 +49,7 @@ describe('SubNavBar component', () => {
         }
 
         component.rerender(<SubNavBar 
-            items={RenovationPaths} 
+            items={NavBarPaths} 
             onClick={handleClick} 
         />);  
         
