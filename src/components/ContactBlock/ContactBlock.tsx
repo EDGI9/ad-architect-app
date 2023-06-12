@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { RouterPaths } from "../../router/RouterPaths";
 import { Card } from "../Card/Card";
 import { Title } from "../Title/Title";
 import { Button } from "../Button/Button";
@@ -31,7 +33,9 @@ export function ContactBlock(props) {
                     </div>
                 </div>
                 <div className="c-contact-block__button">
-                    <Button text="Get in Touch"></Button>
+                    <Link to={RouterPaths.CONTACT_US.path}>
+                        <Button text="Get in touch"></Button>
+                    </Link>
                 </div>
             </Card>
         </div>
