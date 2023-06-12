@@ -35,7 +35,8 @@ export function NavBar(props): JSX.Element {
                 </Link>
                 <div className={`c-nav-bar__links ${open ? 'c-nav-bar__links--active' : ''}`}>
                     {
-                        Object.values(props.routes).map((routeProperties, index) => (
+                        //@ts-ignore
+                        Object.values(props.routes).filter(item => item.id !== "HOME").map((routeProperties, index) => (
                             //@ts-ignore
                             <Link className="c-nav-bar__link" to={routeProperties.path} key={index}>{routeProperties.text} </Link>
                         ))

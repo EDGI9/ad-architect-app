@@ -13,7 +13,8 @@ export function Footer(props): JSX.Element {
     let routes;
 
     if (hastRoutes) {
-        routes = Object.values(props.routes).map((routeProperties, index) => (
+        //@ts-ignore
+        routes = Object.values(props.routes).filter(item => item.id !== "HOME").map((routeProperties, index) => (
             //@ts-ignore
             <Link className="c-footer__link" to={routeProperties.path} key={index}>{routeProperties.text} </Link>
         ))
