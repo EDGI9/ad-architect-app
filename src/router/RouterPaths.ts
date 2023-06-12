@@ -6,11 +6,15 @@ export const RouterPaths: RoutesDTO = {
     HOME: {
         text: 'Home',
         path: `${baseUrl}/`
-    } ,
+    },
     RENOVATIONS: {
         text: 'Renovations',
         path: `${baseUrl}/renovations`
-    } ,
+    },
+    NEW_BUILDS: {
+        text: 'New Builds',
+        path: `${baseUrl}/newbuilds`
+    },
     WHO_WE_ARE: {
         text: 'Who We Are',
         path: `${baseUrl}/whoweare`
