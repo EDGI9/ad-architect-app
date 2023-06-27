@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ImageListDTO } from "../integration/core/dtos/ImageList.dto";
 import { Image } from "../components/Image/Image";
@@ -15,14 +15,108 @@ import { RouterPaths } from "../router/RouterPaths";
 export function Home(): JSX.Element {
     //@ts-ignore
     let [images, setImages] = useState<ImageListDTO>({})
+    let person = useRef();
+    let personSection = useRef();
+    let personNameBubble = useRef();
+    let personQuoteBubble = useRef();
+    let personSlogan = useRef();
+    let leftPictureBubble = useRef();
+    let rightPictureBubble = useRef();
+    let personSectionObserver: IntersectionObserver;
+    let personNameBubbleObserver: IntersectionObserver;
+    let personQuoteBubbleObserver: IntersectionObserver;
+    let leftPictureBubbleObserver: IntersectionObserver;
+    let rightPictureBubbleObserver: IntersectionObserver;
+    let baseAnimationClasses: string[] = ['transition', 'ease-in-out', 'duration-300'];
 
     async function getImages() {
         const imagesList:ImageListDTO = await Services.Images.getAllImages()
         setImages(imagesList)
     }
     
+
+    personSectionObserver = new IntersectionObserver((entries, observer) => {
+        const entry = entries[0];
+        personSlogan.current.classList.add(...baseAnimationClasses, 'delay-200');
+        person.current.classList.add(...baseAnimationClasses, 'delay-300');
+        if (entry.isIntersecting) {
+            person.current.classList.add('-translate-x-0');
+            person.current.classList.remove('translate-x-full'); 
+
+            personSlogan.current.classList.add('translate-x-0');
+            personSlogan.current.classList.remove('-translate-x-full'); 
+        } else {
+            person.current.classList.add('translate-x-full'); 
+            person.current.classList.remove('-translate-x-0'); 
+
+            personSlogan.current.classList.add('-translate-x-full'); 
+            personSlogan.current.classList.remove('translate-x-0'); 
+        }
+    });
+
+    personQuoteBubbleObserver = new IntersectionObserver((entries, observer) => {
+        const entry = entries[0];
+        entry.target.classList.add(...baseAnimationClasses, 'delay-500');
+        if (entry.isIntersecting) {
+            entry.target.classList.add('-translate-x-100');
+            entry.target.classList.remove('translate-x-10', 'opacity-0'); 
+        } else {
+            entry.target.classList.add('translate-x-10','opacity-0'); 
+            entry.target.classList.remove('-translate-x-100'); 
+        }
+    });
+
+    personNameBubbleObserver = new IntersectionObserver((entries, observer) => {
+        const entry = entries[0];
+        entry.target.classList.add(...baseAnimationClasses, 'delay-300');
+        if (entry.isIntersecting) {
+            entry.target.classList.add('md:-translate-x-5');
+            entry.target.classList.remove('translate-x-52', 'opacity-0'); 
+        } else {
+            entry.target.classList.add('translate-x-52','opacity-0'); 
+            entry.target.classList.remove('md:-translate-x-5'); 
+        }
+        
+    });
+
+    leftPictureBubbleObserver = new IntersectionObserver((entries, observer) => {
+        const entry = entries[0];
+        entry.target.classList.add(...baseAnimationClasses, 'delay-150');
+        if (entry.isIntersecting) {
+            entry.target.classList.add('translate-x-0');
+            entry.target.classList.remove('-translate-x-1/2', 'opacity-0'); 
+        } else {
+            entry.target.classList.add('-translate-x-1/2','opacity-0'); 
+            entry.target.classList.remove('translate-x-0'); 
+        }
+    });
+
+    rightPictureBubbleObserver = new IntersectionObserver((entries, observer) => {
+        const entry = entries[0];
+        entry.target.classList.add(...baseAnimationClasses, 'delay-300');
+        if (entry.isIntersecting) {
+            entry.target.classList.add('translate-x-0');
+            entry.target.classList.remove('translate-x-1/2', 'opacity-0'); 
+        } else {
+            entry.target.classList.add('translate-x-1/2','opacity-0'); 
+            entry.target.classList.remove('translate-x-0'); 
+        }
+        
+    });
+
+      
     useEffect(() => {
         getImages()
+        //@ts-ignore
+        personSectionObserver.observe(personSection.current);
+        //@ts-ignore
+        personNameBubbleObserver.observe(personNameBubble.current);
+        //@ts-ignore
+        personQuoteBubbleObserver.observe(personQuoteBubble.current);
+        //@ts-ignore
+        leftPictureBubbleObserver.observe(leftPictureBubble.current);
+        //@ts-ignore
+        rightPictureBubbleObserver.observe(rightPictureBubble.current);
     },[])
     
     return (
@@ -40,7 +134,7 @@ export function Home(): JSX.Element {
             </section>
             <section className="flex flex-col md:flex-row md:h-[500px]  my-40">
                 <div className="relative w-full md:w-1/2">
-                    <div className="flex md:absolute inset-x-0 -bottom-20 justify-start">
+                    <div className="flex md:absolute inset-x-0 -bottom-20 justify-start" ref={leftPictureBubble}>
                         <SectionBubble 
                             align="right"
                             className="max-md:!rounded-none max-md:w-full max-md:max-w-none max-md:!items-center"
@@ -53,7 +147,7 @@ export function Home(): JSX.Element {
                     </div>
                 </div>
                 <div className="relative md:flex w-full md:w-1/2">
-                    <div className="flex md:absolute inset-x-0 -bottom-20 justify-end">
+                    <div className="flex md:absolute inset-x-0 -bottom-20 justify-end" ref={rightPictureBubble}>
                         <SectionBubble 
                             align="left"
                             className="max-md:!rounded-none max-md:w-full max-md:max-w-none max-md:!items-center"
@@ -66,24 +160,26 @@ export function Home(): JSX.Element {
                     </div>
                 </div>
             </section>
-            <section className="flex flex-col md:flex-row md:h-[500px] mt-52 mb-36 bg-gradient-to-r from-white from-10% to-[#E1E1E1] to-90%">
+            <section className="flex flex-col md:flex-row md:h-[500px] mt-52 mb-36 bg-gradient-to-r from-white from-10% to-[#E1E1E1] to-90%" ref={personSection}>
                 <div className="relative w-full md:w-1/2 ps-10 -translate-y-28 ">
-                    <div className="w-full md:w-7/12 grid flex-col justify-contnet-end align-items-end">
+                    <div className="w-full md:w-7/12 grid flex-col justify-contnet-end align-items-end" ref={personSlogan}>
                         <Title type="h1" className="text-[200px] text-[#555555] leading-none justify-self-start flex md:justify-self-end font-extrabold" text="12" /> 
                         <Title type="h2" className="text-[50px] text-[#555555] md:text-end ms-6 md:ms-0 leading-none justify-self-start flex md:justify-self-end" text="years" />
                         <Title type="h2" className="text-[50px] text-[#555555] md:text-end ms-10 md:ms-0 leading-none justify-self-start flex md:justify-self-end"  text="building dreams" />
                     </div>
                 </div>
-                <div className="relative flex items-end justify-end  md:w-1/2">
+                <div className="relative flex items-end justify-end  md:w-1/2" >
                     <div className="w-full md:w-auto md:me-72 md:mb-10">
-                        <div className="w-4/5 md:w-auto ms-3 md:ms-0 md:ps-20">
+                        <div className="w-4/5 md:w-auto ms-3 md:ms-0 md:ps-20" ref={personQuoteBubble}>
                             <ReferralQuote text="The team was very professional and friendly. They delivered exactly what i was looking for. I love my new home."></ReferralQuote>
                         </div>
-                        <div className="-translate-x-10 md:-translate-x-0 w-4/5 md:w-auto my-4 md:my-0">
+                        <div className="md:-translate-x-0 w-4/5 md:w-auto my-4 md:my-0" ref={personNameBubble}>
                             <ReferralName title="Ana Silva" subtitle="Home owner"></ReferralName>
                         </div>
                     </div>
-                    <Image image={images.HOMEPAGE_PERSON} className="absolute bottom-0 right-0 w-1/2 md:w-auto" imgClassName="w-full me-0"/>
+                    <div ref={person} className="absolute bottom-0 right-0 w-1/2 md:w-auto">
+                        <Image  image={images.HOMEPAGE_PERSON} imgClassName="w-full me-0"/>
+                    </div>
                 </div>
             </section>
             <section className="flex justify-center my-36">
