@@ -10,9 +10,9 @@ import  "../assets/styles/utilities.scss";
 
 export function WhoWeAre(): JSX.Element{
     let employeeList;
-    let employee1 = useRef();
-    let employee2 = useRef();
-    let employee3 = useRef();
+    let employee1 = useRef(null);
+    let employee2 = useRef(null);
+    let employee3 = useRef(null);
     let employeeRefs = [employee1, employee2, employee3];
 
     if (Object.keys(employees).length > 0) {

@@ -15,16 +15,16 @@ import { RouterPaths } from "../router/RouterPaths";
 export function Home(): JSX.Element {
     //@ts-ignore
     let [images, setImages] = useState<ImageListDTO>({})
-    let person = useRef();
-    let personSection = useRef();
-    let personNameBubble = useRef();
-    let personQuoteBubble = useRef();
-    let personSlogan = useRef();
-    let pictureSection = useRef();
-    let leftPictureBubble = useRef();
-    let rightPictureBubble = useRef();
-    let leftPicture = useRef();
-    let rightPicture = useRef();
+    let person = useRef(null);
+    let personSection = useRef(null);
+    let personNameBubble = useRef(null);
+    let personQuoteBubble = useRef(null);
+    let personSlogan = useRef(null);
+    let pictureSection = useRef(null);
+    let leftPictureBubble = useRef(null);
+    let rightPictureBubble = useRef(null);
+    let leftPicture = useRef(null);
+    let rightPicture = useRef(null);
     let personSectionObserver: IntersectionObserver;
     let pictureSectionObserver: IntersectionObserver;
     let baseAnimationClasses: string[] = ['transition', 'ease-in-out', 'duration-700'];
