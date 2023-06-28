@@ -37,41 +37,59 @@ export function Home(): JSX.Element {
 
     personSectionObserver = new IntersectionObserver((entries, observer) => {
         const entry = entries[0];
+        //@ts-ignore
         personSlogan.current.classList.add(...baseAnimationClasses, 'delay-200');
+        //@ts-ignore
         person.current.classList.add(...baseAnimationClasses, 'delay-300');
+        //@ts-ignore
         personQuoteBubble.current.classList.add(...baseAnimationClasses, 'delay-[600ms]');
+        //@ts-ignore
         personNameBubble.current.classList.add(...baseAnimationClasses, 'delay-[900ms]');
-
+        
         if (entry.isIntersecting) {
+            //@ts-ignore
             person.current.classList.add('-translate-x-0');
+            //@ts-ignore
             person.current.classList.remove('translate-x-full'); 
-
+            
+            //@ts-ignore
             personSlogan.current.classList.remove('-translate-x-full'); 
-
-            // personNameBubble.current.classList.add('xs:-translate-x-24', 'md:-translate-x-5');
+            
+            //@ts-ignore
             personNameBubble.current.classList.add('-translate-x-10', 'md:-translate-x-5');
+            //@ts-ignore
             personNameBubble.current.classList.remove('translate-x-52', 'opacity-0');
-
+            
+            //@ts-ignore
             personQuoteBubble.current.classList.add('-translate-x-100');
+            //@ts-ignore
             personQuoteBubble.current.classList.remove('translate-x-40', 'opacity-0');
-
+            
             personSectionObserver.unobserve(entry.target);
         } 
     },{
         threshold: 0.5
     });
-
+    
     pictureSectionObserver = new IntersectionObserver((entries, observer) => {
         const entry = entries[0];
+        //@ts-ignore
         leftPicture.current.classList.add(...baseAnimationClasses, 'delay-200');
+        //@ts-ignore
         leftPictureBubble.current.classList.add(...baseAnimationClasses, 'delay-700');
+        //@ts-ignore
         rightPicture.current.classList.add(...baseAnimationClasses, 'delay-200');
+        //@ts-ignore
         rightPictureBubble.current.classList.add(...baseAnimationClasses, 'delay-700');
-
+        
         if (entry.isIntersecting) {
+            //@ts-ignore
             leftPicture.current.classList.remove('-translate-x-3/4', 'blur-sm', 'opacity-0');
+            //@ts-ignore
             leftPictureBubble.current.classList.remove('-translate-x-1/2', 'opacity-0'); 
+            //@ts-ignore
             rightPicture.current.classList.remove('translate-x-3/4', 'blur-sm', 'opacity-0');
+            //@ts-ignore
             rightPictureBubble.current.classList.remove('translate-x-1/2', 'opacity-0'); 
 
             pictureSectionObserver.unobserve(entry.target);
