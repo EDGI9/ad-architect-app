@@ -1,3 +1,5 @@
+import { useEffect, useRef, } from "react";
+
 import { EmployeeDTO } from "../integration/core/dtos/Employee.dto";
 import { EmployeeCard } from "../components/EmployeeCard/EmployeeCard";
 import { Card } from "../components/Card/Card";
@@ -8,12 +10,40 @@ import  "../assets/styles/utilities.scss";
 
 export function WhoWeAre(): JSX.Element{
     let employeeList;
+    let employee1 = useRef();
+    let employee2 = useRef();
+    let employee3 = useRef();
+    let employeeRefs = [employee1, employee2, employee3];
 
     if (Object.keys(employees).length > 0) {
         employeeList = Object.values(employees).map((employee: EmployeeDTO, index) => {
-            return <EmployeeCard image={employee.image} title={employee.title}  subtitle={employee.subtitle} text={employee.text} backgroundColor="" key={index}></EmployeeCard>
+            return <div ref={employeeRefs[index]} key={index} className="transition ease-in-out duration-300 opacity-0 -translate-x-10"><EmployeeCard  image={employee.image} title={employee.title}  subtitle={employee.subtitle} text={employee.text} backgroundColor="" ></EmployeeCard></div>
         })
     }
+
+    useEffect(() => {
+        employeeRefs.forEach((employee, index) => {
+            switch (index) {
+                case 1:
+                    //@ts-ignore
+                    employee.current.classList.add('delay-300');
+                    break;
+                case 2:
+                    //@ts-ignore
+                    employee.current.classList.add('delay-500');
+                    break;
+                case 3:
+                    //@ts-ignore
+                    employee.current.classList.add('delay-700');
+                    break;
+            }
+            
+            //@ts-ignore
+            employee.current.classList.remove('opacity-0', '-translate-x-10');
+        });
+        
+        
+    },[])
 
     return (
         <div className="w-full">
