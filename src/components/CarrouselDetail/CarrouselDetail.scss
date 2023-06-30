@@ -19,12 +19,14 @@
         position: absolute;
         order: 2;
         height: 70%;
+        width: 25%;
         max-width: 200px;
         left: 100%;
         transform: translate(0);
         z-index: 2;
         transition: transform 0.5s;
         transition-timing-function: ease-in-out;
+        padding: 23px 23px;
     }
     .c-carrousel-detail__details-card--visible {
         transform: translate(-100%);
@@ -50,15 +52,34 @@
             position: relative;
             order: 1;
             left: 0%;
+            width: 100%;
             max-width: 100%;
-            padding: 0;
+            padding: 20px 0px;
         } 
+
+        .c-carrousel-detail__details-card--visible {
+            transform: translate(0%);
+        }
+
         picture,source, img {
             order: 2;
         }
 
         .c-button{
             display: none;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        overflow: visible;
+            
+        .c-carrousel-detail__details-card-button{
+            display: none;
+        }
+
+        .c-carrousel-detail__details-card {
+           transform: translate(0%); 
+           width: 300px;
         }
     }
 }
