@@ -5,6 +5,7 @@ import accessability from "../assets/svg/accessability.svg";
 import twitter from "../assets/svg/twitter.svg";
 import instagram from "../assets/svg/instagram.svg";
 import burguerMenu from "../assets/svg/burguer-menu.svg";
+import arrow from "../assets/svg/arrow.svg";
 import bigImg1 from "../assets/images/bigImg1.webp";
 import bigImg2 from "../assets/images/bigImg2.webp";
 import bigImg3 from "../assets/images/bigImg3.webp";
@@ -83,6 +84,11 @@ export const images = [
         id:'ICON_BURGUER_MENU',
         src: burguerMenu,
         name: 'Menu'
+    },
+    {
+        id:'ICON_ARROW',
+        src: arrow,
+        name: 'Arrow'
     },
     {
         id:'BIG_IMG_1',
