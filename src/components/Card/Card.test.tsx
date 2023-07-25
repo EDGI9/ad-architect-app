@@ -23,7 +23,7 @@ describe('Card component', () => {
         
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-card'));
+        expect(component.classList.contains('c-card')).toBe(true);
         //Test to see if component renders image
         //Test to see if component renders title
         //Test to see if component renders text

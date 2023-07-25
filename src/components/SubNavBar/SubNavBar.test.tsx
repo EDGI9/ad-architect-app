@@ -2,6 +2,7 @@ import { it, describe, expect, beforeAll, afterAll } from "vitest";
 import { fireEvent, render, cleanup, RenderResult } from '@testing-library/react';
 import { RenovationPaths } from "../../router/RenovationsPaths.js";
 import { SubNavBar } from "./SubNavBar.js";
+import { HouseAreaDTO } from "../../integration/core/dtos/HouseArea.dto.js";
 
 
 describe('SubNavBar component', () => {
@@ -11,13 +12,9 @@ describe('SubNavBar component', () => {
     let navListItem: HTMLElement[];
     let navListItemButton: HTMLElement;
 
-     beforeAll(() => {
-        component = render(<SubNavBar />);
-    });
+    it('Componen renders properly', () => {
 
-    it.skip('Componen renders properly', () => {
-
-        component.rerender(<SubNavBar 
+        component = render(<SubNavBar 
             items={RenovationPaths} 
         />); 
 
@@ -34,16 +31,15 @@ describe('SubNavBar component', () => {
         expect(navList.children.length).toEqual(RenovationPaths.length);
     });
 
-    it.skip('Component handles user events', () => {
+    it('Component handles user events', () => {
         const firstItem = RenovationPaths[0];
         
-        //@ts-ignore
-        function handleClick(houseArea):void {
+        function handleClick(houseArea: HouseAreaDTO):void {
             expect(houseArea.id).toEqual(firstItem.id);
             expect(houseArea.text).toEqual(firstItem.text);
         }
 
-        component.rerender(<SubNavBar 
+        component = render(<SubNavBar 
             items={RenovationPaths} 
             onClick={handleClick} 
         />);  

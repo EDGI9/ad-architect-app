@@ -23,7 +23,7 @@ describe('ContactBlock component', () => {
 
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-contact-block'));
+        expect(component.classList.contains('c-contact-block')).toBe(true);
         //Test to see if component renders title
         //Test to see if component renders text
     })

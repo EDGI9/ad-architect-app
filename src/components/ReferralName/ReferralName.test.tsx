@@ -19,7 +19,7 @@ describe('ReferralName component', () => {
 
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-referral-name'));
+        expect(component.classList.contains('c-referral-name')).toBe(true);
         expect(getByText(props.title).textContent).toBe(props.title)
         expect(getByText(props.subtitle).textContent).toBe(props.subtitle)
     })

@@ -5,12 +5,14 @@ import { it, describe, expect } from "vitest";
 import { render, cleanup } from '@testing-library/react';
 import { Services } from "../../integration/services/index";
 import { CarrouselBig } from "./CarrouselBig.js";
+import { HouseAreas } from "../../integration/core/constants/HouseAreas.constants";
 
 describe('CarrouselBig component', async () => {
     let component: object;
-    //TODO: Replace hardcoded string with an object property fetched from a service    
+    // let slide;
+
     const props = {
-        slides: await Services.Slider.getByArea('KITCHENS'),
+        slides: await Services.Slider.getByArea(HouseAreas.KITCHENS.id),
     }
 
     afterAll(() => {
@@ -18,15 +20,17 @@ describe('CarrouselBig component', async () => {
     });
 
     it.skip('Component works', () => {
-        const {getByTestId} = render(<CarrouselBig {...props} />);
-        component = getByTestId('qa-carrousel-big');
+        const {container} = render(<CarrouselBig {...props} />);
+        component = container.getElementsByClassName('qa-carrousel-big')[0];
+        // slide = container.getElementsByClassName('qa-carrousel-big__slide-item')[0];
         
         expect(component).not.toBeNull();
-        //@ts-ignore
-        expect(component.classList.contains('c-carrousel-big'));
-        /* console.log(container);
-        expect(container).toContainElement('source')
-        expect(container).toContainElement('img') */
         
+        //@ts-ignore
+        expect(component.classList.contains('c-carrousel-big')).toBe(true);
+        /* console.log(slide);
+        expect(slide).toContainElement('source')
+        expect(slide).toContainElement('img')
+         */
     })
 });

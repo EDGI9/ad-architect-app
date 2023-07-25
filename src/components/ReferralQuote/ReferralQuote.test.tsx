@@ -19,7 +19,7 @@ describe('ReferralQuote component', () => {
 
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-referral-quote'));
+        expect(component.classList.contains('c-referral-quote')).toBe(true);
         expect(getByText(props.text).textContent).toBe(props.text)
     })
 });

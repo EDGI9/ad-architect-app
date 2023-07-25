@@ -25,7 +25,7 @@ describe('EmployeeCard component', async () => {
 
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-employee-card'));
+        expect(component.classList.contains('c-employee-card')).toBe(true);
         //Test to see if component renders image
         //Test to see if component renders title
         //Test to see if component renders text

@@ -22,7 +22,7 @@ describe('CarrouselDetail component', () => {
         
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-carrousel-detail'));
+        expect(component.classList.contains('c-carrousel-detail')).toBe(true);
         //@ts-ignore
         expect(getByText(props.text.title).textContent).toBe(props.text.title)
         //@ts-ignore

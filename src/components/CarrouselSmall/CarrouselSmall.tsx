@@ -43,8 +43,7 @@ export function CarrouselSmall(props) {
 
     return (
         <Carousel 
-          data-testid="qa-carrousel-small" 
-          containerClass="c-carrousel-small" 
+          containerClass="qa-carrousel-small c-carrousel-small" 
           itemClass="c-carrousel-small__slide-item-container"
           sliderClass="c-carrousel-small__slide-container"
           partialVisible={true} 

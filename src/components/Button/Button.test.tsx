@@ -16,12 +16,9 @@ describe('Button component', () => {
     className: "test-class",
   }
 
-  beforeAll(() => {
-    component = render(<Button />);
-  });
 
-  it.skip('Componen renders properly', () => {
-    component.rerender(<Button {...props}></Button>)
+  it('Componen renders properly', () => {
+    component = render(<Button {...props}/>);
     button = component.getByTestId('qa-button');
 
     expect(button).toBeTruthy();
@@ -37,11 +34,11 @@ describe('Button component', () => {
     expect(button.textContent).toEqual(props.text)
   })
 
-  it.skip('Component handles user events', () => {
+  it('Component handles user events', () => {
         
     const handleClick = vi.fn((): void => {})
-
-    component.rerender(<Button {...props} onClick={handleClick}></Button>)
+    
+    component = render(<Button {...props} onClick={handleClick}></Button>)
     button = component.getByTestId('qa-button');
 
     expect(button).toBeTruthy();

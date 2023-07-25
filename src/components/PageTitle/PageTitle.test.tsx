@@ -16,14 +16,15 @@ describe('PageTitle component', () => {
         cleanup();
     });
 
-    //TODO: Add more tests to test if class is passed
     it('Component works', () => {
         const {getByTestId, getByText} = render(<PageTitle {...props}/>);
         component = getByTestId('qa-page-title');
 
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-page-title'));
+        expect(component.classList.contains('c-page-title')).toBe(true);
+        //@ts-ignore
+        expect(component.classList.contains(props.className)).toBe(true);
         expect(getByText(props.text).textContent).toBe(props.text);
     })
 });

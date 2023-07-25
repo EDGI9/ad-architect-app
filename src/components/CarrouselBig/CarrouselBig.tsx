@@ -32,8 +32,7 @@ export function CarrouselBig(props) {
 
     return (
         <Carousel 
-          data-testid="qa-carrousel-big" 
-          containerClass="c-carrousel-big" 
+          containerClass="qa-carrousel-big c-carrousel-big" 
           sliderClass="c-carrousel-big__slide-container"
           itemClass="c-carrousel-big__slide-item-container"
           responsive={responsive} 
@@ -46,7 +45,7 @@ export function CarrouselBig(props) {
             {
               //@ts-ignore
               slides.map((slide: ImageDataDTO, index) => (
-                  <div className="c-carrousel-big__slide-item" key={index}>
+                  <div className="qa-carrousel-big__slide-item c-carrousel-big__slide-item" key={index}>
                       <Counter number={index + 1} type="primary" className="absolute left-2 top-2"/>
                       <Image image={slide.src} height={380} width={400} className="c-carrousel-big__slide-image" />
                   </div>

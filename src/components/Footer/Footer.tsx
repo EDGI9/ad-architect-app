@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import { Image } from "../Image/Image";
 import { Title } from "../Title/Title";
 import { Services } from "../../integration/services/index"
@@ -35,7 +35,9 @@ export function Footer(props): JSX.Element {
                 <Image image={images.LOGO_NAME_2} width={150} height={15}/>
             </div>
             <div className="c-footer__links">
-                {routes}
+                <BrowserRouter>  
+                    {routes}
+                </BrowserRouter> 
             </div>
             <div className="c-footer__footer">
                 <div>

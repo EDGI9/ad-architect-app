@@ -7,6 +7,7 @@ describe('SectionBubble component', () => {
     const props = {
         title: 'Test Title',
         text: 'Test Text',
+        className: 'test-class'
     };
 
     afterAll(() => {
@@ -14,15 +15,20 @@ describe('SectionBubble component', () => {
     });
 
     it('Component works', () => {
-        const {getByTestId, getByText} = render(<SectionBubble {...props}/>);
+        const {getByTestId, getByText, rerender} = render(<SectionBubble {...props}/>);
         component = getByTestId('qa-section-bubble');
 
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-section-bubble'));
+        expect(component.classList.contains('c-section-bubble')).toBe(true);
         //@ts-ignore
-        expect(component.classList.contains('c-section-bubble--align-left'));
+        expect(component.classList.contains('c-section-bubble--align-left')).toBe(true);
+        //@ts-ignore
+        expect(component.classList.contains(props.className)).toBe(true);
+        
         expect(getByText(props.title).textContent).toBe(props.title)
         expect(getByText(props.text).textContent).toBe(props.text)
+
+        rerender(<SectionBubble {...props} align="left" />)
     })
 });

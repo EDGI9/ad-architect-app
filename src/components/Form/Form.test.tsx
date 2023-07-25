@@ -15,6 +15,6 @@ describe('Form component', () => {
 
         expect(component).not.toBeNull();
         //@ts-ignore
-        expect(component.classList.contains('c-form'));
+        expect(component.classList.contains('c-form')).toBe(true);
     })
 });

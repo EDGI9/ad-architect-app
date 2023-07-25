@@ -13,16 +13,16 @@ describe('NavBar component', () => {
     cleanup();
   });
 
-  it.skip('Component works', () => {
+  it('Component works', () => {
       const {getByTestId, getByText} = render(<NavBar {...props}/>);
-      component = getByTestId('qa-sub-nav-bar');
+      component = getByTestId('qa-nav-bar');
 
       expect(component).not.toBeNull();
       //@ts-ignore
-      expect(component.classList.contains('c-sub-nav-bar'));
+      expect(component.classList.contains('c-nav-bar')).toBe(true);
       Object.entries(RouterPaths).map(([routeKey, routeProperties]) => {
         //@ts-ignore
-        expect(getByText(routeProperties.text).textContent).toBe(RouterPaths[routeKey].text)
+        expect(getByText(routeProperties.text).textContent.trim()).toBe(RouterPaths[routeKey].text)
       })
   })
 })
