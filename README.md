@@ -31,9 +31,10 @@ The [design](https://dribbble.com/shots/20492157-Architects-Landing-Page) was cr
         <td><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" title="Tailwind" width="200"/></td>
         <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" title="Sass" width="200"/></td>
         <td><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Vite-Dark.svg" title="Vite" width="200"/></td>
-        <td><img src="https://github.com/bestofjs/bestofjs-webui/blob/master/public/logos/vitest.svg" title="Vitest" width="200"/></td>
+        <td><img src="https://github.com/devicons/devicon/blob/master/icons/vitest/vitest-original.svg" title="Vitest" width="200"/></td>
         <td><img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" title="Figma" width="200"/></td>
         <td><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/GithubActions-Dark.svg" title="Github Actions" width="200"/></td>
+        <td><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Docker.svg" title="Docker" width="200"/></td>
     </tr>
 <table>
 
